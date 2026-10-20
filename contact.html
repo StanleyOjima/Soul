@@ -171,9 +171,9 @@ a{color:inherit;text-decoration:none}
 /* ════════ LET'S TALK ════════ */
 .ct{background:var(--light);color:var(--ink);padding-top:clamp(140px,13vw,190px);padding-bottom:clamp(90px,9vw,140px)}
 .ct-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;grid-template-rows:auto 1fr}
-.ct-side{grid-column:1 / span 6;grid-row:1}
+.ct-side{grid-column:1 / span 5;grid-row:1}
 .ct-side .label{color:var(--ink-2)}
-.ct h1{margin:20px 0 0;font-size:clamp(44px,4.6vw,76px);white-space:nowrap;line-height:.98;letter-spacing:-.035em}
+.ct h1{margin:20px 0 0;font-size:clamp(40px,4.1vw,68px);white-space:nowrap;line-height:.98;letter-spacing:-.035em}
 .ct-sub{margin:24px 0 0;max-width:40ch;font-size:clamp(16px,1.2vw,18px);line-height:1.6;color:var(--ink-2)}
 .mk{background:linear-gradient(var(--green),var(--green)) 0 86% / 0% 30% no-repeat;transition:background-size 1.2s var(--inout) .9s;-webkit-box-decoration-break:clone;box-decoration-break:clone}
 .on .mk{background-size:100% 30%}
@@ -288,6 +288,27 @@ h1.rise .ln:nth-child(2) > span{transition-delay:.09s}
 
 
 
+
+/* Let's talk: the road runs into the form. A landscape window sits at the top of the form column and the white form card rises out of it */
+.ct-stage{grid-column:6 / span 7;grid-row:1 / span 2;position:relative;padding:clamp(130px,11vw,170px) clamp(20px,2vw,30px) 0}
+.ct-stage .ct-form{grid-column:auto;grid-row:auto;position:relative;z-index:1}
+.ct-scene{position:absolute;left:0;right:0;top:0;height:clamp(340px,30vw,440px);border-radius:24px;overflow:hidden;background:var(--ink);isolation:isolate;
+  opacity:0;transition:opacity 1s ease .05s}
+.on .ct-scene{opacity:1}
+.ct-scene img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:30% 42%;image-rendering:pixelated;transform:scale(1.12);transition:transform 2.6s var(--ease) .05s}
+.on .ct-scene img{transform:none}
+.ct-scene::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,11,10,.55) 0%,rgba(11,11,10,0) 38%)}
+.ct-scene-k{position:absolute;z-index:1;left:clamp(22px,2.4vw,36px);top:clamp(20px,2vw,28px);display:inline-flex;align-items:center;gap:10px;font-size:11.5px;font-weight:600;font-stretch:112%;letter-spacing:.09em;text-transform:uppercase;color:#F6F4EE}
+.ct-scene-k i{width:7px;height:7px;border-radius:50%;background:var(--green)}
+.ct-stage .ct-form-head .ct-fk{display:none}
+.ct-stage .ct-form-head h2{margin-top:0}
+@media (max-width:900px){
+  .ct-stage{margin-top:32px;padding:104px 10px 0}
+  .ct-stage .ct-form{margin-top:0}
+  .ct-scene{height:220px;border-radius:20px}
+  .ct-scene-k{left:18px;top:18px}
+}
+
 /* the end of the page: the rocks run down behind the footer */
 .endscene{position:relative;background:var(--ink);overflow:hidden}
 .endscene .meet{position:relative;margin:0;background:var(--light);isolation:isolate;height:clamp(420px,44vw,680px)}
@@ -303,6 +324,27 @@ h1.rise .ln:nth-child(2) > span{transition-delay:.09s}
   .endscene .sfoot2{margin-top:-96px}
 }
 @media (prefers-reduced-motion:reduce){ *{transition-duration:.01ms!important;transition-delay:0s!important} h1.rise .ln > span{transform:none} }
+
+/* nav: the current page gets a small lime dot (the same marker as the mobile menu), not the hover underline */
+.links a[aria-current]::after{display:none}
+.links a[aria-current]::before{content:"";position:absolute;left:-12px;top:50%;width:6px;height:6px;margin-top:-3px;border-radius:50%;background:var(--green)}
+.nav.on-light .links a[aria-current]::before,.nav.on-green .links a[aria-current]::before{background:var(--green-ink)}
+
+/* phones: the page opens on the landscape. The heading sits on the road hills (like the share cover) and the form card overlaps the bottom of it */
+@media (max-width:900px){
+  .ct-side{position:relative;isolation:isolate;overflow:hidden;padding:26px 20px 96px;border-radius:24px;background:var(--ink);color:#F6F4EE}
+  .ct-side > .ct-scene{position:absolute;inset:0;height:auto;border-radius:0;z-index:-1}
+  .ct-side > .ct-scene img{object-position:62% 40%}
+  .ct-side > .ct-scene::after{background:linear-gradient(180deg,rgba(11,11,10,.8) 0%,rgba(11,11,10,.58) 52%,rgba(11,11,10,.3) 100%)}
+  .ct-side > .ct-scene .ct-scene-k{display:none}
+  .ct-side .label{color:rgba(246,244,238,.72)}
+  .ct-side h1{color:#F6F4EE;font-size:min(clamp(30px,10.4vw,54px),calc((100vw - 84px) / 7.8))}
+  .ct-side .ct-sub{text-wrap:pretty}
+  /* on the dark landscape the highlight band fought the white text: here "next step." is simply lime */
+  .ct-side .mk{background:none;color:var(--green)}
+  .ct-side .ct-sub{color:rgba(246,244,238,.82)}
+  .ct-stage{margin-top:-68px;padding:0 10px}
+}
 </style>
 </head>
 <body>
@@ -347,7 +389,9 @@ h1.rise .ln:nth-child(2) > span{transition-delay:.09s}
       <p class="ct-sub ct-in">Starting a business? Trying to improve one? Looking for a business partner? Tell us what you’re working on and what you need help with.</p>
     </div>
 
-    <form class="ct-form" id="ctForm" novalidate >
+    <div class="ct-stage">
+      <div class="ct-scene" aria-hidden="true"><img src="assets/img/contact-01-f98b874833.png" alt=""><span class="ct-scene-k"><i></i>Start the conversation</span></div>
+      <form class="ct-form" id="ctForm" novalidate >
       <div class="ct-form-head"><span class="ct-fk">Start the conversation</span><h2 class="display">Tell us a little about it.</h2></div>
       <fieldset class="ct-g">
         <legend>What would you like to talk about?</legend>
@@ -376,6 +420,7 @@ h1.rise .ln:nth-child(2) > span{transition-delay:.09s}
       <button class="ct-btn" type="submit"><span>Send message</span><i><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="square"/></svg></i></button>
             <p class="ct-status" id="ctStatus" role="status" aria-live="polite"></p>
     </form>
+    </div>
 
     <div class="ct-next">
       <span class="ct-k">What happens next</span>
@@ -389,7 +434,7 @@ h1.rise .ln:nth-child(2) > span{transition-delay:.09s}
 </main>
 
 <div class="endscene">
-  <div class="meet" aria-hidden="true"><div class="meet-layer"><img src="assets/img/contact-01-947af2ddac.png" alt=""></div></div>
+  <div class="meet" aria-hidden="true"><div class="meet-layer"><img src="assets/img/contact-02-947af2ddac.png" alt=""></div></div>
 <footer class="sfoot2 wrap" id="footer">
   <div class="sf2">
     <div class="sf2-top">
@@ -441,6 +486,15 @@ h1.rise .ln:nth-child(2) > span{transition-delay:.09s}
     if (!ok) { status.textContent = ''; const first = form.querySelector('.ct-f.err input, .ct-f.err textarea'); if (first) first.focus(); return; }
     status.textContent = 'Thanks for writing. Our enquiry form opens soon, so this message hasn’t been sent yet.';
   });
+})();
+</script>
+<script>
+/* phones: the landscape moves behind the heading; on wider screens it goes back above the form */
+(() => {
+  const sc = document.querySelector('.ct-scene'), side = document.querySelector('.ct-side'), stage = document.querySelector('.ct-stage');
+  if (!sc || !side || !stage) return;
+  const place = () => { const m = innerWidth <= 900; if (m && sc.parentNode !== side) side.prepend(sc); else if (!m && sc.parentNode !== stage) stage.prepend(sc); };
+  place(); addEventListener('resize', place);
 })();
 </script>
 </body>

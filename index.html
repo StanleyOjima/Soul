@@ -2041,6 +2041,16 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--green);outline-offs
 
 a.dr{text-decoration:none}
 
+/* ── v66 ── */
+/* phones: the hero headline a step bigger */
+@media (max-width:760px){ .hero-d .hd-h,.hd-h{font-size:clamp(40px,12.8vw,60px)} }
+@media (max-width:760px) and (max-height:740px){ .hd-h{font-size:41px!important} }
+
+/* nav: the current page gets a small lime dot (the same marker as the mobile menu), not the hover underline */
+.links a[aria-current]::after{display:none}
+.links a[aria-current]::before{content:"";position:absolute;left:-12px;top:50%;width:6px;height:6px;margin-top:-3px;border-radius:50%;background:var(--green)}
+.nav.on-light .links a[aria-current]::before,.nav.on-green .links a[aria-current]::before{background:var(--green-ink)}
+
 /* preview build: case-study buttons open the case study page; the arrow now slides sideways */
 .p-cta.cs .arr svg + svg{transform:translateX(-160%)}
 .p-cta.cs:hover .arr svg:first-child{transform:translateX(160%)}
@@ -2385,15 +2395,7 @@ a.dr{text-decoration:none}
   </div>
   <div class="fq-list">
       <div class="fq open">
-        <button type="button" class="fq-q" aria-expanded="true"><span>Do I have to buy a full package?</span><i aria-hidden="true"></i></button>
-        <div class="fq-a"><div><p>No. You don’t have to buy a full package. We can help with one specific need, or across several areas if that’s what your business needs.</p></div></div>
-      </div>
-      <div class="fq">
-        <button type="button" class="fq-q" aria-expanded="false"><span>How do we agree what you’ll do?</span><i aria-hidden="true"></i></button>
-        <div class="fq-a"><div><p>We listen first, recommend practical next steps, then explain what we’ll do, what you’ll receive and what the work involves. Nothing starts until we’ve both agreed.</p></div></div>
-      </div>
-      <div class="fq">
-        <button type="button" class="fq-q" aria-expanded="false"><span>How much does it cost?</span><i aria-hidden="true"></i></button>
+        <button type="button" class="fq-q" aria-expanded="true"><span>How much does it cost?</span><i aria-hidden="true"></i></button>
         <div class="fq-a"><div><p>It depends on what the work involves. We agree the scope and the fee with you before any work begins, so there are no surprises.</p></div></div>
       </div>
       <div class="fq">
