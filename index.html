@@ -2051,9 +2051,48 @@ a.dr{text-decoration:none}
 .links a[aria-current]::before{content:"";position:absolute;left:-12px;top:50%;width:6px;height:6px;margin-top:-3px;border-radius:50%;background:var(--green)}
 .nav.on-light .links a[aria-current]::before,.nav.on-green .links a[aria-current]::before{background:var(--green-ink)}
 
+/* ── v67: Selected work cards ── */
+/* the arrow square always clips its second (hover) arrow, and on touch screens that second arrow never shows */
+.p-cta .arr{clip-path:inset(0 round 2px)}
+@media (hover:none){ .p-cta .arr svg + svg{display:none} .p-cta:hover .arr svg:first-child{transform:none} }
+/* phones: a calmer info area. Smaller name, one tidy meta list (label left, value right) that never wraps into boxes, a slimmer button */
+@media (max-width:900px){
+  .work .p-info{padding:16px 8px 6px}
+  .work .p-cat{padding:6px 10px 6px 9px;font-size:12.5px}
+  .work .p-idx{font-size:14px}
+  .work .p-name{margin-top:18px;font-size:clamp(27px,7.8vw,32px);line-height:1;letter-spacing:-.035em;text-wrap:balance}
+  .work .p-line{margin-top:8px;font-size:15.5px;line-height:1.45;color:rgba(11,11,10,.58);text-wrap:pretty}
+  .work .p-foot{margin-top:20px;padding-top:0;gap:16px}
+  .work .p-meta{display:block;border-top:1px solid rgba(11,11,10,.09);border-bottom:0}
+  .work .p-meta div{display:flex;flex-direction:row;align-items:baseline;justify-content:space-between;gap:16px;padding:11px 0;border-left:0;border-bottom:1px solid rgba(11,11,10,.09)}
+  .work .p-meta div:first-child{padding-left:0}
+  .work .p-meta dt{flex:none;font-size:10.5px;letter-spacing:.08em;color:rgba(11,11,10,.5)}
+  .work .p-meta dd{font-size:14px;font-weight:500;text-align:right;line-height:1.35;min-width:0}
+  .work .p-meta dd.live{justify-content:flex-end}
+  .work .p-cta{min-height:56px;padding:0 6px 0 18px}
+  .work .p-cta b{font-size:15px}
+  .work .p-cta small{font-size:12px}
+  .work .p-cta .arr{width:44px;height:44px}
+}
+
+/* ── v68 ── case-study buttons: one line, the arrow slides sideways on hover */
+.p-cta.cs .arr svg + svg{transform:translateX(-340%)}
+@media (hover:hover){ .p-cta.cs:hover .arr svg:first-child{transform:translateX(340%)} .p-cta.cs:hover .arr svg + svg{transform:none} }
+.p-cta.cs .t{justify-content:center}
+
+/* ── v69 ── */
+/* phones: the hero headline fills the width ("Build a better" on one line) and sits a little lower, using the empty space above the map */
+@media (max-width:760px) and (min-height:741px){
+  .hero-d .head{padding-top:clamp(96px,13.5vh,132px)}
+  .hero-d .hd-h,.hd-h{font-size:min(calc((100vw - 48px) / 6.35),60px)}
+}
+@media (max-width:760px) and (max-height:740px) and (min-height:661px){ .hd-h{font-size:min(calc((100vw - 48px) / 6.35),44px)!important} }
+/* phones: card info lines up with the button; even 18px edges all round */
+@media (max-width:900px){ .work .p-info{padding:16px 8px 8px} .work .p-line br{display:none} .work .p-line{text-wrap:balance} }
+
 /* preview build: case-study buttons open the case study page; the arrow now slides sideways */
-.p-cta.cs .arr svg + svg{transform:translateX(-160%)}
-.p-cta.cs:hover .arr svg:first-child{transform:translateX(160%)}
+.p-cta.cs .arr svg + svg{transform:translateX(-340%)}
+.p-cta.cs:hover .arr svg:first-child{transform:translateX(340%)}
 .p-cta.cs:hover .arr svg + svg{transform:none}
 </style>
 </head>
@@ -2193,12 +2232,12 @@ a.dr{text-decoration:none}
         <div class="p-info">
           <div class="p-top"><span class="p-cat"><i></i>Venture build · Logistics</span><span class="p-idx">01 <span>/ 03</span></span></div>
           <h3 class="p-name display">QuickFleet</h3>
-          <p class="p-line">An electric delivery business,<br>built from the ground up</p>
+          <p class="p-line">An electric delivery business, <br>built from the ground up</p>
           <p class="p-text">Strategy, hub operations, brand, website and app, built together from day one.</p>
           <div class="p-foot">
             <dl class="p-meta"><div><dt>Industry</dt><dd>Logistics, EV</dd></div><div><dt>Scope</dt><dd>Strategy, operations, brand, product</dd></div><div><dt>Status</dt><dd class="live">Live</dd></div></dl>
             <div class="p-tagrow"><span class="k">Expertise</span><ul class="p-tags"><li>Business strategy</li><li>Operations</li><li>Brand</li><li>Website &amp; app</li></ul></div>
-            <a class="p-cta cs" href="case-quickfleet.html"><span class="t"><b>Read the case study</b><small>QuickFleet</small></span><span class="arr"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="square"/></svg><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="square"/></svg></span></a>
+            <a class="p-cta cs" href="case-quickfleet.html"><span class="t"><b>Read the case study</b></span><span class="arr"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="square"/></svg><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="square"/></svg></span></a>
           </div>
         </div>
         <div class="p-dim" aria-hidden="true"></div>
@@ -2220,7 +2259,7 @@ a.dr{text-decoration:none}
           <div class="p-foot">
             <dl class="p-meta"><div><dt>Industry</dt><dd>Cloud, data centre</dd></div><div><dt>Scope</dt><dd>Brand identity</dd></div><div><dt>Status</dt><dd>Launched</dd></div></dl>
             <div class="p-tagrow"><span class="k">Expertise</span><ul class="p-tags"><li>Branding</li><li>Logo</li><li>Brand book</li><li>Campaign</li></ul></div>
-            <a class="p-cta cs" href="case-pantech.html"><span class="t"><b>Read the case study</b><small>Pantech Dynamics</small></span><span class="arr"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="square"/></svg><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="square"/></svg></span></a>
+            <a class="p-cta cs" href="case-pantech.html"><span class="t"><b>Read the case study</b></span><span class="arr"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="square"/></svg><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="square"/></svg></span></a>
           </div>
         </div>
         <div class="p-dim" aria-hidden="true"></div>
@@ -2242,7 +2281,7 @@ a.dr{text-decoration:none}
           <div class="p-foot">
             <dl class="p-meta"><div><dt>Industry</dt><dd>Advisory, PR</dd></div><div><dt>Scope</dt><dd>Website</dd></div><div><dt>Status</dt><dd class="live">Live</dd></div></dl>
             <div class="p-tagrow"><span class="k">Expertise</span><ul class="p-tags"><li>Web design</li><li>Development</li><li>EN / 中文</li></ul></div>
-            <a class="p-cta cs" href="case-rhanamerzy.html"><span class="t"><b>Read the case study</b><small>Rhanamerzy</small></span><span class="arr"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="square"/></svg><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="square"/></svg></span></a>
+            <a class="p-cta cs" href="case-rhanamerzy.html"><span class="t"><b>Read the case study</b></span><span class="arr"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="square"/></svg><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="square"/></svg></span></a>
           </div>
         </div>
         <div class="p-dim" aria-hidden="true"></div>
