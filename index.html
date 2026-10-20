@@ -2517,6 +2517,7 @@ a.dr{text-decoration:none}
   const VARIANT = 'd2';
   const fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
   let t0 = 0, introDone = false, timers = [], lenis = null, slot = null, mode = '';
+  let ticking = true;
 
   const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
   const lerp = (a, b, k) => a + (b - a) * k;
@@ -2605,13 +2606,16 @@ a.dr{text-decoration:none}
         c.style.visibility = vis ? '' : 'hidden';
         if (vis) c.style.transform = `translate(-50%,-50%) translateZ(${(P - D).toFixed(1)}px) rotateY(${(-t * 180 / Math.PI).toFixed(3)}deg) translateZ(${(-R).toFixed(1)}px)`;
       });
-      requestAnimationFrame(frame);
+      if (galOn || drag || Math.abs(vel) > 0.0006) rafGal = requestAnimationFrame(frame); else rafGal = 0;
     };
+    let galOn = false, rafGal = 0;
+    const startGal = () => { if (!rafGal) rafGal = requestAnimationFrame(frame); };
+    new IntersectionObserver((es) => { galOn = es[0].isIntersecting; if (galOn) startGal(); }, { rootMargin: '150px' }).observe(st);
     st.addEventListener('pointerdown', (e) => { drag = true; lx = e.clientX; vel = 0; st.setPointerCapture(e.pointerId); st.classList.add('grab'); });
     st.addEventListener('pointermove', (e) => { if (!drag) return; const dx = e.clientX - lx; lx = e.clientX; const d = -dx / st.clientWidth * 2.2; ang += d; vel = d; });
     const up = () => { drag = false; st.classList.remove('grab'); };
     st.addEventListener('pointerup', up); st.addEventListener('pointercancel', up);
-    addEventListener('resize', layout); layout(); frame();
+    addEventListener('resize', layout); layout(); startGal();
   })();
   // Next step: no enquiry route is connected yet, so the doors only explain that (nothing is sent or stored)
   const cNote = $('cNote');
@@ -2865,8 +2869,11 @@ void main(){
       if (r.bottom > -50 && r.top < vh + 50) { const t = Math.round(r.top);
         if (t !== lt) { const s = Math.max(r.width / 1440, r.height / 2400);
           svg.style.setProperty('--t', t); svg.style.setProperty('--vh', vh); svg.style.setProperty('--s', s.toFixed(4)); lt = t; } }
-      requestAnimationFrame(tick); };
-    requestAnimationFrame(tick); })();
+      if (svOn) rafSv = requestAnimationFrame(tick); else rafSv = 0; };
+    let svOn = false, rafSv = 0;
+    const startSv = () => { if (!rafSv) rafSv = requestAnimationFrame(tick); };
+    new IntersectionObserver((es) => { svOn = es[0].isIntersecting; if (svOn) startSv(); }, { rootMargin: '250px' }).observe(g);
+    startSv(); })();
 
   // What we do (desktop): place the switch a set distance above the text, and centre the pair in the panel
   (() => {
@@ -3054,8 +3061,16 @@ void main(){
       cx += (ptr.x - cx) * 0.25; cy += (ptr.y - cy) * 0.25;
       cursor.style.transform = `translate3d(${cx.toFixed(1)}px, ${cy.toFixed(1)}px, 0)`;
     }
-    requestAnimationFrame(render);
+    // Keep the per-frame loop running only while it is doing visible work:
+    // desktop (cursor + parallax), during the intro, or while the hero is on screen.
+    // Once you have scrolled into the content on a phone, the loop powers down so
+    // taps stay instant; any scroll wakes it again.
+    if (!introDone || fine || scrolled < vh) requestAnimationFrame(render);
+    else ticking = false;
   }
+  function wake() { if (!ticking) { ticking = true; requestAnimationFrame(render); } }
+  addEventListener('scroll', wake, { passive: true });
+  addEventListener('resize', wake);
 
   // ── Intro ──
   function play() {
@@ -3096,7 +3111,7 @@ void main(){
     fitHeadline();
     if (reduce) { hero.style.height = '100vh'; green.style.marginTop = '0'; skip(); green.classList.add('on'); work.classList.add('on'); apr.classList.add('on'); contactEl.classList.add('on'); $('who').classList.add('on'); projs.forEach((pj) => pj.classList.add('in')); }
     else {
-      if (window.Lenis) {
+      if (window.Lenis && fine) {
         lenis = new Lenis({ lerp: 0.085, wheelMultiplier: 0.9 });
         const raf = (time) => { lenis.raf(time); requestAnimationFrame(raf); };
         requestAnimationFrame(raf);
