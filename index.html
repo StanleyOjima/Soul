@@ -1438,18 +1438,19 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--green);outline-offs
 .tk-count{font-family:var(--display);font-weight:600;font-size:14px;color:var(--ink-2);font-variant-numeric:tabular-nums;min-width:52px;text-align:center}
 .tk-count b{color:var(--green-ink)}
 .tk-deck{position:relative;height:clamp(340px,40vw,440px);margin-right:28px}
+.testi3 .tk,.testi3 .tk *{list-style:none}
 .tk{position:absolute;inset:0;margin:0;display:flex;flex-direction:column;gap:22px;padding:clamp(28px,3vw,48px);border-radius:8px;background:#fff;box-shadow:0 30px 60px -40px rgba(11,11,10,.35);--d:0;transform:translate(calc(var(--d) * 14px),calc(var(--d) * 14px)) scale(calc(1 - var(--d) * .03));z-index:calc(10 - var(--d));transition:transform .8s var(--ease),opacity .6s ease,background .6s}
 .tk:not(.on){opacity:.55}
 .tk:not(.on) > *{opacity:0}
 .tk > *{transition:opacity .5s ease .2s}
 .tk.on{background:#fff}
 .tk-q{display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:4px;background:var(--green);font-family:var(--display);font-weight:700;font-size:44px;line-height:1;padding-top:16px;color:var(--green-ink)}
-.tk blockquote{margin:0;font-family:var(--display);font-weight:500;font-size:clamp(22px,2.1vw,34px);line-height:1.22;letter-spacing:-.025em;max-width:30ch}
+.tk blockquote{margin:0;font-family:var(--display);font-weight:500;font-size:clamp(18px,4.3vw,24px);line-height:1.3;letter-spacing:-.025em;max-width:34ch}
 .tk figcaption{margin-top:auto;display:flex;align-items:center;gap:14px;padding-top:20px;border-top:1px solid rgba(11,11,10,.1);font-size:15px}
-.tk figcaption > span:last-child{display:flex;flex-direction:column;gap:3px}
+.tk figcaption > span:last-child{display:flex;flex-direction:column;gap:5px}
 .tk figcaption em{font-style:normal;color:var(--ink-2)}
 .tk-av{width:46px;height:46px;flex:none;display:inline-flex;align-items:center;justify-content:center;border-radius:50%;background:var(--light-2);color:var(--ink-2);font:600 13px var(--ui)}
-@media (max-width:900px){.testi3{grid-template-columns:minmax(0,1fr)}.tk-deck{height:400px;margin-right:24px}}
+@media (max-width:900px){.testi3{grid-template-columns:minmax(0,1fr)}.tk-deck{height:clamp(410px,120vw,470px);margin-right:24px}.testi3 .tk *{list-style:none}}
 
 /* What we do: list on the photo */
 @media (min-width:901px){.svc-body .hl{display:none}}
@@ -1909,17 +1910,17 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--green);outline-offs
 /* ── v50: Testimonials ── */
 /* the quote now sits centred in the free space instead of leaving a hole above the attribution,
    so short and long quotes both read as a deliberate composition */
-.tk blockquote{margin-top:auto;margin-bottom:auto}
+.tk blockquote{margin-top:0;margin-bottom:0}
 /* the stack reads as three cards, not one with a faint edge */
 .tk{transform:translate(calc(var(--d) * 16px),calc(var(--d) * 15px)) scale(calc(1 - var(--d) * .035))}
 .tk:not(.on){opacity:.7}
 
 @media (min-width:901px){
   /* a feature quote should carry the section */
-  .tk blockquote{font-size:clamp(24px,2.15vw,34px);line-height:1.2;max-width:27ch}
+  .tk blockquote{font-size:clamp(20px,1.7vw,27px);line-height:1.32;max-width:36ch}
   /* the section was much taller than its content — tighten it so there is no trailing void */
   .testi3{padding-top:clamp(78px,7vw,112px);padding-bottom:clamp(78px,7vw,112px)}
-  .tk-deck{height:clamp(320px,33vw,430px);margin-right:34px}
+  .tk-deck{height:clamp(360px,34vw,470px);margin-right:34px}
   .tk{padding:clamp(30px,3vw,46px)}
 }
 
@@ -2106,6 +2107,12 @@ a.dr{text-decoration:none}
 .sf2-top .lk .lk-sym{fill:var(--green)}
 .sf2-top .lk .lk-wrd{fill:#F6F4EE}
 @media (max-width:900px){ .lk{height:22px} }
+</style>
+<style>
+.hd-mk{display:inline-flex;align-items:center;justify-content:center;line-height:0}
+.hd-mk .lmk{height:54px;width:auto;color:var(--ink);image-rendering:pixelated;display:block}
+@media (max-width:900px){ .hd-mk .lmk{height:40px} }
+@media (max-width:760px){ .hero-d .hd-mk .lmk{height:30px} }
 
 /* preview build: case-study buttons open the case study page; the arrow now slides sideways */
 .p-cta.cs .arr svg + svg{transform:translateX(-340%)}
@@ -2184,7 +2191,7 @@ a.dr{text-decoration:none}
       </div>
     </div>
 
-    <div class="ha-show" id="haShow" aria-hidden="true"><span class="ha-show-in"><span class="hd-logo">soul<i></i></span></span></div>
+    <div class="ha-show" id="haShow" aria-hidden="true"><span class="ha-show-in"><span class="hd-mk"><svg class="lmk" viewBox="0 0 24 22" fill="currentColor" shape-rendering="crispEdges" aria-hidden="true" focusable="false"><rect x="6" y="0" width="1" height="1"/><rect x="12" y="0" width="1" height="1"/><rect x="13" y="0" width="1" height="1"/><rect x="14" y="0" width="1" height="1"/><rect x="15" y="0" width="1" height="1"/><rect x="16" y="0" width="1" height="1"/><rect x="5" y="1" width="1" height="1"/><rect x="6" y="1" width="1" height="1"/><rect x="11" y="1" width="1" height="1"/><rect x="12" y="1" width="1" height="1"/><rect x="13" y="1" width="1" height="1"/><rect x="14" y="1" width="1" height="1"/><rect x="15" y="1" width="1" height="1"/><rect x="16" y="1" width="1" height="1"/><rect x="17" y="1" width="1" height="1"/><rect x="18" y="1" width="1" height="1"/><rect x="4" y="2" width="1" height="1"/><rect x="5" y="2" width="1" height="1"/><rect x="10" y="2" width="1" height="1"/><rect x="11" y="2" width="1" height="1"/><rect x="12" y="2" width="1" height="1"/><rect x="3" y="3" width="1" height="1"/><rect x="4" y="3" width="1" height="1"/><rect x="5" y="3" width="1" height="1"/><rect x="9" y="3" width="1" height="1"/><rect x="10" y="3" width="1" height="1"/><rect x="11" y="3" width="1" height="1"/><rect x="3" y="4" width="1" height="1"/><rect x="4" y="4" width="1" height="1"/><rect x="9" y="4" width="1" height="1"/><rect x="10" y="4" width="1" height="1"/><rect x="11" y="4" width="1" height="1"/><rect x="3" y="5" width="1" height="1"/><rect x="4" y="5" width="1" height="1"/><rect x="9" y="5" width="1" height="1"/><rect x="10" y="5" width="1" height="1"/><rect x="16" y="5" width="1" height="1"/><rect x="17" y="5" width="1" height="1"/><rect x="18" y="5" width="1" height="1"/><rect x="19" y="5" width="1" height="1"/><rect x="3" y="6" width="1" height="1"/><rect x="4" y="6" width="1" height="1"/><rect x="9" y="6" width="1" height="1"/><rect x="10" y="6" width="1" height="1"/><rect x="14" y="6" width="1" height="1"/><rect x="15" y="6" width="1" height="1"/><rect x="16" y="6" width="1" height="1"/><rect x="17" y="6" width="1" height="1"/><rect x="18" y="6" width="1" height="1"/><rect x="19" y="6" width="1" height="1"/><rect x="20" y="6" width="1" height="1"/><rect x="3" y="7" width="1" height="1"/><rect x="4" y="7" width="1" height="1"/><rect x="5" y="7" width="1" height="1"/><rect x="9" y="7" width="1" height="1"/><rect x="10" y="7" width="1" height="1"/><rect x="13" y="7" width="1" height="1"/><rect x="14" y="7" width="1" height="1"/><rect x="15" y="7" width="1" height="1"/><rect x="16" y="7" width="1" height="1"/><rect x="17" y="7" width="1" height="1"/><rect x="18" y="7" width="1" height="1"/><rect x="19" y="7" width="1" height="1"/><rect x="20" y="7" width="1" height="1"/><rect x="21" y="7" width="1" height="1"/><rect x="4" y="8" width="1" height="1"/><rect x="5" y="8" width="1" height="1"/><rect x="9" y="8" width="1" height="1"/><rect x="10" y="8" width="1" height="1"/><rect x="12" y="8" width="1" height="1"/><rect x="13" y="8" width="1" height="1"/><rect x="20" y="8" width="1" height="1"/><rect x="21" y="8" width="1" height="1"/><rect x="22" y="8" width="1" height="1"/><rect x="4" y="9" width="1" height="1"/><rect x="5" y="9" width="1" height="1"/><rect x="6" y="9" width="1" height="1"/><rect x="10" y="9" width="1" height="1"/><rect x="22" y="9" width="1" height="1"/><rect x="0" y="10" width="1" height="1"/><rect x="5" y="10" width="1" height="1"/><rect x="6" y="10" width="1" height="1"/><rect x="7" y="10" width="1" height="1"/><rect x="8" y="10" width="1" height="1"/><rect x="14" y="10" width="1" height="1"/><rect x="15" y="10" width="1" height="1"/><rect x="16" y="10" width="1" height="1"/><rect x="22" y="10" width="1" height="1"/><rect x="23" y="10" width="1" height="1"/><rect x="0" y="11" width="1" height="1"/><rect x="7" y="11" width="1" height="1"/><rect x="8" y="11" width="1" height="1"/><rect x="9" y="11" width="1" height="1"/><rect x="15" y="11" width="1" height="1"/><rect x="16" y="11" width="1" height="1"/><rect x="17" y="11" width="1" height="1"/><rect x="23" y="11" width="1" height="1"/><rect x="0" y="12" width="1" height="1"/><rect x="1" y="12" width="1" height="1"/><rect x="13" y="12" width="1" height="1"/><rect x="16" y="12" width="1" height="1"/><rect x="17" y="12" width="1" height="1"/><rect x="18" y="12" width="1" height="1"/><rect x="1" y="13" width="1" height="1"/><rect x="2" y="13" width="1" height="1"/><rect x="10" y="13" width="1" height="1"/><rect x="13" y="13" width="1" height="1"/><rect x="17" y="13" width="1" height="1"/><rect x="18" y="13" width="1" height="1"/><rect x="19" y="13" width="1" height="1"/><rect x="1" y="14" width="1" height="1"/><rect x="2" y="14" width="1" height="1"/><rect x="3" y="14" width="1" height="1"/><rect x="4" y="14" width="1" height="1"/><rect x="5" y="14" width="1" height="1"/><rect x="6" y="14" width="1" height="1"/><rect x="7" y="14" width="1" height="1"/><rect x="8" y="14" width="1" height="1"/><rect x="9" y="14" width="1" height="1"/><rect x="10" y="14" width="1" height="1"/><rect x="13" y="14" width="1" height="1"/><rect x="14" y="14" width="1" height="1"/><rect x="18" y="14" width="1" height="1"/><rect x="19" y="14" width="1" height="1"/><rect x="2" y="15" width="1" height="1"/><rect x="3" y="15" width="1" height="1"/><rect x="4" y="15" width="1" height="1"/><rect x="5" y="15" width="1" height="1"/><rect x="6" y="15" width="1" height="1"/><rect x="7" y="15" width="1" height="1"/><rect x="8" y="15" width="1" height="1"/><rect x="9" y="15" width="1" height="1"/><rect x="13" y="15" width="1" height="1"/><rect x="14" y="15" width="1" height="1"/><rect x="18" y="15" width="1" height="1"/><rect x="19" y="15" width="1" height="1"/><rect x="20" y="15" width="1" height="1"/><rect x="4" y="16" width="1" height="1"/><rect x="5" y="16" width="1" height="1"/><rect x="6" y="16" width="1" height="1"/><rect x="7" y="16" width="1" height="1"/><rect x="13" y="16" width="1" height="1"/><rect x="14" y="16" width="1" height="1"/><rect x="18" y="16" width="1" height="1"/><rect x="19" y="16" width="1" height="1"/><rect x="20" y="16" width="1" height="1"/><rect x="12" y="17" width="1" height="1"/><rect x="13" y="17" width="1" height="1"/><rect x="14" y="17" width="1" height="1"/><rect x="18" y="17" width="1" height="1"/><rect x="19" y="17" width="1" height="1"/><rect x="11" y="18" width="1" height="1"/><rect x="12" y="18" width="1" height="1"/><rect x="13" y="18" width="1" height="1"/><rect x="18" y="18" width="1" height="1"/><rect x="19" y="18" width="1" height="1"/><rect x="10" y="19" width="1" height="1"/><rect x="11" y="19" width="1" height="1"/><rect x="12" y="19" width="1" height="1"/><rect x="13" y="19" width="1" height="1"/><rect x="18" y="19" width="1" height="1"/><rect x="19" y="19" width="1" height="1"/><rect x="5" y="20" width="1" height="1"/><rect x="6" y="20" width="1" height="1"/><rect x="7" y="20" width="1" height="1"/><rect x="8" y="20" width="1" height="1"/><rect x="9" y="20" width="1" height="1"/><rect x="10" y="20" width="1" height="1"/><rect x="11" y="20" width="1" height="1"/><rect x="12" y="20" width="1" height="1"/><rect x="17" y="20" width="1" height="1"/><rect x="18" y="20" width="1" height="1"/><rect x="6" y="21" width="1" height="1"/><rect x="7" y="21" width="1" height="1"/><rect x="8" y="21" width="1" height="1"/><rect x="9" y="21" width="1" height="1"/><rect x="10" y="21" width="1" height="1"/><rect x="16" y="21" width="1" height="1"/></svg></span></span></div>
     <div class="media" id="media" aria-hidden="true"><canvas id="field"></canvas><img id="heroImg" alt=""><span class="shade" id="shade"></span></div>
 
     <div class="studio wrap" id="studio">
@@ -2416,7 +2423,6 @@ a.dr{text-decoration:none}
     <span class="label">What clients say</span>
     <h2 class="display" data-split>In their words.</h2>
     <p class="tk-sub">What it’s like to work with SOUL, from the people who have.</p>
-    <p><span class="te-flag">Placeholder quotes</span></p>
     <div class="tk-nav">
       <button type="button" id="tkPrev" aria-label="Previous quote"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13 8H3M7 4L3 8l4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="square"/></svg></button>
       <span class="tk-count"><b id="tkN">01</b> / 03</span>
@@ -2426,18 +2432,18 @@ a.dr{text-decoration:none}
   <div class="tk-deck" id="tkDeck">
       <figure class="tk on" data-i="0">
         <span class="tk-q" aria-hidden="true">“</span>
-        <blockquote>Placeholder quote. One or two sentences from a client about what working with SOUL changed for their business.</blockquote>
-        <figcaption><span class="tk-av" aria-hidden="true">AB</span><span><b>[Name]</b><em>[Role, company]</em></span></figcaption>
+        <blockquote>SOUL covered every side of QuickFleet: the branding, the product and the app. All of it came back excellent, and one team this strong across the board made the whole build easier.</blockquote>
+        <figcaption><span class="tk-av" aria-hidden="true">SG</span><span><b>Sani Garba Mamman</b><em>CEO, QuickFleet</em></span></figcaption>
       </figure>
       <figure class="tk" data-i="1">
         <span class="tk-q" aria-hidden="true">“</span>
-        <blockquote>Placeholder quote. Something specific a client valued: the thinking, the brand, the website, or an introduction that mattered.</blockquote>
-        <figcaption><span class="tk-av" aria-hidden="true">CD</span><span><b>[Name]</b><em>[Role, company]</em></span></figcaption>
+        <blockquote>SOUL took the time to understand Pantech and worked efficiently throughout the project. The new identity reflects who we are, and we’re confident using it in the market.</blockquote>
+        <figcaption><span class="tk-av" aria-hidden="true">JO</span><span><b>John Oseni</b><em>CEO, Pantech Dynamics</em></span></figcaption>
       </figure>
       <figure class="tk" data-i="2">
         <span class="tk-q" aria-hidden="true">“</span>
-        <blockquote>Placeholder quote. A client’s words about the partnership side: finding the right company and getting the conversation started.</blockquote>
-        <figcaption><span class="tk-av" aria-hidden="true">EF</span><span><b>[Name]</b><em>[Role, company]</em></span></figcaption>
+        <blockquote>SOUL were fast, and the quality held the whole way through. They turned Rhanamerzy around quicker than we expected, and none of it felt rushed.</blockquote>
+        <figcaption><span class="tk-av" aria-hidden="true">MA</span><span><b>Mercy Alexander</b><em>CEO, Rhanamerzy</em></span></figcaption>
       </figure>
   </div>
 </section>
