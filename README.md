@@ -29,6 +29,7 @@ A test build so the founders can review the site on desktop and phone. It is not
 To update, upload the changed files and commit.
 
 ## Worth knowing
+- The logo now on the site is the chosen mark ("Turn", shading D). The **Soul** wordmark is set in Panchang, whose licence is not yet cleared for logo/trademark use — keep this preview to the founders until that is settled in writing. The mark on its own and the favicon are font-free and unaffected.
 - Every page asks search engines not to index it, but anyone with the link can open it, and a free-plan repository is public.
 - Client work and testimonials are shown for review. The Rhanamerzy testimonial (Mercy Alexander) is still a placeholder, so share the link only with the founders until it's final.
 
