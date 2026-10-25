@@ -11,7 +11,7 @@ A test build so the founders can review the site on desktop and phone. It is not
 - `partnerships.html` — Commercial Partnerships
 - `faq.html` — Questions
 - `404.html` — shown for the three case studies (not built yet) and for mistyped links
-- `assets/` — images and the three case-study videos
+- `assets/` — images, plus the four Selected Work films (QuickFleet, Pantech Dynamics, Rhanamerzy, Atawodi), each in a tall and a wide cut; the homepage loads whichever fits the screen
 
 ## Page names the site already links to
 | Page | File name |
