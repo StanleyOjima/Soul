@@ -16,10 +16,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="assets/og-cover.png">
 <script>if ("scrollRestoration" in history) history.scrollRestoration = "manual"; window.scrollTo(0, 0);</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Syne:wght@400..800&display=block">
-<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<link rel="preload" href="assets/fonts/k3kQo8UDI-1M0wlSfdnoLmvDIaI.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="assets/fonts/8vIH7w4qzmVxm2BL9G78HEY.woff2" as="font" type="font/woff2" crossorigin><style>@font-face { font-family: 'Archivo'; font-style: normal; font-weight: 100 900; font-stretch: 62% 125%; font-display: block; src: url(assets/fonts/k3kQo8UDI-1M0wlSfdboLmvDIaK18A.woff2) format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; } @font-face { font-family: 'Archivo'; font-style: normal; font-weight: 100 900; font-stretch: 62% 125%; font-display: block; src: url(assets/fonts/k3kQo8UDI-1M0wlSfdfoLmvDIaK18A.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; } @font-face { font-family: 'Archivo'; font-style: normal; font-weight: 100 900; font-stretch: 62% 125%; font-display: block; src: url(assets/fonts/k3kQo8UDI-1M0wlSfdnoLmvDIaI.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; } @font-face { font-family: 'Syne'; font-style: normal; font-weight: 400 800; font-display: block; src: url(assets/fonts/8vIH7w4qzmVxm2NL9G78HEZnMg.woff2) format('woff2'); unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF; } @font-face { font-family: 'Syne'; font-style: normal; font-weight: 400 800; font-display: block; src: url(assets/fonts/8vIH7w4qzmVxm25L9G78HEZnMg.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; } @font-face { font-family: 'Syne'; font-style: normal; font-weight: 400 800; font-display: block; src: url(assets/fonts/8vIH7w4qzmVxm2BL9G78HEY.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }</style>
+<script src="assets/js/lenis-1.1.13.min.js"></script>
 <style>
 /* Direction 1 · v12
    Hero: "Every brand has a soul. [live field] We design it, then we build it." The field is code (WebGL), not an image.
@@ -133,7 +131,7 @@ h1 b{font-weight:inherit;color:var(--green)}
 /* Ambient glow + grain behind the hero */
 .glow{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden;opacity:0;transition:opacity 2.6s ease}
 .in-text .glow{opacity:1}
-.bloom{position:absolute;right:-22%;top:-30%;width:104%;height:160%;background:url('assets/img/home-82254371d7.jpg') 72% 45% / cover no-repeat;opacity:.62;animation:bloom 16s ease-in-out infinite alternate;will-change:transform;-webkit-mask-image:radial-gradient(closest-side,#000 55%,transparent 100%);mask-image:radial-gradient(closest-side,#000 55%,transparent 100%)}
+.bloom{position:absolute;right:-22%;top:-30%;width:104%;height:160%;background:url('assets/img/home-82254371d7.webp') 72% 45% / cover no-repeat;opacity:.62;animation:bloom 16s ease-in-out infinite alternate;will-change:transform;-webkit-mask-image:radial-gradient(closest-side,#000 55%,transparent 100%);mask-image:radial-gradient(closest-side,#000 55%,transparent 100%)}
 .pool{position:absolute;left:-20%;bottom:-45%;width:90%;height:90%;background:radial-gradient(closest-side,rgba(181,235,91,.16),rgba(181,235,91,0));animation:pool 19s ease-in-out infinite alternate;will-change:transform}
 .vig{position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,11,10,.55) 0%,rgba(11,11,10,.15) 45%,rgba(11,11,10,0) 70%)}
 .grain{position:absolute;inset:0;z-index:1;pointer-events:none;opacity:.07;mix-blend-mode:overlay;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
@@ -1649,7 +1647,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--green);outline-offs
 .endscene .contact{padding-bottom:clamp(40px,4vw,64px)}
 .sfoot2{padding-top:clamp(48px,6vw,96px)}
 
-.g-tex{background-image:url(assets/img/home-c0e1a34e4a.png)}
+.g-tex{background-image:url(assets/img/home-c0e1a34e4a.webp)}
 /* ── v40 ── */
 /* What we do (desktop): the text block sits in the middle of the photo; calmer hand-over between practices */
 @media (min-width:901px){
@@ -2280,7 +2278,7 @@ a.dr{text-decoration:none}
     <div class="glow" id="glow" aria-hidden="true"><span class="bloom"></span><span class="pool"></span><span class="vig"></span></div>
     <div class="grain" aria-hidden="true"></div>
 
-    <div class="hd-bg" aria-hidden="true"><img src="assets/img/home-8826fd3b73.jpg" alt=""><span class="hd-shade"></span></div>
+    <div class="hd-bg" aria-hidden="true"><img src="assets/img/home-8826fd3b73.webp" srcset="assets/img/home-8826fd3b73-1000.webp 1000w, assets/img/home-8826fd3b73.webp 2000w" sizes="100vw" alt=""><span class="hd-shade"></span></div>
     <div class="head wrap" id="head">
       <div class="hdx">
         <h1 class="hd-h display" aria-label="Build a better business."><span class="ln" aria-hidden="true"><span>Build a better</span></span><span class="ln" aria-hidden="true"><span>business<b class="dot">.</b></span></span></h1>
@@ -2331,22 +2329,22 @@ a.dr{text-decoration:none}
         <article class="cr-k" data-i="0" style="--ci:0">
           <h3 class="cr-h"><button type="button" aria-pressed="false" aria-controls="crF0"><span class="cr-w">Strategy</span><span class="cr-n">01</span></button></h3>
           <div class="cr-d"><p>We test the idea, find the customer and plan what to do first.</p><a class="cr-cta" href="contact.html">Talk to us about strategy <span class="arr"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9M8.5 4.5L12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="square"/></svg></span></a></div>
-          <figure class="cr-f" id="crF0" data-sc="deck"><img class="cr-img" src="assets/img/home-a558415ec5.jpg" alt="The QuickFleet website section “Inside a hub”: battery swap, charging, parcels and check-in" width="1280" height="960" decoding="async"><canvas class="cr-cv" aria-hidden="true"></canvas><div class="cr-live" aria-hidden="true"><div class="cr-sl"><img alt="" src="assets/img/home-f05352a735.jpg"></div><div class="cr-sl"><img alt="" src="assets/img/home-91c697e45c.jpg"></div><div class="cr-sl"><img alt="" src="assets/img/home-c69976ff51.jpg"></div></div></figure>
+          <figure class="cr-f" id="crF0" data-sc="deck"><img class="cr-img" src="assets/img/home-a558415ec5.webp" alt="The QuickFleet website section “Inside a hub”: battery swap, charging, parcels and check-in" width="1280" height="960" decoding="async"><canvas class="cr-cv" aria-hidden="true"></canvas><div class="cr-live" aria-hidden="true"><div class="cr-sl"><img alt="" src="assets/img/home-f05352a735.webp"></div><div class="cr-sl"><img alt="" src="assets/img/home-91c697e45c.webp"></div><div class="cr-sl"><img alt="" src="assets/img/home-c69976ff51.webp"></div></div></figure>
         </article>
         <article class="cr-k" data-i="1" style="--ci:1">
           <h3 class="cr-h"><button type="button" aria-pressed="false" aria-controls="crF1"><span class="cr-w">Branding</span><span class="cr-n">02</span></button></h3>
           <div class="cr-d"><p>Logos, identity and graphics that work as one system.</p><a class="cr-cta" href="contact.html">Talk to us about branding <span class="arr"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9M8.5 4.5L12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="square"/></svg></span></a></div>
-          <figure class="cr-f" id="crF1"><img class="cr-img" src="assets/img/home-0f0ec3f74c.jpg" alt="Six Pantech Dynamics brand posts: the logo, statements and service figures" width="1280" height="960" decoding="async"><canvas class="cr-cv" aria-hidden="true"></canvas></figure>
+          <figure class="cr-f" id="crF1"><img class="cr-img" src="assets/img/home-0f0ec3f74c.webp" alt="Six Pantech Dynamics brand posts: the logo, statements and service figures" width="1280" height="960" decoding="async"><canvas class="cr-cv" aria-hidden="true"></canvas></figure>
         </article>
         <article class="cr-k" data-i="2" style="--ci:2">
           <h3 class="cr-h"><button type="button" aria-pressed="false" aria-controls="crF2"><span class="cr-w">Websites</span><span class="cr-n">03</span></button></h3>
           <div class="cr-d"><p>Clear websites that bring the right people in, designed and built by us.</p><a class="cr-cta" href="contact.html">Talk to us about a website <span class="arr"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9M8.5 4.5L12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="square"/></svg></span></a></div>
-          <figure class="cr-f" id="crF2" data-sc="web"><img class="cr-img" src="assets/img/home-2943c41d05.jpg" alt="The Rhanamerzy website on a desktop screen" width="1280" height="960" decoding="async"><canvas class="cr-cv" aria-hidden="true"></canvas><div class="cr-live" aria-hidden="true"><div class="cr-br"><div class="cr-vp"><img class="cr-nv" alt="" src="assets/img/home-8a82af3ace.png"><img class="cr-s" alt="" src="assets/img/home-6acfb39e06.jpg"></div></div></div></figure>
+          <figure class="cr-f" id="crF2" data-sc="web"><img class="cr-img" src="assets/img/home-2943c41d05.webp" alt="The Rhanamerzy website on a desktop screen" width="1280" height="960" decoding="async"><canvas class="cr-cv" aria-hidden="true"></canvas><div class="cr-live" aria-hidden="true"><div class="cr-br"><div class="cr-vp"><img class="cr-nv" alt="" src="assets/img/home-8a82af3ace.webp"><img class="cr-s" alt="" src="assets/img/home-6acfb39e06.webp"></div></div></div></figure>
         </article>
         <article class="cr-k" data-i="3" style="--ci:3">
           <h3 class="cr-h"><button type="button" aria-pressed="false" aria-controls="crF3"><span class="cr-w">Products</span><span class="cr-n">04</span></button></h3>
           <div class="cr-d"><p>Apps and tools built around how your business actually runs.</p><a class="cr-cta" href="contact.html">Talk to us about a product <span class="arr"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h9M8.5 4.5L12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="square"/></svg></span></a></div>
-          <figure class="cr-f" id="crF3" data-sc="app"><img class="cr-img" data-m="assets/img/home-614d614f35.jpg" src="assets/img/home-46eaadd828.jpg" alt="The QuickFleet website on a laptop: “Riders swap. Hubs charge. Parcels move.”" width="1280" height="960" decoding="async"><canvas class="cr-cv" aria-hidden="true"></canvas><div class="cr-live cr-app" aria-hidden="true"><img class="cr-bg" alt="" src="assets/img/home-aee9f8df30.jpg"><div class="cr-ph2 cr-pa"><div class="cr-scr"><img alt="" src="assets/img/home-b96be24121.webp"></div><img class="cr-fr" alt="" src="assets/img/home-d7383d5946.webp"></div><div class="cr-ph2 cr-pb"><div class="cr-scr"><img alt="" src="assets/img/home-749d0f418e.webp"></div><img class="cr-fr" alt="" src="assets/img/home-d7383d5946.webp"></div></div></figure>
+          <figure class="cr-f" id="crF3" data-sc="app"><img class="cr-img" data-m="assets/img/home-614d614f35.webp" src="assets/img/home-46eaadd828.webp" alt="The QuickFleet website on a laptop: “Riders swap. Hubs charge. Parcels move.”" width="1280" height="960" decoding="async"><canvas class="cr-cv" aria-hidden="true"></canvas><div class="cr-live cr-app" aria-hidden="true"><img class="cr-bg" alt="" src="assets/img/home-aee9f8df30.webp"><div class="cr-ph2 cr-pa"><div class="cr-scr"><img alt="" src="assets/img/home-b96be24121.webp"></div><img class="cr-fr" alt="" src="assets/img/home-d7383d5946.webp"></div><div class="cr-ph2 cr-pb"><div class="cr-scr"><img alt="" src="assets/img/home-749d0f418e.webp"></div><img class="cr-fr" alt="" src="assets/img/home-d7383d5946.webp"></div></div></figure>
         </article>
         <div class="cr-seg" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
       </div>
@@ -2370,8 +2368,8 @@ a.dr{text-decoration:none}
     <article class="proj" style="--i:0;--brand:#1A9A8B">
       <div class="p-card">
         <a class="p-media" href="case-quickfleet.html" aria-label="Read the QuickFleet case study">
-          <img src="assets/img/home-579fb0a1ea.jpg" data-src-t="assets/img/home-f7f66714d3.jpg" alt="QuickFleet: An electric delivery business, built from the ground up">
-          <video muted loop playsinline preload="none" aria-hidden="true" data-src="assets/video/home-416648a396.mp4" data-src-t="assets/video/home-ced0eb34f3.mp4"></video>
+          <img src="assets/img/work-58ffb1871b.webp" loading="lazy" decoding="async" alt="QuickFleet: An electric delivery business, built from the ground up">
+          <video muted loop playsinline preload="none" aria-hidden="true" data-src="assets/video/home-416648a396.mp4" data-src-m="assets/video/home-416648a396-m.mp4" data-src-t="assets/video/home-ced0eb34f3.mp4"></video>
           <span class="p-badge"><i></i>Live site</span>
         </a>
         <div class="p-info">
@@ -2392,8 +2390,8 @@ a.dr{text-decoration:none}
     <article class="proj" style="--i:1;--brand:#2B70E7">
       <div class="p-card">
         <a class="p-media" href="case-pantech.html" aria-label="Read the Pantech Dynamics case study">
-          <img src="assets/img/home-2be8ba2f3e.jpg" data-src-t="assets/img/home-7131f313b6.jpg" alt="Pantech Dynamics: Brand identity for Africa’s data centre">
-          <video muted loop playsinline preload="none" aria-hidden="true" data-src="assets/video/home-5e38f390d6.mp4" data-src-t="assets/video/home-b8b3da2df9.mp4"></video>
+          <img src="assets/img/work-6d7a4109e5.webp" loading="lazy" decoding="async" alt="Pantech Dynamics: Brand identity for Africa’s data centre">
+          <video muted loop playsinline preload="none" aria-hidden="true" data-src="assets/video/home-5e38f390d6.mp4" data-src-m="assets/video/home-5e38f390d6-m.mp4" data-src-t="assets/video/home-b8b3da2df9.mp4"></video>
           <span class="p-badge"><i></i>Brand launch</span>
         </a>
         <div class="p-info">
@@ -2414,8 +2412,8 @@ a.dr{text-decoration:none}
     <article class="proj" style="--i:2;--brand:#9C370B">
       <div class="p-card">
         <a class="p-media" href="case-rhanamerzy.html" aria-label="Read the Rhanamerzy case study">
-          <img src="assets/img/home-2b1b997e45.jpg" data-src-t="assets/img/home-2b50ac4a24.jpg" alt="Rhanamerzy: A bilingual website for an international advisory firm">
-          <video muted loop playsinline preload="none" aria-hidden="true" data-src="assets/video/home-e646414035.mp4" data-src-t="assets/video/home-26956cf811.mp4"></video>
+          <img src="assets/img/work-92ebdf4172.webp" loading="lazy" decoding="async" alt="Rhanamerzy: A bilingual website for an international advisory firm">
+          <video muted loop playsinline preload="none" aria-hidden="true" data-src="assets/video/home-e646414035.mp4" data-src-m="assets/video/home-e646414035-m.mp4" data-src-t="assets/video/home-26956cf811.mp4"></video>
           <span class="p-badge"><i></i>Live site</span>
         </a>
         <div class="p-info">
@@ -2436,8 +2434,8 @@ a.dr{text-decoration:none}
     <article class="proj" style="--i:3;--brand:#070707">
       <div class="p-card">
         <a class="p-media" href="https://atawodi.vercel.app" target="_blank" rel="noopener" data-cursor="View site" aria-label="View Emmanuel Atawodi’s portfolio (opens the live site)">
-          <img src="assets/img/home-17b97381a7.jpg" data-src-t="assets/img/home-b19a74740f.jpg" alt="Emmanuel Atawodi: A portfolio for a senior software engineer">
-          <video muted loop playsinline preload="none" aria-hidden="true" data-src="assets/video/home-87eb63a3ba.mp4" data-src-t="assets/video/home-22bd3774e3.mp4"></video>
+          <img src="assets/img/work-6d359f2de5.webp" loading="lazy" decoding="async" alt="Emmanuel Atawodi: A portfolio for a senior software engineer">
+          <video muted loop playsinline preload="none" aria-hidden="true" data-src="assets/video/home-87eb63a3ba.mp4" data-src-m="assets/video/home-87eb63a3ba-m.mp4" data-src-t="assets/video/home-22bd3774e3.mp4"></video>
           <span class="p-badge"><i></i>Live site</span>
         </a>
         <div class="p-info">
@@ -2469,7 +2467,7 @@ a.dr{text-decoration:none}
   </div>
   <div class="wp" id="wp">
     <article class="wp-p on" data-i="0" tabindex="0" aria-expanded="true">
-      <img class="wp-bg" src="assets/img/home-9c88613798.jpg" alt="">
+      <img class="wp-bg" loading="lazy" decoding="async" src="assets/img/home-9c88613798.webp" alt="">
       <div class="wp-shut" aria-hidden="true"><span class="wp-n">01</span><span class="wp-vt display">Founders with an idea</span><span class="wp-plus">+</span></div>
       <div class="wp-open">
         <span class="wp-n">01</span>
@@ -2480,7 +2478,7 @@ a.dr{text-decoration:none}
       </div>
     </article>
     <article class="wp-p" data-i="1" tabindex="0" aria-expanded="false">
-      <img class="wp-bg" src="assets/img/home-6b03a80a18.jpg" alt="">
+      <img class="wp-bg" loading="lazy" decoding="async" src="assets/img/home-6b03a80a18.webp" alt="">
       <div class="wp-shut" aria-hidden="true"><span class="wp-n">02</span><span class="wp-vt display">Business owners</span><span class="wp-plus">+</span></div>
       <div class="wp-open">
         <span class="wp-n">02</span>
@@ -2491,7 +2489,7 @@ a.dr{text-decoration:none}
       </div>
     </article>
     <article class="wp-p" data-i="2" tabindex="0" aria-expanded="false">
-      <img class="wp-bg" src="assets/img/home-9b6535e85b.jpg" alt="">
+      <img class="wp-bg" loading="lazy" decoding="async" src="assets/img/home-9b6535e85b.webp" alt="">
       <div class="wp-shut" aria-hidden="true"><span class="wp-n">03</span><span class="wp-vt display">Organisations with a new initiative</span><span class="wp-plus">+</span></div>
       <div class="wp-open">
         <span class="wp-n">03</span>
@@ -2502,7 +2500,7 @@ a.dr{text-decoration:none}
       </div>
     </article>
     <article class="wp-p" data-i="3" tabindex="0" aria-expanded="false">
-      <img class="wp-bg" src="assets/img/home-3f7634ec03.jpg" alt="">
+      <img class="wp-bg" loading="lazy" decoding="async" src="assets/img/home-3f7634ec03.webp" alt="">
       <div class="wp-shut" aria-hidden="true"><span class="wp-n">04</span><span class="wp-vt display">Companies looking for a partner</span><span class="wp-plus">+</span></div>
       <div class="wp-open">
         <span class="wp-n">04</span>
@@ -2523,25 +2521,25 @@ a.dr{text-decoration:none}
   </div>
   <div class="a-grid"><i class="hd tl"></i><i class="hd tr"></i><i class="hd bl"></i><i class="hd br"></i>
     <article class="a-cell" style="--d:0.00s">
-      <div class="a-img"><img src="assets/img/home-06e3978e2c.jpg" alt="" loading="lazy"><div class="chipstack"><span>Your business</span><span>Your goals</span><span>What you need help with</span></div></div>
+      <div class="a-img"><img src="assets/img/home-06e3978e2c.webp" alt="" loading="lazy"><div class="chipstack"><span>Your business</span><span>Your goals</span><span>What you need help with</span></div></div>
       <span class="a-n">01</span>
       <h3>We listen.</h3>
       <p>First, we understand your business, your goals and what you need help with.</p>
     </article>
     <article class="a-cell" style="--d:0.09s">
-      <div class="a-img"><img src="assets/img/home-a584a0b8e3.jpg" alt="" loading="lazy"><div class="opt"><span>Option A</span><span class="rec">Option B <b>Recommended</b></span><span>Option C</span></div></div>
+      <div class="a-img"><img src="assets/img/home-a584a0b8e3.webp" alt="" loading="lazy"><div class="opt"><span>Option A</span><span class="rec">Option B <b>Recommended</b></span><span>Option C</span></div></div>
       <span class="a-n">02</span>
       <h3>We find the right approach.</h3>
       <p>We look at your options and recommend practical next steps.</p>
     </article>
     <article class="a-cell" style="--d:0.18s">
-      <div class="a-img"><img src="assets/img/home-2c6a617a85.jpg" alt="" loading="lazy"><div class="agree"><span>What we’ll do <i><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2l2.3 2.3 4.7-5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></i></span><span>What you’ll receive <i><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2l2.3 2.3 4.7-5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></i></span><span>What the work involves <i><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2l2.3 2.3 4.7-5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></i></span></div></div>
+      <div class="a-img"><img src="assets/img/home-2c6a617a85.webp" alt="" loading="lazy"><div class="agree"><span>What we’ll do <i><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2l2.3 2.3 4.7-5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></i></span><span>What you’ll receive <i><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2l2.3 2.3 4.7-5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></i></span><span>What the work involves <i><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2l2.3 2.3 4.7-5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></i></span></div></div>
       <span class="a-n">03</span>
       <h3>We agree on<br>the work.</h3>
       <p>We explain what we’ll do, what you’ll receive and what the work involves.</p>
     </article>
     <article class="a-cell" style="--d:0.27s">
-      <div class="a-img"><img src="assets/img/home-55117c852b.jpg" alt="" loading="lazy"><div class="prog2"><span class="k"><b></b>Agreed work</span><span class="bar"><i></i></span><span class="s">Moving forward</span></div></div>
+      <div class="a-img"><img src="assets/img/home-55117c852b.webp" alt="" loading="lazy"><div class="prog2"><span class="k"><b></b>Agreed work</span><span class="bar"><i></i></span><span class="s">Moving forward</span></div></div>
       <span class="a-n">04</span>
       <h3>We help you move forward.</h3>
       <p>We carry out the agreed work, or coordinate the people who deliver it.</p>
@@ -2552,7 +2550,7 @@ a.dr{text-decoration:none}
 <section class="gallery gx" id="gallery" aria-label="Gallery">
   <div class="gx-pin">
     <div class="gx-stick">
-      <div class="gx-world"><figure class="gx-c" data-ar="0.8" data-p="QuickFleet" data-cap="QuickFleet — Brand"><img src="assets/img/home-f8dc2bd10d.jpg" alt="QuickFleet electric bikes in Abuja" draggable="false" loading="lazy"><a href="case-quickfleet.html" aria-label="QuickFleet" tabindex="-1"></a></figure><figure class="gx-c" data-ar="1" data-p="Pantech" data-cap="Pantech Dynamics — Campaign"><img src="assets/img/home-bf988a528d.jpg" alt="Pantech Dynamics: 8ms from Lagos" draggable="false" loading="lazy"><a href="case-pantech.html" aria-label="Pantech" tabindex="-1"></a></figure><figure class="gx-c" data-ar="1.6" data-p="Rhanamerzy" data-cap="Rhanamerzy — Website"><img src="assets/img/home-2ac5025fbd.jpg" alt="Rhanamerzy: the language choice screen" draggable="false" loading="lazy"><a href="case-rhanamerzy.html" aria-label="Rhanamerzy" tabindex="-1"></a></figure><figure class="gx-c" data-ar="1.1245" data-p="Pantech" data-cap="Pantech Dynamics — Posters"><img src="assets/img/home-000b3be1ce.jpg" alt="Pantech Dynamics campaign posters" draggable="false" loading="lazy"><a href="case-pantech.html" aria-label="Pantech" tabindex="-1"></a></figure><figure class="gx-c" data-ar="0.8" data-p="Atawodi" data-cap="Atawodi — Portfolio site"><img src="assets/img/home-1d901cc593.jpg" alt="Atawodi portfolio: the portrait in particles" draggable="false" loading="lazy"><a href="https://atawodi.vercel.app" target="_blank" rel="noopener" aria-label="Atawodi" tabindex="-1"></a></figure><figure class="gx-c" data-ar="0.6667" data-p="Pantech" data-cap="Pantech Dynamics — Billboard"><img src="assets/img/home-2c355241e0.jpg" alt="Pantech Dynamics billboard" draggable="false" loading="lazy"><a href="case-pantech.html" aria-label="Pantech" tabindex="-1"></a></figure><figure class="gx-c" data-ar="1.6" data-p="QuickFleet" data-cap="QuickFleet — Battery-swap hub"><img src="assets/img/home-4ec032e701.jpg" alt="QuickFleet battery-swap hub" draggable="false" loading="lazy"><a href="case-quickfleet.html" aria-label="QuickFleet" tabindex="-1"></a></figure><figure class="gx-c" data-ar="1" data-p="Pantech" data-cap="Pantech Dynamics — Social"><img src="assets/img/home-7260b1b6f2.jpg" alt="Pantech Dynamics post" draggable="false" loading="lazy"><a href="case-pantech.html" aria-label="Pantech" tabindex="-1"></a></figure><figure class="gx-c" data-ar="1.6" data-p="Rhanamerzy" data-cap="Rhanamerzy — Website"><img src="assets/img/home-ce2f46b19a.jpg" alt="Rhanamerzy site: Some decisions cannot wait" draggable="false" loading="lazy"><a href="case-rhanamerzy.html" aria-label="Rhanamerzy" tabindex="-1"></a></figure><figure class="gx-c" data-ar="0.56" data-p="QuickFleet" data-cap="QuickFleet — App"><img src="assets/img/home-6139809e0c.jpg" alt="QuickFleet app: live delivery tracking" draggable="false" loading="lazy"><a href="case-quickfleet.html" aria-label="QuickFleet" tabindex="-1"></a></figure><figure class="gx-c" data-ar="1.6" data-p="Atawodi" data-cap="Atawodi — Portfolio site"><img src="assets/img/home-af965a4d0e.jpg" alt="Atawodi portfolio: the entry screen with the planet" draggable="false" loading="lazy"><a href="https://atawodi.vercel.app" target="_blank" rel="noopener" aria-label="Atawodi" tabindex="-1"></a></figure><figure class="gx-c" data-ar="1" data-p="Pantech" data-cap="Pantech Dynamics — Merchandise"><img src="assets/img/home-6f0967bf7a.jpg" alt="Pantech Dynamics merchandise" draggable="false" loading="lazy"><a href="case-pantech.html" aria-label="Pantech" tabindex="-1"></a></figure><figure class="gx-c" data-ar="1" data-p="QuickFleet" data-cap="QuickFleet — Website"><img src="assets/img/home-0888c56e8d.jpg" alt="QuickFleet site on a laptop" draggable="false" loading="lazy"><a href="case-quickfleet.html" aria-label="QuickFleet" tabindex="-1"></a></figure><figure class="gx-c" data-ar="1" data-p="Pantech" data-cap="Pantech Dynamics — Social"><img src="assets/img/home-feac63e16b.jpg" alt="Pantech Dynamics: from the founder" draggable="false" loading="lazy"><a href="case-pantech.html" aria-label="Pantech" tabindex="-1"></a></figure><figure class="gx-c" data-ar="1" data-p="Rhanamerzy" data-cap="Rhanamerzy — Website"><img src="assets/img/home-49c43b6085.jpg" alt="Rhanamerzy site on a monitor" draggable="false" loading="lazy"><a href="case-rhanamerzy.html" aria-label="Rhanamerzy" tabindex="-1"></a></figure><figure class="gx-c" data-ar="1.6" data-p="Atawodi" data-cap="Atawodi — Portfolio site"><img src="assets/img/home-6997aa6412.jpg" alt="Atawodi portfolio: the edge of the map" draggable="false" loading="lazy"><a href="https://atawodi.vercel.app" target="_blank" rel="noopener" aria-label="Atawodi" tabindex="-1"></a></figure><figure class="gx-c" data-ar="1" data-p="Pantech" data-cap="Pantech Dynamics — Social"><img src="assets/img/home-2622627cef.jpg" alt="Pantech Dynamics: 526km" draggable="false" loading="lazy"><a href="case-pantech.html" aria-label="Pantech" tabindex="-1"></a></figure><figure class="gx-c" data-ar="1.6" data-p="QuickFleet" data-cap="QuickFleet — Brand"><img src="assets/img/home-bae2b4b4b5.jpg" alt="QuickFleet riders at the hub" draggable="false" loading="lazy"><a href="case-quickfleet.html" aria-label="QuickFleet" tabindex="-1"></a></figure><figure class="gx-c" data-ar="1.6" data-p="Pantech" data-cap="Pantech Dynamics — Brand environment"><img src="assets/img/home-9d2e806ff2.jpg" alt="Pantech Dynamics reception wall" draggable="false" loading="lazy"><a href="case-pantech.html" aria-label="Pantech" tabindex="-1"></a></figure></div>
+      <div class="gx-world"><figure class="gx-c" data-ar="0.8" data-p="QuickFleet" data-cap="QuickFleet — Brand"><img src="assets/img/home-f8dc2bd10d.webp" alt="QuickFleet electric bikes in Abuja" draggable="false" loading="lazy"><a href="case-quickfleet.html" aria-label="QuickFleet" tabindex="-1"></a></figure><figure class="gx-c" data-ar="1" data-p="Pantech" data-cap="Pantech Dynamics — Campaign"><img src="assets/img/home-bf988a528d.webp" alt="Pantech Dynamics: 8ms from Lagos" draggable="false" loading="lazy"><a href="case-pantech.html" aria-label="Pantech" tabindex="-1"></a></figure><figure class="gx-c" data-ar="1.6" data-p="Rhanamerzy" data-cap="Rhanamerzy — Website"><img src="assets/img/home-2ac5025fbd.webp" alt="Rhanamerzy: the language choice screen" draggable="false" loading="lazy"><a href="case-rhanamerzy.html" aria-label="Rhanamerzy" tabindex="-1"></a></figure><figure class="gx-c" data-ar="1.1245" data-p="Pantech" data-cap="Pantech Dynamics — Posters"><img src="assets/img/home-000b3be1ce.webp" alt="Pantech Dynamics campaign posters" draggable="false" loading="lazy"><a href="case-pantech.html" aria-label="Pantech" tabindex="-1"></a></figure><figure class="gx-c" data-ar="0.8" data-p="Atawodi" data-cap="Atawodi — Portfolio site"><img src="assets/img/home-1d901cc593.webp" alt="Atawodi portfolio: the portrait in particles" draggable="false" loading="lazy"><a href="https://atawodi.vercel.app" target="_blank" rel="noopener" aria-label="Atawodi" tabindex="-1"></a></figure><figure class="gx-c" data-ar="0.6667" data-p="Pantech" data-cap="Pantech Dynamics — Billboard"><img src="assets/img/home-2c355241e0.webp" alt="Pantech Dynamics billboard" draggable="false" loading="lazy"><a href="case-pantech.html" aria-label="Pantech" tabindex="-1"></a></figure><figure class="gx-c" data-ar="1.6" data-p="QuickFleet" data-cap="QuickFleet — Battery-swap hub"><img src="assets/img/home-4ec032e701.webp" alt="QuickFleet battery-swap hub" draggable="false" loading="lazy"><a href="case-quickfleet.html" aria-label="QuickFleet" tabindex="-1"></a></figure><figure class="gx-c" data-ar="1" data-p="Pantech" data-cap="Pantech Dynamics — Social"><img src="assets/img/home-7260b1b6f2.webp" alt="Pantech Dynamics post" draggable="false" loading="lazy"><a href="case-pantech.html" aria-label="Pantech" tabindex="-1"></a></figure><figure class="gx-c" data-ar="1.6" data-p="Rhanamerzy" data-cap="Rhanamerzy — Website"><img src="assets/img/home-ce2f46b19a.webp" alt="Rhanamerzy site: Some decisions cannot wait" draggable="false" loading="lazy"><a href="case-rhanamerzy.html" aria-label="Rhanamerzy" tabindex="-1"></a></figure><figure class="gx-c" data-ar="0.56" data-p="QuickFleet" data-cap="QuickFleet — App"><img src="assets/img/home-6139809e0c.webp" alt="QuickFleet app: live delivery tracking" draggable="false" loading="lazy"><a href="case-quickfleet.html" aria-label="QuickFleet" tabindex="-1"></a></figure><figure class="gx-c" data-ar="1.6" data-p="Atawodi" data-cap="Atawodi — Portfolio site"><img src="assets/img/home-af965a4d0e.webp" alt="Atawodi portfolio: the entry screen with the planet" draggable="false" loading="lazy"><a href="https://atawodi.vercel.app" target="_blank" rel="noopener" aria-label="Atawodi" tabindex="-1"></a></figure><figure class="gx-c" data-ar="1" data-p="Pantech" data-cap="Pantech Dynamics — Merchandise"><img src="assets/img/home-6f0967bf7a.webp" alt="Pantech Dynamics merchandise" draggable="false" loading="lazy"><a href="case-pantech.html" aria-label="Pantech" tabindex="-1"></a></figure><figure class="gx-c" data-ar="1" data-p="QuickFleet" data-cap="QuickFleet — Website"><img src="assets/img/home-0888c56e8d.webp" alt="QuickFleet site on a laptop" draggable="false" loading="lazy"><a href="case-quickfleet.html" aria-label="QuickFleet" tabindex="-1"></a></figure><figure class="gx-c" data-ar="1" data-p="Pantech" data-cap="Pantech Dynamics — Social"><img src="assets/img/home-feac63e16b.webp" alt="Pantech Dynamics: from the founder" draggable="false" loading="lazy"><a href="case-pantech.html" aria-label="Pantech" tabindex="-1"></a></figure><figure class="gx-c" data-ar="1" data-p="Rhanamerzy" data-cap="Rhanamerzy — Website"><img src="assets/img/home-49c43b6085.webp" alt="Rhanamerzy site on a monitor" draggable="false" loading="lazy"><a href="case-rhanamerzy.html" aria-label="Rhanamerzy" tabindex="-1"></a></figure><figure class="gx-c" data-ar="1.6" data-p="Atawodi" data-cap="Atawodi — Portfolio site"><img src="assets/img/home-6997aa6412.webp" alt="Atawodi portfolio: the edge of the map" draggable="false" loading="lazy"><a href="https://atawodi.vercel.app" target="_blank" rel="noopener" aria-label="Atawodi" tabindex="-1"></a></figure><figure class="gx-c" data-ar="1" data-p="Pantech" data-cap="Pantech Dynamics — Social"><img src="assets/img/home-2622627cef.webp" alt="Pantech Dynamics: 526km" draggable="false" loading="lazy"><a href="case-pantech.html" aria-label="Pantech" tabindex="-1"></a></figure><figure class="gx-c" data-ar="1.6" data-p="QuickFleet" data-cap="QuickFleet — Brand"><img src="assets/img/home-bae2b4b4b5.webp" alt="QuickFleet riders at the hub" draggable="false" loading="lazy"><a href="case-quickfleet.html" aria-label="QuickFleet" tabindex="-1"></a></figure><figure class="gx-c" data-ar="1.6" data-p="Pantech" data-cap="Pantech Dynamics — Brand environment"><img src="assets/img/home-9d2e806ff2.webp" alt="Pantech Dynamics reception wall" draggable="false" loading="lazy"><a href="case-pantech.html" aria-label="Pantech" tabindex="-1"></a></figure></div>
       <div class="gx-title"><span class="label">Gallery</span><h2 class="display">A closer look<br>at the work.</h2></div>
       <div class="gx-label wrap"><span class="label">Gallery</span></div>
       <div class="gx-end"><a href="work.html">See all work <b><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="square"/></svg></b></a></div>
@@ -2620,7 +2618,7 @@ a.dr{text-decoration:none}
   </div>
 </section>
 
-<div class="endscene"><div class="es-bg" aria-hidden="true"><img src="assets/img/home-8826fd3b73.jpg" alt=""></div>
+<div class="endscene"><div class="es-bg" aria-hidden="true"><img loading="lazy" decoding="async" src="assets/img/home-8826fd3b73.webp" srcset="assets/img/home-8826fd3b73-1000.webp 1000w, assets/img/home-8826fd3b73.webp 2000w" sizes="100vw" alt=""></div>
 <section class="contact wrap" id="contact">
   <div class="c-head">
     <span class="label">Next step</span>
@@ -2629,14 +2627,14 @@ a.dr{text-decoration:none}
   </div>
   <div class="drs">
     <a class="dr" href="contact.html?door=build" data-door="build">
-      <span class="dr-img" aria-hidden="true"><img src="assets/img/home-bc1b3b0424.png" alt=""></span>
+      <span class="dr-img" aria-hidden="true"><img loading="lazy" decoding="async" src="assets/img/home-bc1b3b0424.png" alt=""></span>
       <span class="dr-k">Venture Development</span>
       <span class="dr-t display">Build or improve a business</span>
       <span class="dr-s">Have a business idea you want to develop? Or an existing business that needs improvement?</span>
       <span class="dr-go">Start the conversation<span class="dr-arr" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="square"/></svg></span></span>
     </a>
     <a class="dr" href="contact.html?door=partner" data-door="partner">
-      <span class="dr-img" aria-hidden="true"><img src="assets/img/home-532a303761.png" alt=""></span>
+      <span class="dr-img" aria-hidden="true"><img loading="lazy" decoding="async" src="assets/img/home-532a303761.png" alt=""></span>
       <span class="dr-k">Commercial Partnerships</span>
       <span class="dr-t display">Explore a partnership</span>
       <span class="dr-s">Sometimes the right business partner can help you achieve something you cannot do alone.</span>
@@ -2670,7 +2668,7 @@ a.dr{text-decoration:none}
 <script>
 (() => {
   const GREEN = '#B5EB5B';
-  const INK = { src: 'assets/img/home-ec98074d6c.jpg', full: [0.74, 0.5], win: [0.79, 0.4] };
+  const INK = { src: 'assets/img/home-ec98074d6c.webp', full: [0.74, 0.5], win: [0.79, 0.4] };
   const HEADLINE = {
     label: 'Every brand has a soul. We design it, then we build it.',
     wide: ['Every brand has', 'a soul. {slot} We design it,', 'then we build it{dot}'],
@@ -2927,7 +2925,7 @@ void main(){
     const c = cutFor(v); if (v._cut === c) return; v._cut = c;
     const im = v.parentElement.querySelector('img');
     if (im && im.dataset.srcT) { if (!im.dataset.srcW) im.dataset.srcW = im.getAttribute('src'); im.src = c === 't' ? im.dataset.srcT : im.dataset.srcW; }
-    const d = c === 't' ? v.dataset.srcT : v.dataset.src;
+    const d = c === 't' ? v.dataset.srcT : (innerWidth < 760 && v.dataset.srcM ? v.dataset.srcM : v.dataset.src);
     if (d && !reduce) { const was = !v.paused; v.classList.remove('playing'); v.src = d; v.load(); if (was) v.play().catch(() => {}); }
   }
   let cutT; addEventListener('resize', () => { clearTimeout(cutT); cutT = setTimeout(() => vids.forEach((v) => v && loadCut(v)), 400); });
@@ -2946,6 +2944,7 @@ void main(){
       if (v && !reduce) {
         const active = pj.classList.contains('in') && c < 0.55 && r.bottom > vh * 0.25 && r.top < vh * 0.75 && r.left < innerWidth * 0.6 && r.right > innerWidth * 0.4;
         if (active) window.__pv = v;
+        if (!v._pl && v.src && r.top < vh * 1.9 && r.bottom > -vh * .5) { v._pl = 1; v.preload = 'auto'; }
         if (active && v.paused && v.src && !v._pp) { v._pp = 1; v.play().then(() => { v._pp = 0; }, () => { setTimeout(() => { v._pp = 0; }, 1500); }); }
         else if (!active && !v.paused) v.pause();
       }
