@@ -2928,7 +2928,7 @@ void main(){
     const im = v.parentElement.querySelector('img');
     if (im && im.dataset.srcT) { if (!im.dataset.srcW) im.dataset.srcW = im.getAttribute('src'); im.src = c === 't' ? im.dataset.srcT : im.dataset.srcW; }
     const d = c === 't' ? v.dataset.srcT : v.dataset.src;
-    if (d && !reduce) fetch(d).then((r) => r.blob()).then((b) => { if (v._cut !== c) return; const was = !v.paused; if (v._url) URL.revokeObjectURL(v._url); v._url = URL.createObjectURL(b); v.classList.remove('playing'); v.src = v._url; v.load(); if (was) v.play().catch(() => {}); }).catch(() => {});
+    if (d && !reduce) { const was = !v.paused; v.classList.remove('playing'); v.src = d; v.load(); if (was) v.play().catch(() => {}); }
   }
   let cutT; addEventListener('resize', () => { clearTimeout(cutT); cutT = setTimeout(() => vids.forEach((v) => v && loadCut(v)), 400); });
   function updateProjects(vh) {
@@ -2945,7 +2945,8 @@ void main(){
       const v = vids[i];
       if (v && !reduce) {
         const active = pj.classList.contains('in') && c < 0.55 && r.bottom > vh * 0.25 && r.top < vh * 0.75 && r.left < innerWidth * 0.6 && r.right > innerWidth * 0.4;
-        if (active && v.paused && v.src) v.play().catch(() => {});
+        if (active) window.__pv = v;
+        if (active && v.paused && v.src && !v._pp) { v._pp = 1; v.play().then(() => { v._pp = 0; }, () => { setTimeout(() => { v._pp = 0; }, 1500); }); }
         else if (!active && !v.paused) v.pause();
       }
     });
@@ -3495,5 +3496,6 @@ void main(){
   addEventListener('resize', () => { size(); measure(); frame(cur); kick(); });
 })();
 </script>
+<script>addEventListener('touchend',()=>{const v=window.__pv;if(v&&v.paused&&v.src)v.play().catch(()=>{});},{passive:true});</script>
 </body>
 </html>
