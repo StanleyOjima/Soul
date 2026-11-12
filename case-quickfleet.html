@@ -814,44 +814,96 @@ a{color:inherit;text-decoration:none}
 .cs-btn{background:var(--green);color:var(--ink);height:52px;padding:0 20px}
 .cs-btn:hover{transform:translateY(-2px)}
 
-/* 1 hero */
-.cs-hero{background:var(--ink);color:var(--paper);padding-top:clamp(120px,17vh,180px);padding-bottom:clamp(40px,6vh,72px)}
-.cs-crumb{display:inline-flex;align-items:center;gap:10px;font-size:13px;color:var(--paper-2);margin-bottom:clamp(34px,6vh,64px);transition:color .3s}
-.cs-crumb:hover{color:var(--paper)}
-.cs-hgrid{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-bottom:clamp(36px,5vh,56px)}
-.cs-h1{margin:20px 0 0;font-size:min(96px,12.6vw);line-height:.92;letter-spacing:-.04em}
-.cs-hsub{margin:22px 0 0;font-size:clamp(19px,1.7vw,26px);line-height:1.3;color:var(--paper-2);max-width:26ch}
-.cs-film{margin:0;position:relative;aspect-ratio:1440/990;max-height:calc(100svh - 120px);width:100%;border-radius:10px;overflow:hidden;background:#0C0730}
-.cs-film img,.cs-film video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.cs-film video{opacity:0;transition:opacity .8s ease}.cs-film video.playing{opacity:1}
+/* 1 hero (light) */
+.cs-crumb{display:inline-flex;align-items:center;gap:10px;font-size:13px;transition:color .3s}
+.ch{background:var(--light);color:var(--ink);padding-top:clamp(108px,15vh,150px)}
+.ch-top{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.ch .cs-crumb{margin:0;color:var(--ink-2)}.ch .cs-crumb:hover{color:var(--ink)}
+.ch-tag{display:inline-flex;align-items:center;gap:9px;font-size:11px;font-weight:600;font-stretch:112%;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-2)}
+.ch-tag i{width:7px;height:7px;border-radius:50%;background:#0A997D}
+.ch-title{margin:clamp(30px,5vh,56px) 0 0;font-size:min(16.4vw,248px);line-height:.84;letter-spacing:-.055em;white-space:nowrap;margin-left:-.05em}
+.ch-title span{display:inline-block;transform:translateY(.28em);opacity:0;transition:transform 1.1s var(--ease) calc(var(--d)*45ms),opacity .8s ease calc(var(--d)*45ms)}
+.ch.on .ch-title span{transform:none;opacity:1}
+.ch-row{display:flex;justify-content:space-between;align-items:flex-end;gap:28px;margin-top:clamp(22px,3.4vh,36px);padding-bottom:clamp(30px,5vh,52px)}
+.ch-sub{margin:0;font-size:clamp(20px,1.9vw,30px);line-height:1.22;letter-spacing:-.012em;max-width:22ch}
+.ch-row .cs-btn,.ci .cs-btn{flex:none}
+.ch-stage{position:relative;overflow:hidden}
+.ch-film{margin:0;position:relative;width:100%;aspect-ratio:1440/860;border-radius:calc(var(--r,10px));overflow:hidden;background:#0C0730;
+  transform:scale(var(--s,1));transform-origin:50% 0;will-change:transform}
+.ch-film img,.ch-film video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ch-film video{opacity:0;transition:opacity .8s ease}.ch-film video.playing{opacity:1}
+.ch-facts{display:grid;grid-template-columns:repeat(5,1fr);gap:24px;margin:0;padding:22px 0 clamp(80px,12vh,130px)}
+.ch-facts div{padding-top:16px;border-top:1px solid rgba(11,11,10,.14)}
+.ch-facts dt{font-size:11px;font-weight:600;font-stretch:112%;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-2)}
+.ch-facts dd{margin:8px 0 0;font-size:16px;line-height:1.4}
+.ch-facts a{display:inline-flex;align-items:center;gap:6px;border-bottom:1px solid rgba(11,11,10,.3)}
+.cs-eyebrow{display:block;font-size:11px;font-weight:600;font-stretch:112%;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-2);margin-bottom:26px}
 
-/* 2 intro */
-.cs-intro{background:var(--light);color:var(--ink);padding-top:clamp(90px,13vh,150px);padding-bottom:clamp(90px,13vh,150px)}
-.cs-lede{grid-column:1 / span 7}
-.cs-big{margin:0;font-size:clamp(22px,2.15vw,33px);line-height:1.32;letter-spacing:-.012em}
-.cs-own{margin:28px 0 0;font-size:15px;line-height:1.55;color:var(--ink-2);max-width:52ch;padding-left:16px;border-left:2px solid var(--green)}
-.cs-facts{grid-column:9 / span 4;margin:0;align-self:start}
-.cs-facts div{display:grid;grid-template-columns:118px 1fr;gap:16px;padding:15px 0;border-top:1px solid rgba(11,11,10,.12)}
-.cs-facts div:last-child{border-bottom:1px solid rgba(11,11,10,.12)}
-.cs-facts dt{font-size:11px;font-weight:600;font-stretch:112%;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-2);padding-top:3px}
-.cs-facts dd{margin:0;font-size:15.5px;line-height:1.45}
+/* 2 brief */
+.ci{background:#F6F4EE;color:var(--ink);padding-top:clamp(100px,14vh,160px);padding-bottom:clamp(100px,14vh,160px)}
+.ci-state{margin:0;font-size:clamp(34px,4.4vw,70px);line-height:1.02;letter-spacing:-.035em;max-width:20ch}
+.ci-cols{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;margin-top:clamp(40px,6vh,64px)}
+.ci-cols p{margin:0;font-size:clamp(17px,1.25vw,19px);line-height:1.55;color:var(--ink-2)}
+.ci-cols p:first-child{grid-column:5 / span 4}.ci-cols p:last-child{grid-column:9 / span 4}
+.ci-did{list-style:none;margin:clamp(70px,10vh,110px) 0 0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid rgba(11,11,10,.14)}
+.ci-did li{padding:22px 22px 26px 0;display:flex;flex-direction:column;gap:6px;border-right:1px solid rgba(11,11,10,.1);padding-left:22px}
+.ci-did li:first-child{padding-left:0}.ci-did li:last-child{border-right:0}
+.ci-did span{font-size:11px;font-weight:600;font-stretch:112%;letter-spacing:.09em;color:var(--ink-2)}
+.ci-did b{font-family:var(--display);font-weight:600;font-size:clamp(20px,1.7vw,26px);letter-spacing:-.025em;margin-top:22px}
+.ci-did em{font-style:normal;font-size:14.5px;line-height:1.45;color:var(--ink-2)}
+.ci-own{margin:clamp(44px,6vh,64px) 0 0;font-size:14.5px;line-height:1.55;color:var(--ink-2);max-width:60ch;padding-left:14px;border-left:2px solid var(--green)}
 
 /* 3 problem */
-.cs-prob{background:var(--ink);color:var(--paper);padding-top:clamp(100px,15vh,170px);padding-bottom:clamp(100px,15vh,170px)}
-.cs-fuel{display:flex;align-items:flex-end;gap:clamp(18px,3vw,48px);margin:10px 0 clamp(60px,9vh,100px);flex-wrap:wrap}
-.cf{display:flex;flex-direction:column;gap:14px}
-.cf b{font-size:clamp(64px,11vw,176px);line-height:.85;letter-spacing:-.05em;font-weight:600;color:var(--paper-2)}
-.cf.now b{color:var(--green)}
-.cf span{font-size:14px;color:var(--paper-2);max-width:24ch}
-.cf sup{font-size:10px;margin-left:2px}
-.cf-arr{width:clamp(40px,6vw,90px);color:var(--paper-2);padding-bottom:clamp(30px,5vw,70px)}
-.cf-arr svg{width:100%;height:auto;display:block}
-.cs-pr2 .cs-h2{grid-column:1 / span 6}
-.cs-three{grid-column:8 / span 5;list-style:none;margin:0;padding:0}
-.cs-three li{display:grid;grid-template-columns:96px 1fr;gap:16px;padding:18px 0;border-top:1px solid var(--line);font-size:17px}
-.cs-three li:last-child{border-bottom:1px solid var(--line)}
-.cs-three span{font-size:11px;font-weight:600;font-stretch:112%;letter-spacing:.09em;text-transform:uppercase;color:var(--green);padding-top:5px}
+.cp{background:var(--light);color:var(--ink);padding-top:clamp(100px,14vh,160px);padding-bottom:clamp(100px,14vh,160px)}
+.cp-g{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;align-items:end}
+.cp-h{grid-column:1 / span 5;margin:0;font-size:clamp(36px,4.2vw,66px);line-height:1;letter-spacing:-.035em}
+.cp-h em{font-style:normal;background:var(--green);padding:0 .1em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.cp-bars{grid-column:7 / span 6;display:flex;flex-direction:column;gap:22px}
+.cpb-l{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:10px}
+.cpb-l span{font-size:13px;color:var(--ink-2)}
+.cpb-l b{font-family:var(--display);font-weight:600;font-size:clamp(40px,4.6vw,76px);line-height:.9;letter-spacing:-.045em}
+.cpb:not(.now) .cpb-l b{color:#9C9A93}
+.cpb-t{height:14px;border-radius:2px;background:rgba(11,11,10,.07);overflow:hidden}
+.cpb-t i{display:block;height:100%;width:var(--w);background:#B9B7B1;transform:scaleX(0);transform-origin:0 50%;transition:transform 1.4s var(--ease) .2s}
+.cpb.now .cpb-t i{background:var(--ink);transition-delay:.45s}
+.cp-bars.on .cpb-t i{transform:none}
+.cpb-k{margin:2px 0 0;font-size:13px;color:var(--ink-2)}
+.cp-src{list-style:none;margin:6px 0 0;padding:12px 0 0;border-top:1px solid rgba(11,11,10,.1);display:grid;gap:4px;font-size:12px;line-height:1.45;color:var(--muted)}.cp-src sup{margin-right:5px}
+.cp-gam{margin-top:clamp(90px,13vh,140px);padding-top:28px;border-top:1px solid rgba(11,11,10,.14)}
+.cp-gam h3{margin:0;font-size:clamp(26px,2.5vw,40px);letter-spacing:-.03em}
+.cp-cards{list-style:none;margin:clamp(30px,4vh,44px) 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.cp-cards li{background:#fff;border-radius:6px;padding:26px 26px 30px;min-height:190px;display:flex;flex-direction:column;box-shadow:0 1px 0 rgba(11,11,10,.04)}
+.cpc-x{width:30px;height:30px;border-radius:50%;border:1.5px solid #D14B2E;position:relative;margin-bottom:auto}
+.cpc-x::before,.cpc-x::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:1.5px;background:#D14B2E;transform:translate(-50%,-50%) rotate(45deg)}
+.cpc-x::after{transform:translate(-50%,-50%) rotate(-45deg)}
+.cp-cards b{display:block;margin-top:34px;font-family:var(--display);font-weight:600;font-size:22px;letter-spacing:-.02em}
+.cp-cards p{margin:6px 0 0;font-size:16px;line-height:1.45;color:var(--ink-2)}
+.cp-cards li{transition:transform .9s var(--ease),opacity .9s var(--ease)}
+.cs .cp-cards[data-reveal]{opacity:1;transform:none}
+.cp-cards:not(.on) li{opacity:0;transform:translateY(22px)}
+.cp-cards li:nth-child(2){transition-delay:.12s}.cp-cards li:nth-child(3){transition-delay:.24s}
 
+@media (max-width:900px){
+  .ch{padding-top:100px}
+  .ch-title{font-size:clamp(50px,17.2vw,140px);margin-top:34px}
+  .ch-row{flex-direction:column;align-items:flex-start;gap:22px}
+  .ch-film{aspect-ratio:16/11}
+  .ch-facts{grid-template-columns:1fr 1fr;gap:0 20px;padding-bottom:80px}
+  .ch-facts div{padding:14px 0}
+  .ch-facts div:last-child{grid-column:1 / -1}
+  .ci-cols{grid-template-columns:1fr;gap:16px}
+  .ci-cols p:first-child,.ci-cols p:last-child{grid-column:1 / -1}
+  .ci-did{grid-template-columns:1fr}
+  .ci-did li{display:grid;grid-template-columns:34px 1fr;column-gap:12px;padding:16px 0;border-right:0;border-bottom:1px solid rgba(11,11,10,.1)}
+  .ci-did li:first-child{padding-left:0}
+  .ci-did b{margin:0;font-size:20px;grid-column:2}.ci-did span{grid-row:1;padding-top:6px}.ci-did em{grid-column:2}
+  .cp-g{grid-template-columns:1fr}.cp-h,.cp-bars{grid-column:1 / -1}
+  .cp-bars{margin-top:44px}
+  .cp-cards{grid-template-columns:1fr}
+  .cp-cards li{min-height:0;flex-direction:row;flex-wrap:wrap;align-items:center;column-gap:16px;padding:20px}
+  .cp-cards b{margin:0;font-size:19px}.cp-cards p{flex-basis:100%;margin-top:10px}
+  .cpc-x{margin:0}
+}
 /* 4 idea */
 .cs-idea{background:var(--green);color:var(--ink);padding-top:clamp(100px,15vh,170px);padding-bottom:clamp(100px,15vh,170px)}
 .cs-idea .label{color:var(--ink)}
@@ -967,16 +1019,6 @@ a{color:inherit;text-decoration:none}
 @media (max-width:900px){
   .cs-g,.pp,.cb-row{grid-template-columns:1fr}
   .cs-g>*,.pp>*,.cb-row>*{grid-column:1 / -1!important}
-  .cs-hero{padding-top:112px}
-  .cs-hgrid{flex-direction:column;align-items:flex-start;gap:24px}
-  .cs-h1{font-size:clamp(52px,15vw,72px)}
-  .cs-film{aspect-ratio:16/11;border-radius:8px}
-  .cs-facts{margin-top:44px}
-  .cs-facts div{grid-template-columns:104px 1fr}
-  .cs-three{margin-top:40px}
-  .cs-three li{grid-template-columns:78px 1fr;font-size:16px}
-  .cs-fuel{gap:10px 18px}
-  .cf-arr{display:none}
   .cs-prom{grid-template-columns:1fr;gap:34px}
   .cs-prom h3{margin-top:18px}
   .pp-stick{display:none}
@@ -1079,59 +1121,75 @@ body{background:var(--ink)}
 }
 </style>
 <main class="cs" id="top">
-  <!-- 1 · hero (ink) -->
-  <section class="cs-hero wrap">
-    <div class="in">
-      <a class="cs-crumb" href="work.html"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M13 7H2M6 3L2 7l4 4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>All work</a>
-      <div class="cs-hgrid">
-        <div class="cs-hl">
-          <span class="label">Case study · Venture build</span>
-          <h1 class="display cs-h1"><span class="ln">QuickFleet</span></h1>
-          <p class="cs-hsub">An electric delivery business, built from the ground&nbsp;up.</p>
-        </div>
-        <div class="cs-hr">
-          <a class="btn cs-btn" href="https://quickfleet.co" target="_blank" rel="noopener"><span>Visit quickfleet.co</span><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9l6-6M4 3h5v5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
-        </div>
+  <!-- 1 · hero (light) -->
+  <section class="ch">
+    <div class="in wrap">
+      <div class="ch-top">
+        <a class="cs-crumb" href="work.html"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M13 7H2M6 3L2 7l4 4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>All work</a>
+        <span class="ch-tag"><i></i>Case study 01 · Venture build</span>
       </div>
-      <figure class="cs-film" data-reveal>
+      <h1 class="display ch-title" aria-label="QuickFleet"><span style="--d:0">Q</span><span style="--d:1">u</span><span style="--d:2">i</span><span style="--d:3">c</span><span style="--d:4">k</span><span style="--d:5">F</span><span style="--d:6">l</span><span style="--d:7">e</span><span style="--d:8">e</span><span style="--d:9">t</span></h1>
+      <div class="ch-row">
+        <p class="ch-sub">An electric delivery business, built from the ground&nbsp;up.</p>
+        <a class="btn cs-btn" href="https://quickfleet.co" target="_blank" rel="noopener"><span>Visit quickfleet.co</span><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9l6-6M4 3h5v5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
+      </div>
+    </div>
+    <div class="ch-stage">
+      <figure class="cs-film ch-film">
         <img class="cs-poster" src="assets/img/cs-qf-bikes-376ef7575a.webp" width="2000" height="1155" alt="QuickFleet electric motorcycles with branded delivery boxes" decoding="async">
         <video muted loop playsinline preload="none" aria-hidden="true" data-src="assets/video/home-416648a396.mp4" data-src-m="assets/video/home-416648a396-m.mp4"></video>
       </figure>
     </div>
-  </section>
-
-  <!-- 2 · intro and facts (paper) -->
-  <section class="cs-intro wrap">
-    <div class="in cs-g">
-      <div class="cs-lede" data-reveal>
-        <p class="cs-big">QuickFleet runs same-day delivery on electric motorcycles, with battery-swap hubs across the city and a record for every parcel. We shaped the business with its founders, then built everything a customer touches: the brand, the app and the website.</p>
-        <p class="cs-own">QuickFleet is a venture SOUL’s founders started together. The idea came from Sani and Emmanuel; we built it the way we build for every client.</p>
-      </div>
-      <dl class="cs-facts" data-reveal>
+    <div class="in wrap">
+      <dl class="ch-facts" data-reveal>
         <div><dt>Industry</dt><dd>Logistics, electric mobility</dd></div>
         <div><dt>Location</dt><dd>Abuja, Nigeria</dd></div>
-        <div><dt>What we did</dt><dd>Strategy, operations, brand, product, website</dd></div>
         <div><dt>Stage</dt><dd><i class="cs-dot"></i>Pre-launch</dd></div>
         <div><dt>Year</dt><dd>2026</dd></div>
+        <div><dt>Live</dt><dd><a href="https://quickfleet.co" target="_blank" rel="noopener">quickfleet.co <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9l6-6M4 3h5v5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a></dd></div>
       </dl>
     </div>
   </section>
 
-  <!-- 3 · the problem (ink) -->
-  <section class="cs-prob wrap">
+  <!-- 2 · the brief (light) -->
+  <section class="ci wrap">
     <div class="in">
-      <span class="label cs-k">01 — The problem</span>
-      <div class="cs-fuel" data-reveal>
-        <div class="cf"><b class="display">₦238</b><span>A litre of petrol, May 2023 average<sup>1</sup></span></div>
-        <span class="cf-arr" aria-hidden="true"><svg viewBox="0 0 60 20"><path d="M0 10h56M48 3l8 7-8 7" fill="none" stroke="currentColor" stroke-width="2"/></svg></span>
-        <div class="cf now"><b class="display">₦1,325</b><span>A litre in Abuja, November 2026<sup>2</sup></span></div>
+      <span class="cs-eyebrow">The brief</span>
+      <p class="display ci-state" data-reveal>An electric delivery company, from the first decision to the bikes on the&nbsp;road.</p>
+      <div class="ci-cols" data-reveal>
+        <p>QuickFleet runs same-day delivery on electric motorcycles, with battery-swap hubs across the city and a record for every parcel.</p>
+        <p>We worked on the business itself, then built everything a customer touches: the brand, the app and the website.</p>
       </div>
-      <div class="cs-g cs-pr2">
-        <h2 class="display cs-h2" data-reveal>Delivery prices followed fuel up. And most delivery is still a&nbsp;gamble.</h2>
-        <ol class="cs-three" data-reveal>
-          <li><span>Price</span>Agreed on the phone, and it moves.</li>
-          <li><span>Rider</span>Whoever is free. Nobody vetted them.</li>
-          <li><span>Record</span>None, once the parcel leaves.</li>
+      <ol class="ci-did" data-reveal>
+        <li><span>01</span><b>Strategy</b><em>The three promises and the price model</em></li>
+        <li><span>02</span><b>Operations</b><em>Hubs, riders and dispatch as one flow</em></li>
+        <li><span>03</span><b>Brand</b><em>Identity, palette and motion</em></li>
+        <li><span>04</span><b>Product</b><em>The customer app, booking to proof</em></li>
+        <li><span>05</span><b>Website</b><em>quickfleet.co, design and build</em></li>
+      </ol>
+      <p class="ci-own" data-reveal>QuickFleet is a venture SOUL’s founders started together. The idea came from Sani and Emmanuel; we built it the way we build for every client.</p>
+    </div>
+  </section>
+
+  <!-- 3 · the problem (light) -->
+  <section class="cp wrap">
+    <div class="in">
+      <span class="cs-eyebrow">01 — The problem</span>
+      <div class="cp-g">
+        <h2 class="display cp-h" data-reveal>Fuel got <em>5.6&times;</em> dearer. Delivery prices followed.</h2>
+        <div class="cp-bars" data-reveal role="img" aria-label="A litre of petrol: ₦238 in May 2023, ₦1,325 in Abuja in November 2026">
+          <div class="cpb" style="--w:17.96%"><div class="cpb-l"><span>May 2023</span><b>₦238</b></div><div class="cpb-t"><i></i></div></div>
+          <div class="cpb now" style="--w:100%"><div class="cpb-l"><span>November 2026, Abuja</span><b>₦1,325</b></div><div class="cpb-t"><i></i></div></div>
+          <p class="cpb-k">A litre of petrol<sup>1, 2</sup></p>
+          <ol class="cp-src"><li><sup>1</sup>National Bureau of Statistics, Petrol Price Watch, May 2023: average retail price ₦238.11.</li><li><sup>2</sup>NNPC pump price in Abuja, reported 5 November 2026.</li></ol>
+        </div>
+      </div>
+      <div class="cp-gam">
+        <h3 class="display" data-reveal>And most delivery is still a gamble.</h3>
+        <ol class="cp-cards" data-reveal>
+          <li><span class="cpc-x" aria-hidden="true"></span><b>The price</b><p>Agreed on the phone, and it moves.</p></li>
+          <li><span class="cpc-x" aria-hidden="true"></span><b>The rider</b><p>Whoever is free. Nobody vetted them.</p></li>
+          <li><span class="cpc-x" aria-hidden="true"></span><b>The record</b><p>None, once the parcel leaves.</p></li>
         </ol>
       </div>
     </div>
@@ -1256,10 +1314,7 @@ body{background:var(--ink)}
         <blockquote class="display">“SOUL covered every side of QuickFleet: the branding, the product and the app. All of it came back excellent, and one team this strong made the whole build easier.”</blockquote>
         <figcaption><b>Sani Garba Mamman</b><span>CEO, QuickFleet</span></figcaption>
       </figure>
-      <ol class="cs-src">
-        <li><sup>1</sup>National Bureau of Statistics, Premium Motor Spirit Price Watch, May 2023: average retail price ₦238.11.</li>
-        <li><sup>2</sup>NNPC retail price in Abuja, ₦1,325 per litre, reported 5 November 2026.</li>
-      </ol>
+
     </div>
   </section>
 
@@ -1303,16 +1358,23 @@ body{background:var(--ink)}
   const setMenu=(o)=>{ mmenu.classList.toggle('open',o); nav.classList.toggle('menu-open',o); menuBtn.setAttribute('aria-expanded',o); mmenu.setAttribute('aria-hidden',String(!o)); document.body.style.overflow=o?'hidden':''; };
   menuBtn.addEventListener('click',()=>setMenu(!mmenu.classList.contains('open')));
   mmenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
-  const onScroll=()=>{ const y=scrollY; nav.classList.toggle('float',y>40); nav.classList.toggle('solid',y>40); };
+  const onScroll=()=>{ const y=scrollY; nav.classList.toggle('float',y>40); nav.classList.toggle('solid',y>40); nav.classList.toggle('on-light',y<=40); };
   addEventListener('scroll',onScroll,{passive:true}); onScroll();
   const io=new IntersectionObserver(es=>es.forEach(x=>{ if(x.isIntersecting){ x.target.classList.add('on','vis'); io.unobserve(x.target);} }),{threshold:.12});
   document.querySelectorAll('[data-reveal]').forEach(e=>io.observe(e));
   const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-  // hero film: the bikes photo shows first; the film loads only when on screen and fades in once it is playing
-  const film=document.querySelector('.cs-film'), v=film&&film.querySelector('video');
+  // hero: letters rise in; the film grows from inset to edge to edge as you scroll (scroll listener, nothing runs off-screen)
+  const ch=document.querySelector('.ch'); requestAnimationFrame(()=>ch.classList.add('on'));
+  const film=document.querySelector('.ch-film'), stage=document.querySelector('.ch-stage'), v=film&&film.querySelector('video');
+  const g=()=>parseFloat(getComputedStyle(document.querySelector('.ch .wrap')).paddingLeft)||20;
+  let gut=g(); addEventListener('resize',()=>{ gut=g(); grow(); });
+  const grow=()=>{ if(reduce) return; const r=stage.getBoundingClientRect(), vh=innerHeight; if(r.top>vh||r.bottom<0) return;
+    const t=Math.max(0,Math.min(1,(vh*.92-r.top)/(vh*.62))), W=stage.clientWidth, s=(W-2*gut+2*gut*t)/W;
+    film.style.setProperty('--s',s.toFixed(4)); film.style.setProperty('--r',(10*(1-t)/s).toFixed(2)+'px'); };
+  addEventListener('scroll',grow,{passive:true}); grow();
   if(v&&!reduce){ v.addEventListener('playing',()=>v.classList.add('playing'));
     new IntersectionObserver(es=>{ const on=es[0].isIntersecting;
-      if(on){ if(!v.src){ v.src=innerWidth<760?v.dataset.srcM:v.dataset.src; v.load(); } v.play().catch(()=>{}); } else if(v.src) v.pause(); },{threshold:.25}).observe(film);
+      if(on){ if(!v.src){ v.src=innerWidth<760?v.dataset.srcM:v.dataset.src; v.load(); } v.play().catch(()=>{}); } else if(v.src) v.pause(); },{threshold:.2}).observe(film);
     addEventListener('touchend',()=>{ if(v.src&&v.paused&&film.getBoundingClientRect().top<innerHeight) v.play().catch(()=>{}); },{passive:true}); }
   // follow one parcel: the step in the middle of the screen picks the screen (desktop; phones show each screen inline)
   const steps=[...document.querySelectorAll('.pp-step')], scr=[...document.querySelectorAll('.pp-s')], prog=[...document.querySelectorAll('.pp-prog i')];
