@@ -800,25 +800,28 @@ a{color:inherit;text-decoration:none}
 .sf2-top .lk .lk-wrd{fill:#F6F4EE}
 @media (max-width:900px){ .lk{height:22px} }
 </style>
-<style>
+<link rel="preload" as="image" href="assets/img/cs-qf-bikes-376ef7575a.webp" fetchpriority="high"><style>
 #nav.on-light{background:#fff}
-.cs{--pg:#FFFFFF;--pn:#F2F1EE;--hair:rgba(11,11,10,.12);background:var(--pg);color:var(--ink)}
+.cs{--pg:#FFFFFF;--pn:#F2F1EE;--hair:rgba(11,11,10,.12);--qd:#0C0730;--qt:#0A997D;background:var(--pg);color:var(--ink)}
 .cs .in{width:min(1376px,100%);margin:0 auto}
 .k-g{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px}
 .cs [data-reveal]{opacity:0;transform:translateY(24px);transition:opacity .9s var(--ease),transform 1.1s var(--ease)}
 .cs [data-reveal].on{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.cs [data-reveal]{opacity:1;transform:none;transition:none}}
-.k-lab,.k-facts dt,.k-n,.k-tag{font-size:12px;font-weight:500;font-stretch:112%;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+.k-lab,.k-facts dt,.k-n,.k-tag,.pp-n{font-size:12px;font-weight:500;font-stretch:112%;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+.k-btn{background:var(--green);color:var(--ink);height:52px;padding:0 20px;display:inline-flex;align-items:center;gap:12px}
 /* hero */
-.k-hero{background:var(--pg);padding-top:clamp(150px,24vh,250px)}
+.k-hero{background:var(--pg);padding-top:clamp(140px,21vh,220px)}
 .k-tag{display:inline-flex;align-items:center;gap:12px;color:var(--ink)}
 .k-tag i{width:22px;height:22px;border-radius:3px;background:var(--pn);position:relative}
-.k-tag i::after{content:"";position:absolute;inset:7px;border-radius:2px;background:#3CC37A}
-.k-h1{margin:clamp(30px,5vh,52px) 0 0;font-family:var(--display);font-weight:500;font-size:min(5vw,84px);line-height:1.04;letter-spacing:-.035em;max-width:none}
-.cs .k-media{margin:clamp(60px,9vh,100px) auto 0;position:relative;border-radius:14px;overflow:hidden;background:var(--pn)}
-.k-film{aspect-ratio:1440/860}
-.k-film img,.k-film video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.k-film video{opacity:0;transition:opacity .9s ease}.k-film video.playing{opacity:1}
+.k-tag i::after{content:"";position:absolute;inset:7px;border-radius:2px;background:var(--qt)}
+.k-hh{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;align-items:end;margin-top:clamp(28px,4.6vh,48px)}
+.k-h1{grid-column:1 / span 9;margin:0;font-family:var(--display);font-weight:500;font-size:min(5vw,84px);line-height:1.04;letter-spacing:-.035em}
+.k-ha{grid-column:10 / span 3;padding-bottom:10px}
+.k-ha p{margin:0 0 22px;font-size:16px;line-height:1.5;color:var(--ink-2)}
+.cs .k-media{margin:clamp(56px,8vh,90px) auto 0;position:relative;border-radius:14px;overflow:hidden;background:var(--pn)}
+.k-photo{aspect-ratio:1376/800}
+.k-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 62%;transform:scale(var(--z,1.06));transform-origin:50% 60%;will-change:transform}
 /* intro */
 .k-intro{background:var(--pg);padding-top:clamp(110px,16vh,170px);padding-bottom:clamp(110px,16vh,170px)}
 .k-lede{grid-column:1 / span 6;padding-left:clamp(0px,5vw,72px)}
@@ -826,76 +829,177 @@ a{color:inherit;text-decoration:none}
 .k-facts{grid-column:8 / span 5;margin:44px 0 0;border-top:1px solid var(--hair)}
 .k-facts div{display:flex;justify-content:space-between;align-items:center;gap:24px;min-height:58px;padding:12px 0;border-bottom:1px solid var(--hair)}
 .k-facts dd{margin:0;font-size:16.5px;text-align:right}
-.k-facts a{display:inline-flex;align-items:center;gap:6px}
-.k-team{display:flex;gap:6px}.k-team img{width:34px;height:34px;border-radius:4px;object-fit:cover;object-position:50% 18%;filter:grayscale(1)}
-/* numbered section */
-.k-sec{background:var(--pg);padding-bottom:clamp(110px,16vh,170px)}
-.k-sh{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;padding-top:28px;border-top:1px solid var(--hair)}
+.k-facts a,.k-more{display:inline-flex;align-items:center;gap:6px}
+/* numbered sections */
+.k-sec{background:var(--pg);padding-bottom:clamp(120px,17vh,190px)}
+.k-sh{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;padding-top:28px;border-top:1px solid var(--hair);margin-bottom:clamp(60px,9vh,100px)}
 .k-n{grid-column:1 / span 1;padding-top:6px}
 .k-st{grid-column:4 / span 3;margin:0;font-family:var(--display);font-weight:500;font-size:clamp(30px,2.7vw,42px);letter-spacing:-.03em;line-height:1}
 .k-sh p{grid-column:8 / span 5;margin:0;font-size:clamp(17px,1.3vw,19.5px);line-height:1.55;color:var(--ink-2)}
-.k-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:clamp(70px,10vh,110px)}
-.k-panel{margin:0;border-radius:14px;background:var(--pn);aspect-ratio:1/1;position:relative;overflow:hidden}
-/* fuel panel */
-.k-fuel{display:flex;flex-direction:column;justify-content:center;padding:clamp(28px,5vw,72px)}
-.kf-row{display:flex;justify-content:space-between;align-items:baseline;gap:16px}
-.kf-row span{font-size:14px;color:var(--ink-2)}
-.kf-row b{font-family:var(--display);font-weight:500;font-size:clamp(44px,6vw,96px);line-height:1;letter-spacing:-.045em;color:#A8A69F}
-.kf-row.now{margin-top:clamp(36px,5vw,64px)}.kf-row.now b{color:var(--ink)}
-.kf-bar{height:12px;margin-top:16px;border-radius:2px;background:rgba(11,11,10,.07);overflow:hidden}
-.kf-bar i{display:block;height:100%;width:var(--w);background:#C9C7C0;transform:scaleX(0);transform-origin:0 50%;transition:transform 1.4s var(--ease) .25s}
-.kf-bar.now i{background:var(--ink);transition-delay:.5s}
-.k-fuel.on .kf-bar i{transform:none}
-.k-fuel figcaption{position:absolute;left:clamp(28px,5vw,72px);right:clamp(28px,5vw,72px);bottom:clamp(24px,3.4vw,44px);display:flex;align-items:baseline;gap:14px;font-size:14px;color:var(--ink-2)}
-.k-fuel figcaption b{font-family:var(--display);font-weight:600;font-size:22px;color:var(--ink);background:var(--green);padding:2px 8px;border-radius:2px}
-.k-fuel sup{font-size:10px}
-/* promises panel: three white tiles like an exploration board */
-.k-prom{display:flex;align-items:center;justify-content:center;padding:clamp(22px,4.4vw,64px)}
-.k-prom ul{list-style:none;margin:0;padding:0;width:100%;display:grid;gap:12px}
-.k-prom li{background:#fff;border-radius:8px;padding:clamp(18px,2vw,28px);display:grid;grid-template-columns:40px 1fr;column-gap:16px;align-items:baseline;
-  opacity:0;transform:translateY(16px);transition:opacity .8s var(--ease),transform 1s var(--ease)}
-.k-prom.on li{opacity:1;transform:none}
-.k-prom li:nth-child(2){transition-delay:.12s}.k-prom li:nth-child(3){transition-delay:.24s}.k-prom li:nth-child(4){transition-delay:.36s}
-.k-prom li span{font-size:12px;font-weight:500;font-stretch:112%;letter-spacing:.08em;color:var(--ink-2)}
-.k-prom li b{font-family:var(--display);font-weight:500;font-size:clamp(22px,2vw,30px);letter-spacing:-.03em;line-height:1.05}
-.k-prom li em{grid-column:2;font-style:normal;font-size:15px;line-height:1.45;color:var(--ink-2);margin-top:6px}
-.k-prom li.k-was{background:transparent;padding-top:8px;padding-bottom:0;grid-template-columns:auto 1fr}
-.k-prom li.k-was span{white-space:nowrap}.k-prom li.k-was em{grid-column:auto;margin:0;text-decoration:line-through;text-decoration-color:rgba(209,75,46,.7)}
+.k-panel{margin:0;border-radius:14px;background:var(--pn);position:relative;overflow:hidden}
+.k-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+.k-three{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
+.k-wide{margin-top:16px}
+/* 01 fuel */
+.k-fuel{display:grid;grid-template-columns:1fr 1fr;align-items:end;gap:40px;padding:clamp(32px,5vw,80px);min-height:clamp(420px,40vw,580px)}
+.kf-x{display:block;margin:18px 0 20px;font-family:var(--display);font-weight:500;font-size:clamp(110px,13vw,210px);line-height:.82;letter-spacing:-.06em}
+.kf-x small{font-size:.42em;letter-spacing:0;margin-left:.04em}
+.k-fuel figcaption{max-width:30ch;font-size:17px;line-height:1.45;color:var(--ink-2)}
+.k-fuel sup{font-size:10px;white-space:nowrap}
+.kf-bars{display:flex;align-items:flex-end;justify-content:flex-end;gap:clamp(16px,2.4vw,36px);height:clamp(300px,30vw,440px)}
+.kf-b{width:clamp(90px,10vw,150px);height:100%;display:flex;flex-direction:column;justify-content:flex-end}
+.kf-b b{font-family:var(--display);font-weight:500;font-size:clamp(22px,2.2vw,34px);letter-spacing:-.03em;margin-bottom:12px}
+.kf-b i{display:block;height:calc(var(--h) - 70px);min-height:24px;background:var(--ink);border-radius:4px 4px 0 0;transform:scaleY(0);transform-origin:50% 100%;transition:transform 1.3s var(--ease) .5s}
+.kf-b.was i{background:#C9C7C0;transition-delay:.25s}.kf-b.was b{color:#9A988F}
+.kf-b span{padding-top:12px;border-top:1px solid var(--ink);font-size:13px;color:var(--ink-2)}
+.k-fuel.on .kf-b i{transform:none}
+/* 01 promise cards */
+.k-pc{background:var(--pn);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.k-win{position:relative;aspect-ratio:1/.92;overflow:hidden}
+.kw-s{position:absolute;left:13%;right:13%;top:13%;bottom:0;border-radius:20px 20px 0 0;overflow:hidden;background:#fff;box-shadow:0 30px 60px -30px rgba(12,7,48,.35),0 0 0 1px rgba(11,11,10,.05)}
+.kw-s img{display:block;width:100%;height:auto}
+.k-codew{display:grid;place-items:center}
+.kc{width:74%;background:#fff;border-radius:18px;padding:9% 7%;text-align:center;color:var(--qd);box-shadow:0 30px 60px -30px rgba(12,7,48,.35)}
+.cc-k{display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#6B6A80}
+.cc-digits{display:flex;justify-content:center;gap:6%;margin:11% 0}
+.cc-digits b{width:20%;aspect-ratio:.82;display:grid;place-items:center;border-radius:12px;background:var(--qd);color:#fff;font-size:clamp(22px,2.4vw,36px);font-weight:600}
+.cc-ok{display:inline-flex;align-items:center;gap:7px;font-size:13.5px;font-weight:600;color:var(--qt)}
+.kp-t{padding:26px clamp(22px,2.2vw,32px) 30px;border-top:1px solid var(--hair);background:var(--pn);flex:1;display:flex;flex-direction:column}
+.kp-t h3{margin:14px 0 10px;font-family:var(--display);font-weight:500;font-size:clamp(24px,2.1vw,32px);letter-spacing:-.03em;line-height:1.04}
+.kp-t p{margin:0 0 20px;font-size:15.5px;line-height:1.5;color:var(--ink-2)}
+.kp-t s{margin-top:auto;font-size:13.5px;color:var(--muted);text-decoration-color:rgba(209,75,46,.75)}
+.kp-t s::before{content:"Instead of  ";text-decoration:none;display:inline-block;margin-right:6px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-stretch:112%}
 .k-src{list-style:none;margin:20px 0 0;padding:0;display:grid;gap:4px;font-size:12px;color:var(--muted)}
 .k-src sup{margin-right:5px}
+/* 02 product */
+.pp{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;padding:0 clamp(24px,5vw,80px);overflow:visible}
+.pp-steps{grid-column:1 / span 5;list-style:none;margin:0;padding:6vh 0}
+.pp-step{min-height:74vh;display:flex;flex-direction:column;justify-content:center;opacity:.25;transition:opacity .5s var(--ease)}
+.pp-step.on{opacity:1}
+.pp-step h3{margin:16px 0 12px;font-family:var(--display);font-weight:500;font-size:clamp(30px,3vw,48px);line-height:1;letter-spacing:-.03em}
+.pp-step p{margin:0;font-size:17px;line-height:1.5;color:var(--ink-2);max-width:36ch}
+.pp-inl{display:none}
+.pp-stick{grid-column:7 / span 6;position:sticky;top:0;height:100vh;height:100svh;display:flex;align-items:center;justify-content:center;gap:28px}
+.pp-scr{position:relative;height:min(76vh,760px);aspect-ratio:600/1336}
+.pp-s{position:absolute;inset:0;opacity:0;transform:translateY(18px) scale(.98);transition:opacity .6s var(--ease),transform .8s var(--ease)}
+.pp-s.on{opacity:1;transform:none}
+.pp-s img,.pp-inl img{width:100%;height:100%;object-fit:cover;border-radius:clamp(22px,2.4vw,34px);box-shadow:0 40px 80px -40px rgba(12,7,48,.45),0 0 0 1px rgba(11,11,10,.06);display:block}
+.pp-prog{display:flex;flex-direction:column;gap:8px}
+.pp-prog i{width:3px;height:26px;border-radius:2px;background:rgba(11,11,10,.14);transition:background .4s}
+.pp-prog i.on{background:var(--ink)}
+.cs-code{position:absolute;inset:0;border-radius:clamp(22px,2.4vw,34px);background:#F6F7FA;box-shadow:0 40px 80px -40px rgba(12,7,48,.45),0 0 0 1px rgba(11,11,10,.06);display:flex;flex-direction:column;padding:9% 7%;color:var(--qd);font-family:var(--ui);overflow:hidden}
+.pp-inl .cs-code{position:relative;aspect-ratio:600/1336}
+.cc-top{font-size:clamp(11px,1vw,14px);font-weight:600;display:flex;align-items:center;gap:8px}
+.cc-dot{width:8px;height:8px;border-radius:50%;background:var(--qt)}
+.cc-mid{margin:auto 0;text-align:center;background:#fff;border-radius:18px;padding:12% 6%}
+.cc-rows{display:flex;flex-direction:column;gap:2px;margin-bottom:8%}
+.cc-rows div{display:flex;justify-content:space-between;padding:9px 2px;border-bottom:1px solid rgba(12,7,48,.08);font-size:clamp(11px,.95vw,14px)}
+.cc-rows span,.cc-foot{color:#6B6A80}
+.cc-foot{font-size:clamp(9px,.8vw,11px);letter-spacing:.06em;text-align:center}
+/* 03 brand */
+.k-lock{background:var(--qd);aspect-ratio:1376/640;display:flex;align-items:center;justify-content:center;gap:3.2%}
+.kl-m{width:11%;height:auto}.kl-w{width:46%;height:auto}
+.k-mk{aspect-ratio:1/1;display:grid;place-items:center;background:#fff;box-shadow:inset 0 0 0 1px var(--hair)}
+.km{width:42%;height:auto}
+.k-mk figcaption,.k-ph figcaption{position:absolute;left:24px;right:24px;bottom:20px;display:flex;justify-content:space-between;font-size:12px;font-weight:500;font-stretch:112%;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+.k-pal{list-style:none;padding:0;aspect-ratio:1/1;display:grid;grid-template-rows:repeat(4,1fr)}
+.k-pal li{background:var(--c);color:#fff;display:flex;justify-content:space-between;align-items:flex-end;padding:0 24px 18px}
+.k-pal li.lt{color:var(--qd)}
+.k-pal b{font-family:var(--display);font-weight:500;font-size:clamp(20px,1.8vw,28px);letter-spacing:-.02em}
+.k-pal code{font-family:var(--ui);font-size:13px;letter-spacing:.06em;opacity:.8}
+.k-wm{aspect-ratio:1376/420;display:grid;place-items:center;background:var(--pn)}
+.kw{width:58%;height:auto}
+/* 04 website */
+.k-shot{padding:clamp(18px,3.2vw,56px) clamp(18px,3.2vw,56px) 0;display:flex;align-items:flex-end}
+.k-shot .ks{width:100%;border-radius:8px 8px 0 0;overflow:hidden;box-shadow:0 30px 70px -36px rgba(12,7,48,.4),0 0 0 1px rgba(11,11,10,.06)}
+.k-shot img{display:block;width:100%;height:auto}
+.k-big{padding:clamp(24px,6vw,100px) clamp(24px,6vw,100px) 0}
+.k-wt .k-shot{padding:20px 20px 0}
+.k-phones{margin-top:16px;display:flex;justify-content:center;align-items:flex-start;gap:clamp(14px,3vw,48px);padding:clamp(32px,6vw,96px) 6% 0;height:clamp(380px,38vw,560px)}
+.k-phones img{width:clamp(150px,17vw,260px);height:auto;border-radius:clamp(18px,2vw,30px);box-shadow:0 40px 80px -40px rgba(12,7,48,.45),0 0 0 1px rgba(11,11,10,.06)}
+.k-phones img:nth-child(2){margin-top:clamp(40px,5vw,80px)}
+.k-more{margin-top:22px;font-size:15px;border-bottom:1px solid currentColor;padding-bottom:2px}
+/* 05 operations */
+.k-ph{aspect-ratio:16/9}
+.k-ph img{width:100%;height:100%;object-fit:cover}
+.k-ph figcaption{left:20px;right:auto;bottom:18px;color:#fff;background:rgba(11,11,10,.55);padding:7px 10px;border-radius:3px}
+.k-pair .k-ph{aspect-ratio:1/1}
+.k-ops{aspect-ratio:1/1;display:flex;align-items:center;padding:clamp(28px,4.4vw,72px)}
+.k-ops ol{list-style:none;margin:0;padding:0;width:100%}
+.k-ops li{display:grid;grid-template-columns:48px 1fr;column-gap:16px;padding:26px 0;border-top:1px solid var(--hair)}
+.k-ops li:last-child{border-bottom:1px solid var(--hair)}
+.k-ops span{font-size:12px;font-weight:500;font-stretch:112%;letter-spacing:.08em;color:var(--ink-2);padding-top:8px}
+.k-ops b{font-family:var(--display);font-weight:500;font-size:clamp(28px,2.6vw,40px);letter-spacing:-.03em;line-height:1}
+.k-ops em{grid-column:2;font-style:normal;font-size:15.5px;color:var(--ink-2);margin-top:8px}
+/* 06 where it stands */
+.k-ba{padding:clamp(20px,3.4vw,56px)}
+.ba-r{display:grid;grid-template-columns:1fr 2fr 2fr;gap:24px;padding:18px 0;border-bottom:1px solid var(--hair);font-size:16px;line-height:1.45}
+.ba-r:last-child{border-bottom:0}
+.ba-r span:nth-child(2){color:var(--muted)}
+.ba-h{font-size:12px;font-weight:500;font-stretch:112%;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);padding-top:0}
+.ba-h i,.k-st2 i{display:inline-block;width:8px;height:8px;border-radius:2px;background:var(--qt);margin-right:8px}
+.ba-r b{font-weight:500}
+.k-end{margin-top:clamp(80px,12vh,130px);align-items:start}
+.k-st2{grid-column:1 / span 4;list-style:none;margin:0;padding:0;border-top:1px solid var(--hair)}
+.k-st2 li{display:flex;justify-content:space-between;padding:18px 0;border-bottom:1px solid var(--hair);font-size:16px}
+.k-st2 span{color:var(--ink-2)}.k-st2 b{font-weight:500}
+.k-q{grid-column:6 / span 7;margin:0}
+.k-q blockquote{margin:0;font-family:var(--display);font-weight:500;font-size:clamp(26px,2.6vw,40px);line-height:1.18;letter-spacing:-.025em}
+.k-q figcaption{margin-top:28px;display:flex;gap:12px;align-items:baseline;font-size:15px}
+.k-q figcaption span{color:var(--ink-2)}
 /* next */
-.k-next{background:var(--pg);padding-top:28px;padding-bottom:clamp(90px,12vh,140px)}
+.k-next{background:var(--pg);padding-bottom:clamp(90px,12vh,140px)}
 .k-next .in{border-top:1px solid var(--hair);padding-top:28px}
 .k-card{grid-column:1 / span 6;display:block}
 .k-card figure{margin:20px 0 0;aspect-ratio:16/10;border-radius:14px;overflow:hidden;background:var(--pn)}
 .k-card figure img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
 .k-card:hover figure img{transform:scale(1.03)}
-.k-ct{display:flex;align-items:center;gap:16px;margin-top:20px}
+.k-ct{display:grid;grid-template-columns:1fr auto;align-items:center;column-gap:16px;margin-top:20px}
 .k-ct b{font-family:var(--display);font-weight:500;font-size:clamp(24px,2.2vw,34px);letter-spacing:-.03em}
-.k-ct span{flex:1;color:var(--ink-2);font-size:15.5px}
+.k-ct span{grid-column:1 / -1;color:var(--ink-2);font-size:15.5px;margin-top:4px}
 .k-ct i{width:44px;height:44px;display:grid;place-items:center;background:var(--green);border-radius:2px;transition:transform .5s var(--ease)}
 .k-card:hover .k-ct i{transform:translateX(4px)}
 .k-cta{grid-column:8 / span 5;align-self:end}
 .k-cta h2{margin:0 0 28px;font-family:var(--display);font-weight:500;font-size:clamp(34px,3.8vw,58px);line-height:1.02;letter-spacing:-.035em}
 .k-cta em{font-style:normal;background:var(--green);padding:0 .12em}
-.k-btn{background:var(--green);color:var(--ink);height:52px;padding:0 20px}
+@media (max-width:1100px) and (min-width:901px){.k-h1{grid-column:1 / span 8}.k-ha{grid-column:9 / span 4}}
 @media (max-width:900px){
-  .k-hero{padding-top:128px}
+  .k-hero{padding-top:124px}
+  .k-hh,.k-g,.k-sh,.pp{grid-template-columns:1fr}
+  .k-hh>*,.k-g>*,.k-sh>*,.pp>*{grid-column:1 / -1!important}
   .k-h1{font-size:clamp(34px,9.4vw,52px);line-height:1.06}.k-br{display:none}
-  .cs .k-media{border-radius:10px;margin-top:40px}.k-film{aspect-ratio:16/11}
-  .k-g,.k-sh{grid-template-columns:1fr}
-  .k-g>*,.k-sh>*{grid-column:1 / -1!important}
+  .k-ha{padding:26px 0 0}.k-ha p{margin-bottom:18px}
+  .cs .k-media{border-radius:10px;margin-top:36px}.k-photo{aspect-ratio:4/3.4}
   .k-lede{padding-left:0}
-  .k-facts{margin-top:48px}
-  .k-facts div{min-height:50px}.k-facts dd{font-size:15.5px}
+  .k-facts{margin-top:48px}.k-facts div{min-height:50px}.k-facts dd{font-size:15.5px}
   .k-st{margin:14px 0 18px}
-  .k-pair{grid-template-columns:1fr;margin-top:44px}
-  .k-panel{aspect-ratio:auto;border-radius:10px}
-  .k-fuel{padding:32px 22px 26px}.k-fuel figcaption{position:static;margin-top:28px}
-  .k-prom{padding:16px}
+  .k-sh{margin-bottom:40px}
+  .k-pair,.k-three{grid-template-columns:1fr;gap:12px;margin-top:12px}
+  .k-panel,.k-pc{border-radius:10px}
+  .k-fuel{grid-template-columns:1fr;padding:30px 22px 26px;gap:34px;min-height:0}
+  .kf-bars{justify-content:flex-start;height:230px;gap:14px}
+  .kf-b{width:auto;flex:1}.kf-b b{font-size:24px}
+  .pp{padding:0 18px}
+  .pp-stick{display:none}
+  .pp-steps{padding:10px 0 30px}
+  .pp-step{min-height:0;opacity:1;padding:34px 0 8px;border-top:1px solid var(--hair)}
+  .pp-step:first-child{border-top:0}
+  .pp-inl{display:block;width:min(72%,300px);margin:26px auto 0}
+  .pp-inl img{height:auto}
+  .k-lock{aspect-ratio:4/3}.kl-m{width:16%}.kl-w{width:62%}
+  .k-pal{aspect-ratio:auto}.k-pal li{min-height:84px}
+  .k-wm{aspect-ratio:16/7}.kw{width:74%}
+  .k-big{padding:18px 18px 0}
+  .k-phones{height:auto;padding:28px 14px 0;gap:10px;max-height:420px}
+  .k-phones img{width:30%;border-radius:14px}
+  .k-ph,.k-pair .k-ph{aspect-ratio:4/3}
+  .k-ops{aspect-ratio:auto;padding:12px 22px}
+  .ba-r{grid-template-columns:1fr 1fr;gap:6px 16px;font-size:15px}
+  .ba-r b{grid-column:1 / -1}
+  .ba-h span:first-child{display:none}
+  .k-ba{padding:20px}
+  .k-q{margin-top:56px}
   .k-cta{margin-top:70px}
-  .k-ct{flex-wrap:wrap;row-gap:4px}.k-ct b{flex:1 0 calc(100% - 64px)}.k-ct i{order:2}.k-ct span{order:3;flex-basis:100%}
-  .k-prom li.k-was{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -983,11 +1087,16 @@ body{background:var(--ink)}
   <section class="k-hero wrap">
     <div class="in">
       <span class="k-tag"><i></i>QuickFleet</span>
-      <h1 class="k-h1" data-reveal>An electric delivery business, <br class="k-br">built from the ground&nbsp;up</h1>
+      <div class="k-hh">
+        <h1 class="k-h1" data-reveal>An electric delivery business, <br class="k-br">built from the ground&nbsp;up</h1>
+        <div class="k-ha" data-reveal>
+          <p>Strategy, operations, brand, app and website for an electric delivery network in Abuja.</p>
+          <a class="btn k-btn" href="https://quickfleet.co" target="_blank" rel="noopener"><span>Visit quickfleet.co</span><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9l6-6M4 3h5v5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
+        </div>
+      </div>
     </div>
-    <figure class="k-media k-film in" data-reveal>
-      <img class="" src="assets/img/cs-qf-bikes-376ef7575a.webp" width="2000" height="1155" alt="QuickFleet electric motorcycles with branded delivery boxes in Abuja" decoding="async">
-      <video muted loop playsinline preload="none" aria-hidden="true" data-src="assets/video/home-416648a396.mp4" data-src-m="assets/video/home-416648a396-m.mp4"></video>
+    <figure class="k-media k-photo in">
+      <img class="" src="assets/img/cs-qf-bikes-376ef7575a.webp" width="2000" height="1155" alt="Three QuickFleet electric motorcycles with branded delivery boxes in Abuja" fetchpriority="high" decoding="async">
     </figure>
   </section>
 
@@ -1003,7 +1112,6 @@ body{background:var(--ink)}
         <div><dt>Scope</dt><dd>Strategy, Operations, Brand, Product, Website</dd></div>
         <div><dt>Stage</dt><dd>Pre-launch</dd></div>
         <div><dt>Year</dt><dd>2026</dd></div>
-        <div><dt>Team</dt><dd class="k-team"><img src="assets/img/about-06-d5f6822efa.webp" alt="Emmanuel Idachaba" title="Emmanuel Idachaba"><img src="assets/img/about-07-6d75cd32c9.webp" alt="Ojima Aniegboka" title="Ojima Aniegboka"><img src="assets/img/about-08-f68adb3ed5.webp" alt="Sani Garba Mamman" title="Sani Garba Mamman"></dd></div>
         <div><dt>Live</dt><dd><a href="https://quickfleet.co" target="_blank" rel="noopener">quickfleet.co <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9l6-6M4 3h5v5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a></dd></div>
       </dl>
     </div>
@@ -1012,26 +1120,32 @@ body{background:var(--ink)}
   <section class="k-sec wrap" id="strategy">
     <div class="in">
       <header class="k-sh" data-reveal>
-        <span class="k-n">01</span>
-        <h2 class="k-st">Strategy</h2>
-        <p>Fuel went from ₦238 to ₦1,325 a litre in three and a half years, and delivery prices followed. Most delivery is still informal: a price agreed on the phone, a rider nobody vetted, no record once the parcel leaves. We built the business around three promises that answer each one.</p>
+        <span class="k-n">01</span><h2 class="k-st">Strategy</h2><p>Fuel went from ₦238 to ₦1,325 a litre in three and a half years, and delivery prices followed. Most delivery is still informal: a price agreed on the phone, a rider nobody vetted, no record once the parcel leaves. We built the business around three promises that answer each one.</p>
       </header>
-      <div class="k-pair">
-        <figure class="k-panel k-fuel" data-reveal>
-          <div class="kf-row"><span>May 2023</span><b>₦238</b></div>
-          <div class="kf-bar"><i style="--w:17.96%"></i></div>
-          <div class="kf-row now"><span>November 2026 · Abuja</span><b>₦1,325</b></div>
-          <div class="kf-bar now"><i style="--w:100%"></i></div>
-          <figcaption><b>5.6×</b> A litre of petrol, three and a half years apart<sup>1, 2</sup></figcaption>
-        </figure>
-        <figure class="k-panel k-prom" data-reveal>
-          <ul>
-            <li><span>01</span><b>Fixed price</b><em>Shown before you book, locked at pickup</em></li>
-            <li><span>02</span><b>Known rider</b><em>Vetted, trained and named before they arrive</em></li>
-            <li><span>03</span><b>Proof at the door</b><em>The receiver confirms with a four-digit code</em></li>
-            <li class="k-was"><span>Instead of</span><em>a price by phone · a stranger · no record</em></li>
-          </ul>
-        </figure>
+      <figure class="k-panel k-fuel" data-reveal>
+        <div class="kf-t">
+          <span class="k-lab">Petrol, one litre</span>
+          <b class="kf-x">5.6<small>×</small></b>
+          <figcaption>dearer in three and a half years, and every petrol bike’s price moves with it.<sup>1, 2</sup></figcaption>
+        </div>
+        <div class="kf-bars" role="img" aria-label="Petrol per litre: ₦238 in May 2023, ₦1,325 in Abuja in November 2026">
+          <div class="kf-b was" style="--h:17.96%"><b>₦238</b><i></i><span>May 2023</span></div>
+          <div class="kf-b" style="--h:100%"><b>₦1,325</b><i></i><span>Nov 2026 · Abuja</span></div>
+        </div>
+      </figure>
+      <div class="k-three">
+        <article class="k-pc" data-reveal>
+          <div class="k-win"><div class="kw-s"><img style="margin-top:-104.7%" class="" src="assets/img/cs-qf-scr3-1a70693980.webp" width="600" height="1336" alt="QuickFleet app: the price, ₦1,500, shown before booking" loading="lazy" decoding="async"></div></div>
+          <div class="kp-t"><span class="k-lab">01 · The price</span><h3>Fixed price</h3><p>Shown before you book and locked at pickup. Electric energy doesn’t move with the pump.</p><s>A price agreed on the phone</s></div>
+        </article>
+        <article class="k-pc" data-reveal>
+          <div class="k-win"><div class="kw-s"><img style="margin-top:-111.3%" class="" src="assets/img/cs-qf-scr4-f0305858fa.webp" width="600" height="1336" alt="QuickFleet app: the named rider, one minute away" loading="lazy" decoding="async"></div></div>
+          <div class="kp-t"><span class="k-lab">02 · The rider</span><h3>Known rider</h3><p>Vetted, trained and named before they arrive. Our riders, on our machines.</p><s>Whoever is free</s></div>
+        </article>
+        <article class="k-pc" data-reveal>
+          <div class="k-win k-codew"><div class="kc" role="img" aria-label="Delivery code 4 8 2 7, confirmed by the receiver"><span class="cc-k">Delivery code</span><div class="cc-digits"><b>4</b><b>8</b><b>2</b><b>7</b></div><span class="cc-ok"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="8" fill="#0A997D"/><path d="M4.6 8.2l2.2 2.2 4.6-4.8" fill="none" stroke="#fff" stroke-width="1.7"/></svg>Confirmed by the receiver</span></div></div>
+          <div class="kp-t"><span class="k-lab">03 · The record</span><h3>Proof at the door</h3><p>The receiver closes the delivery with a four-digit code, and every step is timestamped.</p><s>No record after pickup</s></div>
+        </article>
       </div>
       <ol class="k-src">
         <li><sup>1</sup>National Bureau of Statistics, Petrol Price Watch, May 2023: average retail price ₦238.11.</li>
@@ -1040,12 +1154,122 @@ body{background:var(--ink)}
     </div>
   </section>
 
+  <section class="k-sec wrap" id="product">
+    <div class="in">
+      <header class="k-sh" data-reveal>
+        <span class="k-n">02</span><h2 class="k-st">Product</h2><p>Six moments in the customer app, from home to the door. Each screen carries one of the three promises, so the customer sees the price, the rider and the proof without asking.</p>
+      </header>
+      <div class="k-panel pp">
+        <ol class="pp-steps">
+          <li class="pp-step" data-i="0"><span class="pp-n">01 · Home</span><h3>Start from home.</h3><p>One button to send a parcel. Every rider is vetted, trained and tracked to the door.</p>
+            <div class="pp-inl"><img class="" src="assets/img/cs-qf-scr1-758c3d9b9f.webp" width="600" height="1336" alt="QuickFleet app: Start from home." loading="lazy" decoding="async"></div></li>
+          <li class="pp-step" data-i="1"><span class="pp-n">02 · Where to</span><h3>Say where it’s going.</h3><p>Saved places and recent receivers come first, so a repeat delivery takes seconds.</p>
+            <div class="pp-inl"><img class="" src="assets/img/cs-qf-scr2-990e14846b.webp" width="600" height="1336" alt="QuickFleet app: Say where it’s going." loading="lazy" decoding="async"></div></li>
+          <li class="pp-step" data-i="2"><span class="pp-n">03 · Price</span><h3>See the price. It’s locked.</h3><p>Route, distance and price before you book: ₦1,500, Garki to Maitama. It won’t move at pickup.</p>
+            <div class="pp-inl"><img class="" src="assets/img/cs-qf-scr3-1a70693980.webp" width="600" height="1336" alt="QuickFleet app: See the price. It’s locked." loading="lazy" decoding="async"></div></li>
+          <li class="pp-step" data-i="3"><span class="pp-n">04 · Rider</span><h3>Know who’s coming.</h3><p>A named rider on a map, one minute away, with a number you can call.</p>
+            <div class="pp-inl"><img class="" src="assets/img/cs-qf-scr4-f0305858fa.webp" width="600" height="1336" alt="QuickFleet app: Know who’s coming." loading="lazy" decoding="async"></div></li>
+          <li class="pp-step" data-i="4"><span class="pp-n">05 · Proof</span><h3>The receiver closes it.</h3><p>They get a text link and confirm with a four-digit code. No app needed.</p>
+            <div class="pp-inl"><div class="cs-code" role="img" aria-label="Receiver’s confirmation: delivery code 4 8 2 7, confirmed"><div class="cc-top"><span class="cc-dot"></span>Delivery to Chidinma Okafor</div><div class="cc-mid"><span class="cc-k">Delivery code</span><div class="cc-digits"><b>4</b><b>8</b><b>2</b><b>7</b></div><span class="cc-ok"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="8" fill="#0A997D"/><path d="M4.6 8.2l2.2 2.2 4.6-4.8" fill="none" stroke="#fff" stroke-width="1.7"/></svg>Confirmed by the receiver</span></div><div class="cc-rows"><div><span>Picked up</span><b>1:12 PM</b></div><div><span>Delivered</span><b>1:24 PM</b></div><div><span>Paid</span><b>₦1,500</b></div></div><div class="cc-foot">QF-2047 · Garki → Maitama</div></div></div></li>
+          <li class="pp-step" data-i="5"><span class="pp-n">06 · Record</span><h3>Every delivery, on record.</h3><p>Each step is timestamped, from booking to handover, and the app keeps working on patchy data.</p>
+            <div class="pp-inl"><img class="" src="assets/img/cs-qf-scr5-a974a11e43.webp" width="600" height="1336" alt="QuickFleet app: Every delivery, on record." loading="lazy" decoding="async"></div></li>
+        </ol>
+        <div class="pp-stick" aria-hidden="true"><div class="pp-scr"><div class="pp-s on" data-i="0"><img class="" src="assets/img/cs-qf-scr1-758c3d9b9f.webp" width="600" height="1336" alt="" loading="lazy" decoding="async"></div><div class="pp-s" data-i="1"><img class="" src="assets/img/cs-qf-scr2-990e14846b.webp" width="600" height="1336" alt="" loading="lazy" decoding="async"></div><div class="pp-s" data-i="2"><img class="" src="assets/img/cs-qf-scr3-1a70693980.webp" width="600" height="1336" alt="" loading="lazy" decoding="async"></div><div class="pp-s" data-i="3"><img class="" src="assets/img/cs-qf-scr4-f0305858fa.webp" width="600" height="1336" alt="" loading="lazy" decoding="async"></div><div class="pp-s" data-i="4"><div class="cs-code" role="img" aria-label="Receiver’s confirmation: delivery code 4 8 2 7, confirmed"><div class="cc-top"><span class="cc-dot"></span>Delivery to Chidinma Okafor</div><div class="cc-mid"><span class="cc-k">Delivery code</span><div class="cc-digits"><b>4</b><b>8</b><b>2</b><b>7</b></div><span class="cc-ok"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="8" fill="#0A997D"/><path d="M4.6 8.2l2.2 2.2 4.6-4.8" fill="none" stroke="#fff" stroke-width="1.7"/></svg>Confirmed by the receiver</span></div><div class="cc-rows"><div><span>Picked up</span><b>1:12 PM</b></div><div><span>Delivered</span><b>1:24 PM</b></div><div><span>Paid</span><b>₦1,500</b></div></div><div class="cc-foot">QF-2047 · Garki → Maitama</div></div></div><div class="pp-s" data-i="5"><img class="" src="assets/img/cs-qf-scr5-a974a11e43.webp" width="600" height="1336" alt="" loading="lazy" decoding="async"></div></div><div class="pp-prog"><i class=on></i><i></i><i></i><i></i><i></i><i></i></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="k-sec wrap" id="brand">
+    <div class="in">
+      <header class="k-sh" data-reveal>
+        <span class="k-n">03</span><h2 class="k-st">Brand</h2><p>A mark and palette made for trust: deep navy and purple, with teal and mint for everything electric. The Q carries an arrow out of the circle, a parcel on its way. It runs from the bikes and boxes to the app and the site.</p>
+      </header>
+      <figure class="k-panel k-lock" data-reveal role="img" aria-label="The QuickFleet logo: the Q mark and the wordmark">
+        <svg class="kl-m" viewBox="0 0 292 310" aria-hidden="true"><path d="M56.88 30.62 L47.38 38.75 L34.62 52.00 L26.50 62.75 L24.50 66.12 L22.50 68.75 L20.50 72.50 L19.50 73.62 L13.88 84.62 L13.38 86.38 L12.50 87.50 L12.12 89.12 L9.62 94.75 L9.38 96.12 L8.50 97.62 L8.25 99.25 L4.50 110.75 L2.12 124.12 L1.38 126.62 L0.38 139.75 L0.00 139.88 L0.00 155.50 L0.38 155.62 L1.38 166.38 L2.50 173.12 L3.12 175.00 L4.12 181.38 L5.25 184.50 L5.75 187.25 L6.38 188.50 L8.62 196.38 L9.38 197.75 L11.25 203.25 L18.12 217.75 L23.62 227.12 L24.38 227.75 L25.00 229.25 L33.50 241.25 L35.50 243.12 L37.62 246.00 L40.62 249.25 L42.50 250.75 L43.38 252.25 L44.62 253.50 L46.38 254.62 L48.62 257.25 L55.50 263.38 L60.50 267.38 L62.00 268.12 L62.88 269.25 L75.75 277.38 L87.00 282.88 L90.75 284.12 L94.38 285.88 L96.38 286.25 L97.75 287.12 L111.50 291.25 L115.25 291.75 L119.62 293.00 L123.25 293.25 L130.50 294.38 L136.50 294.50 L139.00 294.88 L147.75 294.88 L157.62 294.12 L159.88 294.25 L161.88 293.62 L170.12 292.50 L173.25 291.62 L173.75 291.12 L173.25 289.88 L170.62 287.62 L157.12 273.75 L152.38 269.50 L146.00 262.75 L144.38 262.00 L137.38 262.00 L134.38 261.50 L129.75 261.25 L119.38 259.50 L108.88 256.50 L107.88 255.88 L105.75 255.38 L104.25 254.50 L102.62 254.12 L98.62 252.38 L98.12 251.75 L93.88 250.00 L90.62 248.25 L90.25 247.75 L86.38 245.62 L80.50 241.62 L79.50 240.50 L74.75 237.25 L63.00 226.12 L57.38 219.12 L56.38 217.25 L55.38 216.50 L51.12 210.25 L49.25 206.88 L48.50 206.12 L47.88 204.50 L46.88 203.25 L46.38 201.62 L44.38 198.25 L42.62 193.75 L41.50 192.25 L40.12 188.75 L39.62 186.50 L38.50 184.25 L38.25 182.50 L37.50 181.00 L37.00 178.50 L36.12 176.25 L34.62 169.38 L34.12 164.62 L33.38 162.00 L32.50 150.38 L32.50 142.75 L33.38 131.62 L34.25 128.62 L34.38 125.62 L35.25 122.75 L35.88 118.62 L36.50 117.25 L37.62 112.50 L38.12 111.75 L38.62 109.62 L39.50 108.12 L41.62 101.62 L42.12 101.12 L44.38 95.75 L45.12 95.00 L47.12 90.62 L51.38 83.38 L59.50 72.50 L64.62 66.88 L70.50 61.25 L81.50 52.50 L84.12 51.00 L85.62 49.75 L92.62 45.75 L98.62 42.88 L100.12 42.50 L101.50 41.62 L103.00 41.25 L104.00 40.50 L111.88 37.75 L124.88 34.50 L132.50 33.38 L139.88 33.00 L148.75 32.88 L158.25 33.50 L160.75 34.25 L165.00 34.50 L175.88 37.12 L178.75 38.38 L180.88 38.75 L182.62 39.62 L185.25 40.38 L186.62 41.25 L187.75 41.50 L189.12 42.38 L191.25 43.00 L196.25 45.38 L206.12 51.38 L217.12 59.62 L223.38 65.75 L224.62 67.38 L225.25 67.62 L227.38 69.75 L235.38 79.75 L242.25 90.50 L242.50 91.50 L243.25 92.50 L247.50 101.25 L251.62 112.50 L254.38 123.62 L255.75 131.88 L256.38 141.75 L256.25 155.38 L254.62 167.75 L253.38 171.62 L252.88 175.25 L251.62 180.12 L250.88 181.75 L250.38 184.25 L249.62 185.75 L249.00 188.25 L247.75 190.62 L247.38 192.38 L244.50 198.38 L243.62 199.50 L242.00 203.38 L239.25 208.12 L233.75 216.25 L231.50 218.62 L230.62 220.25 L228.38 222.50 L225.38 226.25 L218.25 233.25 L217.62 233.50 L212.00 238.62 L208.38 241.50 L207.25 242.12 L206.38 242.12 L205.25 241.50 L197.25 233.50 L189.50 226.50 L184.00 220.75 L177.00 214.12 L175.88 213.38 L167.00 204.38 L146.88 185.38 L145.00 183.00 L145.12 182.00 L148.25 179.00 L149.12 177.62 L151.00 176.25 L154.62 172.50 L157.25 170.38 L164.75 162.50 L166.75 160.88 L172.00 155.50 L173.25 154.62 L173.75 154.88 L174.12 156.00 L173.88 182.38 L174.25 183.00 L175.00 183.38 L201.12 183.25 L201.75 182.75 L201.75 104.38 L202.00 103.38 L201.62 102.50 L200.50 102.12 L113.75 102.12 L112.75 102.50 L112.12 103.62 L112.12 128.88 L112.50 131.38 L113.62 131.75 L146.38 131.62 L147.38 131.88 L147.75 132.50 L146.12 134.38 L131.75 147.75 L121.25 158.38 L120.62 158.62 L115.88 163.50 L107.88 170.88 L100.25 178.62 L96.62 181.62 L96.12 182.75 L96.75 184.00 L106.88 193.38 L109.62 196.38 L112.25 198.62 L114.75 201.50 L122.38 208.38 L134.25 220.38 L156.25 241.38 L157.88 243.25 L159.25 244.25 L162.88 248.38 L166.25 251.25 L168.88 254.25 L180.75 265.38 L192.62 277.38 L196.12 280.38 L199.62 284.25 L209.88 293.75 L212.62 296.88 L217.25 301.00 L224.12 308.12 L226.00 309.00 L230.88 308.75 L258.12 309.12 L259.75 308.88 L275.38 309.00 L276.12 308.75 L276.50 307.62 L276.00 307.00 L274.62 306.25 L270.12 301.62 L253.62 286.38 L251.88 284.38 L250.62 283.50 L247.12 279.62 L235.75 269.38 L232.38 266.00 L231.75 264.88 L232.62 263.75 L238.25 259.38 L242.88 255.25 L244.75 252.88 L247.88 250.12 L249.62 247.75 L256.38 240.25 L264.25 229.25 L269.75 220.12 L276.62 206.38 L280.50 196.12 L281.38 192.75 L283.50 187.12 L283.75 184.88 L286.12 175.75 L286.25 173.75 L287.62 167.25 L288.75 154.88 L288.62 136.50 L288.00 132.25 L287.75 127.00 L286.88 123.25 L286.75 120.88 L286.00 118.62 L286.00 117.38 L283.75 108.00 L283.50 105.88 L282.62 104.25 L279.38 93.62 L272.38 78.12 L271.50 77.12 L271.00 75.75 L265.25 66.12 L258.62 56.88 L251.75 48.75 L246.38 43.12 L236.12 33.50 L227.12 26.50 L224.38 25.00 L221.25 22.50 L217.25 20.38 L216.25 19.50 L210.25 16.62 L208.38 15.25 L202.88 12.62 L197.25 10.50 L195.88 9.62 L194.25 9.38 L188.25 7.00 L185.12 6.38 L183.62 5.62 L180.12 4.62 L174.00 3.50 L172.25 2.88 L167.75 2.38 L165.25 1.62 L162.25 1.62 L159.00 1.00 L153.75 0.75 L151.88 0.38 L151.62 0.00 L137.50 0.00 L137.38 0.38 L136.38 0.62 L124.88 1.62 L110.00 4.62 L93.62 9.75 L80.62 15.50 L77.38 17.62 L73.00 19.75 L66.62 23.62Z" fill="#0A997D" fill-rule="evenodd"/></svg><svg class="kl-w" viewBox="0 0 891 154" aria-hidden="true"><path d="M266.38 44.88 L265.25 45.50 L264.88 46.12 L264.88 136.75 L265.75 137.75 L266.50 138.00 L287.38 138.00 L288.38 137.62 L289.12 136.50 L289.00 46.12 L287.62 44.88ZM157.75 45.25 L157.12 46.38 L157.25 108.38 L158.00 114.12 L159.50 119.25 L162.38 125.25 L166.25 130.25 L170.88 134.00 L176.12 136.88 L180.00 138.38 L187.62 139.88 L195.12 139.88 L199.12 139.38 L203.25 138.38 L210.00 135.38 L215.50 131.38 L218.00 128.88 L218.75 128.88 L219.12 129.38 L219.12 136.75 L219.88 137.62 L220.62 137.88 L241.62 138.00 L242.75 137.38 L243.38 136.38 L243.38 46.50 L243.12 45.75 L241.38 44.75 L219.50 44.75 L218.75 45.62 L218.62 100.25 L217.38 105.38 L215.62 109.12 L214.50 110.62 L210.25 114.75 L207.38 116.38 L204.12 117.50 L201.38 117.88 L196.00 117.88 L192.62 117.25 L187.62 114.75 L184.38 111.50 L182.88 109.00 L181.50 104.88 L181.00 99.25 L181.12 46.25 L180.88 45.62 L180.25 45.00 L179.25 44.75 L158.62 44.75ZM765.88 42.88 L757.88 44.62 L757.12 45.12 L754.62 45.75 L753.38 46.50 L751.62 47.00 L748.62 48.50 L744.12 51.50 L740.75 54.25 L735.75 59.62 L733.50 62.62 L730.50 67.62 L729.00 70.88 L728.38 73.00 L727.50 74.62 L726.12 79.62 L725.00 86.50 L724.75 94.12 L725.62 101.12 L727.62 109.38 L730.12 115.12 L731.75 118.00 L734.50 122.00 L737.25 125.12 L740.75 128.50 L744.38 131.38 L751.75 135.50 L759.75 138.38 L765.25 139.50 L770.62 140.00 L775.25 140.00 L781.38 139.38 L787.12 138.25 L788.75 137.50 L791.12 137.00 L795.25 135.38 L800.12 132.62 L805.50 128.50 L808.75 125.25 L811.38 122.25 L814.00 118.62 L814.00 118.12 L812.38 116.62 L803.75 112.12 L798.38 108.75 L796.38 107.88 L795.50 107.88 L794.50 108.62 L793.50 110.25 L789.25 114.38 L786.25 116.38 L785.50 116.50 L783.88 117.50 L778.38 119.00 L776.12 119.25 L770.50 119.25 L767.88 118.88 L763.62 117.62 L760.62 116.25 L756.62 113.50 L752.50 109.00 L750.88 106.12 L749.50 102.88 L748.88 100.38 L749.00 99.75 L749.75 98.88 L750.50 98.62 L816.38 98.75 L817.12 98.38 L817.50 97.75 L817.88 94.25 L817.88 87.12 L817.12 80.25 L815.50 73.50 L814.12 70.00 L813.50 69.12 L813.12 67.62 L811.50 64.50 L807.38 58.50 L804.25 55.25 L800.25 51.75 L793.50 47.50 L789.25 45.62 L787.75 45.38 L786.12 44.62 L777.00 42.75 L769.50 42.62ZM749.12 80.12 L750.62 75.75 L752.38 72.62 L755.75 69.00 L758.75 66.50 L761.62 65.00 L765.62 63.62 L770.38 63.00 L774.50 63.00 L779.00 63.62 L783.00 65.12 L785.50 66.50 L787.88 68.38 L790.50 71.25 L792.12 73.75 L793.50 76.62 L794.25 80.75 L793.12 81.88 L750.50 82.00 L749.25 81.25ZM663.50 42.75 L653.62 44.75 L652.50 45.38 L650.75 45.75 L644.62 48.62 L638.75 52.62 L633.38 57.75 L630.62 61.00 L626.38 67.75 L623.75 73.62 L622.50 77.62 L620.75 87.62 L620.62 94.25 L621.00 98.50 L622.50 106.25 L623.75 110.00 L626.62 116.12 L627.25 116.75 L629.25 120.38 L632.00 123.88 L636.50 128.38 L642.75 132.88 L647.62 135.50 L655.75 138.38 L664.38 139.88 L670.25 140.00 L676.50 139.50 L683.25 138.25 L684.75 137.50 L687.12 137.00 L691.12 135.50 L696.25 132.75 L700.38 129.88 L704.38 126.12 L710.25 119.00 L710.38 118.00 L709.00 116.75 L702.38 113.38 L701.50 112.62 L695.38 109.38 L694.12 108.38 L693.25 108.00 L691.75 108.00 L687.00 113.50 L683.38 116.12 L681.00 117.25 L673.62 119.12 L667.00 119.25 L664.62 119.00 L659.75 117.62 L656.75 116.38 L654.50 115.00 L651.50 112.50 L648.38 109.12 L647.12 107.12 L644.50 100.88 L644.50 99.62 L645.75 98.75 L712.62 98.75 L713.75 98.25 L714.25 97.62 L714.38 88.75 L714.12 85.12 L713.12 78.62 L711.75 73.50 L709.00 66.62 L707.38 63.62 L703.25 58.00 L697.88 52.75 L694.12 50.00 L690.12 47.75 L682.38 44.62 L673.62 42.88 L669.75 42.62ZM645.25 80.12 L646.88 75.25 L648.50 72.38 L651.75 69.00 L654.62 66.62 L657.75 65.00 L661.88 63.62 L666.38 63.00 L670.00 63.00 L676.12 64.00 L679.25 65.12 L682.12 66.62 L685.50 69.50 L688.50 73.50 L689.75 75.88 L691.00 80.62 L690.25 81.75 L646.62 82.00 L645.38 81.25ZM346.38 42.88 L338.50 44.50 L337.00 45.25 L334.88 45.75 L328.50 48.62 L323.75 51.62 L320.75 54.00 L315.75 59.00 L312.88 62.62 L311.38 65.25 L310.62 66.00 L307.75 71.62 L305.00 80.62 L303.88 89.62 L303.88 94.50 L304.75 102.12 L306.62 109.12 L307.75 112.00 L310.50 117.38 L315.50 124.12 L320.00 128.38 L323.62 131.25 L328.50 134.12 L334.62 136.88 L336.88 137.38 L338.75 138.25 L343.62 139.38 L350.75 140.00 L360.50 139.50 L366.25 138.38 L368.88 137.38 L371.25 136.88 L377.38 134.12 L382.00 131.25 L386.75 127.25 L390.25 123.62 L394.25 118.00 L394.88 116.50 L396.12 114.75 L396.12 114.12 L395.25 113.00 L392.88 112.12 L382.25 106.88 L380.88 106.50 L379.38 105.50 L376.25 104.25 L375.38 104.75 L372.50 109.25 L368.12 113.62 L364.25 116.12 L361.00 117.38 L355.50 118.25 L349.75 118.00 L346.00 117.25 L340.50 114.75 L336.75 112.12 L332.50 107.38 L329.75 101.62 L328.50 97.38 L328.12 92.75 L328.38 86.12 L329.62 81.50 L331.38 77.38 L333.75 73.62 L337.75 69.50 L342.75 66.38 L345.75 65.25 L349.62 64.50 L356.25 64.38 L361.00 65.25 L364.38 66.50 L367.00 68.12 L371.12 71.88 L373.38 74.75 L374.50 77.25 L375.88 78.50 L376.88 78.38 L377.62 77.75 L379.38 77.25 L380.75 76.38 L382.25 76.00 L395.38 70.50 L396.00 69.75 L396.00 68.75 L394.25 65.38 L391.38 60.88 L387.25 55.88 L382.12 51.50 L375.38 47.38 L368.12 44.62 L359.88 42.88 L356.25 42.62ZM839.88 18.75 L838.88 19.62 L838.62 43.88 L837.38 45.00 L824.88 45.00 L823.75 45.75 L823.50 46.50 L823.50 64.12 L823.75 64.75 L824.75 65.50 L837.50 65.50 L838.62 66.75 L838.75 111.12 L839.75 117.75 L841.38 123.12 L844.00 128.12 L848.00 132.75 L851.50 135.38 L857.62 138.25 L864.50 139.75 L872.38 140.00 L879.00 139.38 L884.25 138.25 L885.88 137.50 L888.25 137.00 L890.88 135.50 L890.88 134.62 L890.38 134.38 L889.75 133.25 L888.38 124.25 L887.88 117.75 L887.50 116.50 L887.00 116.25 L885.75 116.38 L882.38 117.50 L876.88 118.25 L873.38 118.25 L869.25 117.50 L867.25 116.38 L864.38 113.38 L863.38 111.38 L862.75 108.00 L862.88 66.62 L863.75 65.62 L887.62 65.38 L888.25 64.50 L888.12 45.75 L887.38 45.00 L864.50 45.00 L863.50 44.75 L862.75 43.62 L862.62 19.25 L862.00 18.75 L861.00 18.62ZM582.38 5.00 L581.62 5.50 L581.38 6.38 L581.38 136.62 L582.38 138.00 L604.25 138.00 L605.38 136.75 L605.38 5.88 L604.50 5.00ZM410.38 5.25 L409.88 6.38 L409.88 136.75 L410.25 137.50 L411.38 138.00 L419.25 137.75 L433.00 138.00 L434.62 137.25 L434.88 136.50 L434.88 109.75 L435.38 108.75 L441.25 102.75 L442.25 101.38 L443.12 100.88 L444.00 100.88 L445.62 102.62 L450.62 110.12 L451.38 110.75 L453.50 114.12 L455.50 116.50 L458.62 121.25 L470.25 137.12 L471.50 137.88 L499.25 137.88 L499.62 137.12 L499.50 136.50 L497.50 134.38 L497.12 133.50 L479.62 111.12 L469.25 97.38 L468.50 96.75 L460.00 85.25 L460.62 83.88 L493.12 48.62 L495.62 46.38 L495.75 45.75 L495.38 44.88 L469.12 44.75 L467.62 45.38 L450.38 63.62 L435.88 79.50 L435.25 79.62 L434.75 79.00 L434.75 5.75 L434.25 5.12 L411.38 5.00ZM25.00 23.50 L19.50 29.50 L16.25 34.25 L15.62 34.75 L12.62 39.62 L9.88 45.00 L7.25 51.75 L6.50 55.25 L5.50 58.00 L4.38 63.62 L3.88 70.25 L3.88 78.50 L4.50 85.50 L5.75 91.25 L8.50 100.12 L13.75 110.38 L17.88 116.25 L22.00 121.12 L25.25 124.38 L32.88 130.12 L37.50 132.88 L42.75 135.50 L46.62 137.00 L48.88 137.50 L50.62 138.38 L56.75 139.88 L67.50 141.12 L77.25 140.88 L84.25 139.88 L91.00 138.25 L92.75 137.38 L94.12 137.12 L99.00 135.25 L100.00 134.50 L101.38 134.50 L103.50 136.62 L113.62 149.62 L115.12 150.88 L116.00 150.88 L117.62 150.00 L120.12 149.38 L121.75 148.50 L123.38 148.12 L138.88 142.25 L139.38 141.50 L139.38 140.50 L134.50 135.38 L134.12 134.62 L122.38 121.25 L122.00 120.25 L122.12 119.50 L125.38 116.00 L129.75 110.00 L132.50 105.38 L134.12 102.12 L134.50 100.75 L135.25 99.75 L138.00 91.25 L138.62 87.62 L139.38 85.38 L140.25 77.25 L140.38 70.38 L139.38 59.62 L138.00 54.00 L135.25 45.50 L131.38 37.62 L128.25 32.62 L127.62 32.12 L125.50 28.88 L121.88 24.88 L117.38 20.50 L112.38 16.62 L108.00 13.88 L102.25 10.88 L96.25 8.38 L91.00 6.88 L87.50 6.38 L84.38 5.50 L76.75 4.88 L70.75 4.88 L62.38 5.50 L55.62 6.88 L49.62 8.50 L40.62 12.38 L35.88 15.12 L29.62 19.50ZM68.25 30.00 L76.62 30.00 L80.88 30.50 L82.50 31.12 L85.25 31.62 L90.12 33.38 L95.00 36.12 L98.38 38.50 L104.50 44.62 L107.50 48.75 L109.25 51.75 L112.12 58.62 L113.50 64.00 L114.25 69.50 L114.38 76.00 L113.25 84.12 L110.38 92.25 L106.25 99.25 L104.75 100.50 L104.38 100.50 L102.38 98.38 L89.12 82.50 L87.62 82.62 L71.00 97.75 L71.00 99.12 L83.00 112.88 L83.88 114.38 L82.75 115.25 L76.62 116.50 L66.38 116.50 L58.88 115.00 L54.50 113.50 L52.88 112.50 L51.62 112.12 L48.75 110.50 L44.75 107.50 L41.38 104.25 L37.38 99.25 L34.62 94.25 L34.25 92.88 L33.25 91.25 L32.00 87.38 L30.50 79.62 L30.38 70.50 L31.75 61.75 L34.50 54.12 L37.38 48.62 L38.88 46.62 L44.75 40.25 L48.62 37.25 L52.88 34.62 L55.75 33.25 L60.62 31.50 L64.50 30.50ZM273.88 3.75 L269.50 5.50 L265.88 8.75 L264.75 10.38 L263.50 12.88 L263.00 15.50 L262.88 18.62 L263.38 22.25 L264.62 25.12 L266.12 27.12 L269.12 29.88 L271.75 31.25 L274.88 31.88 L279.00 31.88 L282.00 31.25 L284.62 30.00 L287.00 28.25 L289.00 26.00 L290.25 23.88 L291.38 19.50 L291.38 16.12 L290.62 12.75 L289.12 9.62 L288.12 8.38 L284.88 5.62 L280.25 3.75 L278.38 3.50ZM565.88 3.88 L560.50 2.75 L553.62 2.12 L549.12 2.12 L543.25 2.62 L537.62 4.00 L533.88 5.50 L529.50 8.00 L525.75 11.12 L522.50 14.88 L519.88 19.62 L518.62 23.00 L517.38 30.62 L517.38 43.25 L517.00 44.12 L515.88 44.88 L503.75 44.75 L502.75 45.75 L502.62 64.38 L502.88 65.00 L503.75 65.62 L515.50 65.50 L516.12 65.62 L517.25 67.12 L517.12 136.25 L517.50 137.25 L518.50 137.88 L539.50 138.00 L541.25 137.00 L541.38 66.75 L542.50 65.50 L565.12 65.50 L565.62 65.25 L566.25 64.50 L566.38 47.00 L566.00 45.50 L564.50 44.75 L543.00 45.00 L542.12 44.75 L541.25 43.50 L541.50 33.00 L541.88 31.38 L543.50 28.00 L545.00 26.38 L547.88 24.62 L551.38 23.62 L553.50 23.38 L559.50 23.62 L565.00 24.88 L565.88 24.88 L566.50 24.38 L566.62 4.62Z" fill="#fff" fill-rule="evenodd"/></svg>
+      </figure>
+      <div class="k-pair">
+        <figure class="k-panel k-mk" data-reveal role="img" aria-label="The QuickFleet mark in teal"><svg class="km" viewBox="0 0 292 310" aria-hidden="true"><path d="M56.88 30.62 L47.38 38.75 L34.62 52.00 L26.50 62.75 L24.50 66.12 L22.50 68.75 L20.50 72.50 L19.50 73.62 L13.88 84.62 L13.38 86.38 L12.50 87.50 L12.12 89.12 L9.62 94.75 L9.38 96.12 L8.50 97.62 L8.25 99.25 L4.50 110.75 L2.12 124.12 L1.38 126.62 L0.38 139.75 L0.00 139.88 L0.00 155.50 L0.38 155.62 L1.38 166.38 L2.50 173.12 L3.12 175.00 L4.12 181.38 L5.25 184.50 L5.75 187.25 L6.38 188.50 L8.62 196.38 L9.38 197.75 L11.25 203.25 L18.12 217.75 L23.62 227.12 L24.38 227.75 L25.00 229.25 L33.50 241.25 L35.50 243.12 L37.62 246.00 L40.62 249.25 L42.50 250.75 L43.38 252.25 L44.62 253.50 L46.38 254.62 L48.62 257.25 L55.50 263.38 L60.50 267.38 L62.00 268.12 L62.88 269.25 L75.75 277.38 L87.00 282.88 L90.75 284.12 L94.38 285.88 L96.38 286.25 L97.75 287.12 L111.50 291.25 L115.25 291.75 L119.62 293.00 L123.25 293.25 L130.50 294.38 L136.50 294.50 L139.00 294.88 L147.75 294.88 L157.62 294.12 L159.88 294.25 L161.88 293.62 L170.12 292.50 L173.25 291.62 L173.75 291.12 L173.25 289.88 L170.62 287.62 L157.12 273.75 L152.38 269.50 L146.00 262.75 L144.38 262.00 L137.38 262.00 L134.38 261.50 L129.75 261.25 L119.38 259.50 L108.88 256.50 L107.88 255.88 L105.75 255.38 L104.25 254.50 L102.62 254.12 L98.62 252.38 L98.12 251.75 L93.88 250.00 L90.62 248.25 L90.25 247.75 L86.38 245.62 L80.50 241.62 L79.50 240.50 L74.75 237.25 L63.00 226.12 L57.38 219.12 L56.38 217.25 L55.38 216.50 L51.12 210.25 L49.25 206.88 L48.50 206.12 L47.88 204.50 L46.88 203.25 L46.38 201.62 L44.38 198.25 L42.62 193.75 L41.50 192.25 L40.12 188.75 L39.62 186.50 L38.50 184.25 L38.25 182.50 L37.50 181.00 L37.00 178.50 L36.12 176.25 L34.62 169.38 L34.12 164.62 L33.38 162.00 L32.50 150.38 L32.50 142.75 L33.38 131.62 L34.25 128.62 L34.38 125.62 L35.25 122.75 L35.88 118.62 L36.50 117.25 L37.62 112.50 L38.12 111.75 L38.62 109.62 L39.50 108.12 L41.62 101.62 L42.12 101.12 L44.38 95.75 L45.12 95.00 L47.12 90.62 L51.38 83.38 L59.50 72.50 L64.62 66.88 L70.50 61.25 L81.50 52.50 L84.12 51.00 L85.62 49.75 L92.62 45.75 L98.62 42.88 L100.12 42.50 L101.50 41.62 L103.00 41.25 L104.00 40.50 L111.88 37.75 L124.88 34.50 L132.50 33.38 L139.88 33.00 L148.75 32.88 L158.25 33.50 L160.75 34.25 L165.00 34.50 L175.88 37.12 L178.75 38.38 L180.88 38.75 L182.62 39.62 L185.25 40.38 L186.62 41.25 L187.75 41.50 L189.12 42.38 L191.25 43.00 L196.25 45.38 L206.12 51.38 L217.12 59.62 L223.38 65.75 L224.62 67.38 L225.25 67.62 L227.38 69.75 L235.38 79.75 L242.25 90.50 L242.50 91.50 L243.25 92.50 L247.50 101.25 L251.62 112.50 L254.38 123.62 L255.75 131.88 L256.38 141.75 L256.25 155.38 L254.62 167.75 L253.38 171.62 L252.88 175.25 L251.62 180.12 L250.88 181.75 L250.38 184.25 L249.62 185.75 L249.00 188.25 L247.75 190.62 L247.38 192.38 L244.50 198.38 L243.62 199.50 L242.00 203.38 L239.25 208.12 L233.75 216.25 L231.50 218.62 L230.62 220.25 L228.38 222.50 L225.38 226.25 L218.25 233.25 L217.62 233.50 L212.00 238.62 L208.38 241.50 L207.25 242.12 L206.38 242.12 L205.25 241.50 L197.25 233.50 L189.50 226.50 L184.00 220.75 L177.00 214.12 L175.88 213.38 L167.00 204.38 L146.88 185.38 L145.00 183.00 L145.12 182.00 L148.25 179.00 L149.12 177.62 L151.00 176.25 L154.62 172.50 L157.25 170.38 L164.75 162.50 L166.75 160.88 L172.00 155.50 L173.25 154.62 L173.75 154.88 L174.12 156.00 L173.88 182.38 L174.25 183.00 L175.00 183.38 L201.12 183.25 L201.75 182.75 L201.75 104.38 L202.00 103.38 L201.62 102.50 L200.50 102.12 L113.75 102.12 L112.75 102.50 L112.12 103.62 L112.12 128.88 L112.50 131.38 L113.62 131.75 L146.38 131.62 L147.38 131.88 L147.75 132.50 L146.12 134.38 L131.75 147.75 L121.25 158.38 L120.62 158.62 L115.88 163.50 L107.88 170.88 L100.25 178.62 L96.62 181.62 L96.12 182.75 L96.75 184.00 L106.88 193.38 L109.62 196.38 L112.25 198.62 L114.75 201.50 L122.38 208.38 L134.25 220.38 L156.25 241.38 L157.88 243.25 L159.25 244.25 L162.88 248.38 L166.25 251.25 L168.88 254.25 L180.75 265.38 L192.62 277.38 L196.12 280.38 L199.62 284.25 L209.88 293.75 L212.62 296.88 L217.25 301.00 L224.12 308.12 L226.00 309.00 L230.88 308.75 L258.12 309.12 L259.75 308.88 L275.38 309.00 L276.12 308.75 L276.50 307.62 L276.00 307.00 L274.62 306.25 L270.12 301.62 L253.62 286.38 L251.88 284.38 L250.62 283.50 L247.12 279.62 L235.75 269.38 L232.38 266.00 L231.75 264.88 L232.62 263.75 L238.25 259.38 L242.88 255.25 L244.75 252.88 L247.88 250.12 L249.62 247.75 L256.38 240.25 L264.25 229.25 L269.75 220.12 L276.62 206.38 L280.50 196.12 L281.38 192.75 L283.50 187.12 L283.75 184.88 L286.12 175.75 L286.25 173.75 L287.62 167.25 L288.75 154.88 L288.62 136.50 L288.00 132.25 L287.75 127.00 L286.88 123.25 L286.75 120.88 L286.00 118.62 L286.00 117.38 L283.75 108.00 L283.50 105.88 L282.62 104.25 L279.38 93.62 L272.38 78.12 L271.50 77.12 L271.00 75.75 L265.25 66.12 L258.62 56.88 L251.75 48.75 L246.38 43.12 L236.12 33.50 L227.12 26.50 L224.38 25.00 L221.25 22.50 L217.25 20.38 L216.25 19.50 L210.25 16.62 L208.38 15.25 L202.88 12.62 L197.25 10.50 L195.88 9.62 L194.25 9.38 L188.25 7.00 L185.12 6.38 L183.62 5.62 L180.12 4.62 L174.00 3.50 L172.25 2.88 L167.75 2.38 L165.25 1.62 L162.25 1.62 L159.00 1.00 L153.75 0.75 L151.88 0.38 L151.62 0.00 L137.50 0.00 L137.38 0.38 L136.38 0.62 L124.88 1.62 L110.00 4.62 L93.62 9.75 L80.62 15.50 L77.38 17.62 L73.00 19.75 L66.62 23.62Z" fill="#0A997D" fill-rule="evenodd"/></svg><figcaption><span>The mark</span><span>Q + arrow</span></figcaption></figure>
+        <ul class="k-panel k-pal" data-reveal aria-label="QuickFleet palette">
+          <li style="--c:#0C0730"><b>Deep</b><code>#0C0730</code></li>
+          <li style="--c:#22184A"><b>Purple</b><code>#22184A</code></li>
+          <li style="--c:#0A997D"><b>Teal</b><code>#0A997D</code></li>
+          <li style="--c:#6FD9C1" class="lt"><b>Mint</b><code>#6FD9C1</code></li>
+        </ul>
+      </div>
+      <figure class="k-panel k-wide k-wm" data-reveal role="img" aria-label="The QuickFleet wordmark on white"><svg class="kw" viewBox="0 0 891 154" aria-hidden="true"><path d="M266.38 44.88 L265.25 45.50 L264.88 46.12 L264.88 136.75 L265.75 137.75 L266.50 138.00 L287.38 138.00 L288.38 137.62 L289.12 136.50 L289.00 46.12 L287.62 44.88ZM157.75 45.25 L157.12 46.38 L157.25 108.38 L158.00 114.12 L159.50 119.25 L162.38 125.25 L166.25 130.25 L170.88 134.00 L176.12 136.88 L180.00 138.38 L187.62 139.88 L195.12 139.88 L199.12 139.38 L203.25 138.38 L210.00 135.38 L215.50 131.38 L218.00 128.88 L218.75 128.88 L219.12 129.38 L219.12 136.75 L219.88 137.62 L220.62 137.88 L241.62 138.00 L242.75 137.38 L243.38 136.38 L243.38 46.50 L243.12 45.75 L241.38 44.75 L219.50 44.75 L218.75 45.62 L218.62 100.25 L217.38 105.38 L215.62 109.12 L214.50 110.62 L210.25 114.75 L207.38 116.38 L204.12 117.50 L201.38 117.88 L196.00 117.88 L192.62 117.25 L187.62 114.75 L184.38 111.50 L182.88 109.00 L181.50 104.88 L181.00 99.25 L181.12 46.25 L180.88 45.62 L180.25 45.00 L179.25 44.75 L158.62 44.75ZM765.88 42.88 L757.88 44.62 L757.12 45.12 L754.62 45.75 L753.38 46.50 L751.62 47.00 L748.62 48.50 L744.12 51.50 L740.75 54.25 L735.75 59.62 L733.50 62.62 L730.50 67.62 L729.00 70.88 L728.38 73.00 L727.50 74.62 L726.12 79.62 L725.00 86.50 L724.75 94.12 L725.62 101.12 L727.62 109.38 L730.12 115.12 L731.75 118.00 L734.50 122.00 L737.25 125.12 L740.75 128.50 L744.38 131.38 L751.75 135.50 L759.75 138.38 L765.25 139.50 L770.62 140.00 L775.25 140.00 L781.38 139.38 L787.12 138.25 L788.75 137.50 L791.12 137.00 L795.25 135.38 L800.12 132.62 L805.50 128.50 L808.75 125.25 L811.38 122.25 L814.00 118.62 L814.00 118.12 L812.38 116.62 L803.75 112.12 L798.38 108.75 L796.38 107.88 L795.50 107.88 L794.50 108.62 L793.50 110.25 L789.25 114.38 L786.25 116.38 L785.50 116.50 L783.88 117.50 L778.38 119.00 L776.12 119.25 L770.50 119.25 L767.88 118.88 L763.62 117.62 L760.62 116.25 L756.62 113.50 L752.50 109.00 L750.88 106.12 L749.50 102.88 L748.88 100.38 L749.00 99.75 L749.75 98.88 L750.50 98.62 L816.38 98.75 L817.12 98.38 L817.50 97.75 L817.88 94.25 L817.88 87.12 L817.12 80.25 L815.50 73.50 L814.12 70.00 L813.50 69.12 L813.12 67.62 L811.50 64.50 L807.38 58.50 L804.25 55.25 L800.25 51.75 L793.50 47.50 L789.25 45.62 L787.75 45.38 L786.12 44.62 L777.00 42.75 L769.50 42.62ZM749.12 80.12 L750.62 75.75 L752.38 72.62 L755.75 69.00 L758.75 66.50 L761.62 65.00 L765.62 63.62 L770.38 63.00 L774.50 63.00 L779.00 63.62 L783.00 65.12 L785.50 66.50 L787.88 68.38 L790.50 71.25 L792.12 73.75 L793.50 76.62 L794.25 80.75 L793.12 81.88 L750.50 82.00 L749.25 81.25ZM663.50 42.75 L653.62 44.75 L652.50 45.38 L650.75 45.75 L644.62 48.62 L638.75 52.62 L633.38 57.75 L630.62 61.00 L626.38 67.75 L623.75 73.62 L622.50 77.62 L620.75 87.62 L620.62 94.25 L621.00 98.50 L622.50 106.25 L623.75 110.00 L626.62 116.12 L627.25 116.75 L629.25 120.38 L632.00 123.88 L636.50 128.38 L642.75 132.88 L647.62 135.50 L655.75 138.38 L664.38 139.88 L670.25 140.00 L676.50 139.50 L683.25 138.25 L684.75 137.50 L687.12 137.00 L691.12 135.50 L696.25 132.75 L700.38 129.88 L704.38 126.12 L710.25 119.00 L710.38 118.00 L709.00 116.75 L702.38 113.38 L701.50 112.62 L695.38 109.38 L694.12 108.38 L693.25 108.00 L691.75 108.00 L687.00 113.50 L683.38 116.12 L681.00 117.25 L673.62 119.12 L667.00 119.25 L664.62 119.00 L659.75 117.62 L656.75 116.38 L654.50 115.00 L651.50 112.50 L648.38 109.12 L647.12 107.12 L644.50 100.88 L644.50 99.62 L645.75 98.75 L712.62 98.75 L713.75 98.25 L714.25 97.62 L714.38 88.75 L714.12 85.12 L713.12 78.62 L711.75 73.50 L709.00 66.62 L707.38 63.62 L703.25 58.00 L697.88 52.75 L694.12 50.00 L690.12 47.75 L682.38 44.62 L673.62 42.88 L669.75 42.62ZM645.25 80.12 L646.88 75.25 L648.50 72.38 L651.75 69.00 L654.62 66.62 L657.75 65.00 L661.88 63.62 L666.38 63.00 L670.00 63.00 L676.12 64.00 L679.25 65.12 L682.12 66.62 L685.50 69.50 L688.50 73.50 L689.75 75.88 L691.00 80.62 L690.25 81.75 L646.62 82.00 L645.38 81.25ZM346.38 42.88 L338.50 44.50 L337.00 45.25 L334.88 45.75 L328.50 48.62 L323.75 51.62 L320.75 54.00 L315.75 59.00 L312.88 62.62 L311.38 65.25 L310.62 66.00 L307.75 71.62 L305.00 80.62 L303.88 89.62 L303.88 94.50 L304.75 102.12 L306.62 109.12 L307.75 112.00 L310.50 117.38 L315.50 124.12 L320.00 128.38 L323.62 131.25 L328.50 134.12 L334.62 136.88 L336.88 137.38 L338.75 138.25 L343.62 139.38 L350.75 140.00 L360.50 139.50 L366.25 138.38 L368.88 137.38 L371.25 136.88 L377.38 134.12 L382.00 131.25 L386.75 127.25 L390.25 123.62 L394.25 118.00 L394.88 116.50 L396.12 114.75 L396.12 114.12 L395.25 113.00 L392.88 112.12 L382.25 106.88 L380.88 106.50 L379.38 105.50 L376.25 104.25 L375.38 104.75 L372.50 109.25 L368.12 113.62 L364.25 116.12 L361.00 117.38 L355.50 118.25 L349.75 118.00 L346.00 117.25 L340.50 114.75 L336.75 112.12 L332.50 107.38 L329.75 101.62 L328.50 97.38 L328.12 92.75 L328.38 86.12 L329.62 81.50 L331.38 77.38 L333.75 73.62 L337.75 69.50 L342.75 66.38 L345.75 65.25 L349.62 64.50 L356.25 64.38 L361.00 65.25 L364.38 66.50 L367.00 68.12 L371.12 71.88 L373.38 74.75 L374.50 77.25 L375.88 78.50 L376.88 78.38 L377.62 77.75 L379.38 77.25 L380.75 76.38 L382.25 76.00 L395.38 70.50 L396.00 69.75 L396.00 68.75 L394.25 65.38 L391.38 60.88 L387.25 55.88 L382.12 51.50 L375.38 47.38 L368.12 44.62 L359.88 42.88 L356.25 42.62ZM839.88 18.75 L838.88 19.62 L838.62 43.88 L837.38 45.00 L824.88 45.00 L823.75 45.75 L823.50 46.50 L823.50 64.12 L823.75 64.75 L824.75 65.50 L837.50 65.50 L838.62 66.75 L838.75 111.12 L839.75 117.75 L841.38 123.12 L844.00 128.12 L848.00 132.75 L851.50 135.38 L857.62 138.25 L864.50 139.75 L872.38 140.00 L879.00 139.38 L884.25 138.25 L885.88 137.50 L888.25 137.00 L890.88 135.50 L890.88 134.62 L890.38 134.38 L889.75 133.25 L888.38 124.25 L887.88 117.75 L887.50 116.50 L887.00 116.25 L885.75 116.38 L882.38 117.50 L876.88 118.25 L873.38 118.25 L869.25 117.50 L867.25 116.38 L864.38 113.38 L863.38 111.38 L862.75 108.00 L862.88 66.62 L863.75 65.62 L887.62 65.38 L888.25 64.50 L888.12 45.75 L887.38 45.00 L864.50 45.00 L863.50 44.75 L862.75 43.62 L862.62 19.25 L862.00 18.75 L861.00 18.62ZM582.38 5.00 L581.62 5.50 L581.38 6.38 L581.38 136.62 L582.38 138.00 L604.25 138.00 L605.38 136.75 L605.38 5.88 L604.50 5.00ZM410.38 5.25 L409.88 6.38 L409.88 136.75 L410.25 137.50 L411.38 138.00 L419.25 137.75 L433.00 138.00 L434.62 137.25 L434.88 136.50 L434.88 109.75 L435.38 108.75 L441.25 102.75 L442.25 101.38 L443.12 100.88 L444.00 100.88 L445.62 102.62 L450.62 110.12 L451.38 110.75 L453.50 114.12 L455.50 116.50 L458.62 121.25 L470.25 137.12 L471.50 137.88 L499.25 137.88 L499.62 137.12 L499.50 136.50 L497.50 134.38 L497.12 133.50 L479.62 111.12 L469.25 97.38 L468.50 96.75 L460.00 85.25 L460.62 83.88 L493.12 48.62 L495.62 46.38 L495.75 45.75 L495.38 44.88 L469.12 44.75 L467.62 45.38 L450.38 63.62 L435.88 79.50 L435.25 79.62 L434.75 79.00 L434.75 5.75 L434.25 5.12 L411.38 5.00ZM25.00 23.50 L19.50 29.50 L16.25 34.25 L15.62 34.75 L12.62 39.62 L9.88 45.00 L7.25 51.75 L6.50 55.25 L5.50 58.00 L4.38 63.62 L3.88 70.25 L3.88 78.50 L4.50 85.50 L5.75 91.25 L8.50 100.12 L13.75 110.38 L17.88 116.25 L22.00 121.12 L25.25 124.38 L32.88 130.12 L37.50 132.88 L42.75 135.50 L46.62 137.00 L48.88 137.50 L50.62 138.38 L56.75 139.88 L67.50 141.12 L77.25 140.88 L84.25 139.88 L91.00 138.25 L92.75 137.38 L94.12 137.12 L99.00 135.25 L100.00 134.50 L101.38 134.50 L103.50 136.62 L113.62 149.62 L115.12 150.88 L116.00 150.88 L117.62 150.00 L120.12 149.38 L121.75 148.50 L123.38 148.12 L138.88 142.25 L139.38 141.50 L139.38 140.50 L134.50 135.38 L134.12 134.62 L122.38 121.25 L122.00 120.25 L122.12 119.50 L125.38 116.00 L129.75 110.00 L132.50 105.38 L134.12 102.12 L134.50 100.75 L135.25 99.75 L138.00 91.25 L138.62 87.62 L139.38 85.38 L140.25 77.25 L140.38 70.38 L139.38 59.62 L138.00 54.00 L135.25 45.50 L131.38 37.62 L128.25 32.62 L127.62 32.12 L125.50 28.88 L121.88 24.88 L117.38 20.50 L112.38 16.62 L108.00 13.88 L102.25 10.88 L96.25 8.38 L91.00 6.88 L87.50 6.38 L84.38 5.50 L76.75 4.88 L70.75 4.88 L62.38 5.50 L55.62 6.88 L49.62 8.50 L40.62 12.38 L35.88 15.12 L29.62 19.50ZM68.25 30.00 L76.62 30.00 L80.88 30.50 L82.50 31.12 L85.25 31.62 L90.12 33.38 L95.00 36.12 L98.38 38.50 L104.50 44.62 L107.50 48.75 L109.25 51.75 L112.12 58.62 L113.50 64.00 L114.25 69.50 L114.38 76.00 L113.25 84.12 L110.38 92.25 L106.25 99.25 L104.75 100.50 L104.38 100.50 L102.38 98.38 L89.12 82.50 L87.62 82.62 L71.00 97.75 L71.00 99.12 L83.00 112.88 L83.88 114.38 L82.75 115.25 L76.62 116.50 L66.38 116.50 L58.88 115.00 L54.50 113.50 L52.88 112.50 L51.62 112.12 L48.75 110.50 L44.75 107.50 L41.38 104.25 L37.38 99.25 L34.62 94.25 L34.25 92.88 L33.25 91.25 L32.00 87.38 L30.50 79.62 L30.38 70.50 L31.75 61.75 L34.50 54.12 L37.38 48.62 L38.88 46.62 L44.75 40.25 L48.62 37.25 L52.88 34.62 L55.75 33.25 L60.62 31.50 L64.50 30.50ZM273.88 3.75 L269.50 5.50 L265.88 8.75 L264.75 10.38 L263.50 12.88 L263.00 15.50 L262.88 18.62 L263.38 22.25 L264.62 25.12 L266.12 27.12 L269.12 29.88 L271.75 31.25 L274.88 31.88 L279.00 31.88 L282.00 31.25 L284.62 30.00 L287.00 28.25 L289.00 26.00 L290.25 23.88 L291.38 19.50 L291.38 16.12 L290.62 12.75 L289.12 9.62 L288.12 8.38 L284.88 5.62 L280.25 3.75 L278.38 3.50ZM565.88 3.88 L560.50 2.75 L553.62 2.12 L549.12 2.12 L543.25 2.62 L537.62 4.00 L533.88 5.50 L529.50 8.00 L525.75 11.12 L522.50 14.88 L519.88 19.62 L518.62 23.00 L517.38 30.62 L517.38 43.25 L517.00 44.12 L515.88 44.88 L503.75 44.75 L502.75 45.75 L502.62 64.38 L502.88 65.00 L503.75 65.62 L515.50 65.50 L516.12 65.62 L517.25 67.12 L517.12 136.25 L517.50 137.25 L518.50 137.88 L539.50 138.00 L541.25 137.00 L541.38 66.75 L542.50 65.50 L565.12 65.50 L565.62 65.25 L566.25 64.50 L566.38 47.00 L566.00 45.50 L564.50 44.75 L543.00 45.00 L542.12 44.75 L541.25 43.50 L541.50 33.00 L541.88 31.38 L543.50 28.00 L545.00 26.38 L547.88 24.62 L551.38 23.62 L553.50 23.38 L559.50 23.62 L565.00 24.88 L565.88 24.88 L566.50 24.38 L566.62 4.62Z" fill="#0C0730" fill-rule="evenodd"/></svg></figure>
+    </div>
+  </section>
+
+  <section class="k-sec wrap" id="website">
+    <div class="in">
+      <header class="k-sh" data-reveal>
+        <span class="k-n">04</span><h2 class="k-st">Website</h2><p>quickfleet.co explains the network the way a customer meets it: what it costs, who comes and how it’s proved. A waitlist sorts customers, businesses and riders.</p>
+      </header>
+      <figure class="k-panel k-shot k-big" data-reveal><div class="ks"><img class="" src="assets/img/cs-qf-w_home-66a969a9f0.webp" width="1440" height="900" alt="quickfleet.co home page: The electric delivery network for Nigeria" loading="lazy" decoding="async" sizes="(max-width:900px) 92vw, 80vw"></div></figure>
+      <div class="k-three k-wt">
+        <figure class="k-panel k-shot" data-reveal><div class="ks"><img class="" src="assets/img/cs-qf-w_hubs-36993b1d3b.webp" width="1440" height="900" alt="quickfleet.co: Inside a hub" loading="lazy" decoding="async"></div></figure>
+        <figure class="k-panel k-shot" data-reveal><div class="ks"><img class="" src="assets/img/cs-qf-w_tech-e9e3e8b9a9.webp" width="1440" height="900" alt="quickfleet.co: A booking opens a record" loading="lazy" decoding="async"></div></figure>
+        <figure class="k-panel k-shot" data-reveal><div class="ks"><img class="" src="assets/img/cs-qf-w_stand-555be51ca6.webp" width="1440" height="900" alt="quickfleet.co: Three things every parcel gets" loading="lazy" decoding="async"></div></figure>
+      </div>
+      <figure class="k-panel k-phones" data-reveal>
+        <img class="" src="assets/img/cs-qf-m_home-be5698bb55.webp" width="780" height="1688" alt="quickfleet.co on a phone: home" loading="lazy" decoding="async"><img class="" src="assets/img/cs-qf-m_net-b33cd6d2ad.webp" width="780" height="1688" alt="quickfleet.co on a phone: the network" loading="lazy" decoding="async"><img class="" src="assets/img/cs-qf-m_about-71bd92e3a4.webp" width="780" height="1688" alt="quickfleet.co on a phone: about" loading="lazy" decoding="async">
+      </figure>
+      <a class="k-more" href="https://quickfleet.co" target="_blank" rel="noopener">Visit quickfleet.co <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9l6-6M4 3h5v5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
+    </div>
+  </section>
+
+  <section class="k-sec wrap" id="operations">
+    <div class="in">
+      <header class="k-sh" data-reveal>
+        <span class="k-n">05</span><h2 class="k-st">Operations</h2><p>Battery-swap hubs, three to five in every city, close to where deliveries start. A rider swaps a flat battery for a charged one in minutes, so a parcel never waits on a charger.</p>
+      </header>
+      <figure class="k-panel k-ph k-wide" data-reveal><img class="" src="assets/img/cs-qf-hub-d10578f5f8.webp" width="1600" height="900" alt="Concept render of a QuickFleet battery-swap hub" loading="lazy" decoding="async" sizes="(max-width:900px) 92vw, 96vw"><figcaption>Hub concept</figcaption></figure>
+      <div class="k-pair">
+        <figure class="k-panel k-ph" data-reveal><img class="" src="assets/img/cs-qf-riders-4bf9895e9e.webp" width="1600" height="900" alt="Concept render of QuickFleet riders at a hub" loading="lazy" decoding="async"><figcaption>Rider concept</figcaption></figure>
+        <div class="k-panel k-ops" data-reveal>
+          <ol>
+            <li><span>01</span><b>Arrive</b><em>A rider rolls in with a flat battery.</em></li>
+            <li><span>02</span><b>Swap</b><em>A charged one goes in. Minutes, not hours.</em></li>
+            <li><span>03</span><b>Ride</b><em>Back on the road while the hub charges the flat one.</em></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="k-sec wrap" id="now">
+    <div class="in">
+      <header class="k-sh" data-reveal>
+        <span class="k-n">06</span><h2 class="k-st">Where it stands</h2><p>Pre-launch, Abuja first. No numbers yet. We’ll add them when the first parcels move.</p>
+      </header>
+      <div class="k-panel k-ba" data-reveal role="table" aria-label="Informal dispatch compared with QuickFleet">
+        <div class="ba-r ba-h" role="row"><span role="columnheader"></span><span role="columnheader">Informal dispatch</span><span role="columnheader"><i></i>QuickFleet</span></div>
+        <div class="ba-r" role="row"><b role="rowheader">Price</b><span role="cell">Agreed on the phone. Moves with fuel.</span><span role="cell">Shown before you book. Locked at pickup.</span></div>
+        <div class="ba-r" role="row"><b role="rowheader">Rider</b><span role="cell">Whoever is free.</span><span role="cell">Vetted, trained and named.</span></div>
+        <div class="ba-r" role="row"><b role="rowheader">Record</b><span role="cell">None after pickup.</span><span role="cell">Timestamped from booking to handover.</span></div>
+        <div class="ba-r" role="row"><b role="rowheader">Receiver</b><span role="cell">Calls around to chase it.</span><span role="cell">A text link and a four-digit code.</span></div>
+        <div class="ba-r" role="row"><b role="rowheader">Energy</b><span role="cell">Petrol, at the pump price.</span><span role="cell">Electric, from battery-swap hubs.</span></div>
+      </div>
+      <div class="k-g k-end">
+        <ul class="k-st2" data-reveal>
+          <li><span>Website</span><b><i></i>Live</b></li>
+          <li><span>Customer app</span><b>Designed</b></li>
+          <li><span>First city</span><b>Abuja</b></li>
+        </ul>
+        <figure class="k-q" data-reveal>
+          <blockquote>“SOUL covered every side of QuickFleet: the branding, the product and the app. All of it came back excellent, and one team this strong made the whole build easier.”</blockquote>
+          <figcaption><b>Sani Garba Mamman</b><span>CEO, QuickFleet</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
   <section class="k-next wrap">
     <div class="in k-g">
       <a class="k-card" href="case-pantech.html" data-reveal>
         <span class="k-lab">Next case study</span>
         <figure><img src="assets/img/work-6d7a4109e5.webp" alt="Pantech Dynamics brand identity" loading="lazy" decoding="async"></figure>
-        <div class="k-ct"><b>Pantech Dynamics</b><span>Brand identity for Africa’s data centre</span><i><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></i></div>
+        <div class="k-ct"><b>Pantech Dynamics</b><i><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></i><span>Brand identity for Africa’s data centre</span></div>
       </a>
       <div class="k-cta" data-reveal>
         <h2>Your business could be <em>next.</em></h2>
@@ -1079,16 +1303,20 @@ body{background:var(--ink)}
   const setMenu=(o)=>{ mmenu.classList.toggle('open',o); nav.classList.toggle('menu-open',o); menuBtn.setAttribute('aria-expanded',o); mmenu.setAttribute('aria-hidden',String(!o)); document.body.style.overflow=o?'hidden':''; };
   menuBtn.addEventListener('click',()=>setMenu(!mmenu.classList.contains('open')));
   mmenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
-  const onScroll=()=>{ const y=scrollY; nav.classList.toggle('float',y>40); nav.classList.toggle('solid',y>40); nav.classList.toggle('on-light',y<=40); };
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const photo=document.querySelector('.k-photo');
+  const onScroll=()=>{ const y=scrollY; nav.classList.toggle('float',y>40); nav.classList.toggle('solid',y>40); nav.classList.toggle('on-light',y<=40);
+    // the hero photo settles from a slight zoom as it rises (scroll-driven only)
+    if(photo&&!reduce){ const r=photo.getBoundingClientRect(); if(r.bottom>0&&r.top<innerHeight){ const t=Math.max(0,Math.min(1,1-r.top/innerHeight)); photo.style.setProperty('--z',(1.06-.06*t).toFixed(4)); } } };
   addEventListener('scroll',onScroll,{passive:true}); onScroll();
   const io=new IntersectionObserver(es=>es.forEach(x=>{ if(x.isIntersecting){ x.target.classList.add('on','vis'); io.unobserve(x.target);} }),{threshold:.15});
   document.querySelectorAll('[data-reveal]').forEach(e=>io.observe(e));
-  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const film=document.querySelector('.k-film'), v=film&&film.querySelector('video');
-  if(v&&!reduce){ v.addEventListener('playing',()=>v.classList.add('playing'));
-    new IntersectionObserver(es=>{ const on=es[0].isIntersecting;
-      if(on){ if(!v.src){ v.src=innerWidth<760?v.dataset.srcM:v.dataset.src; v.load(); } v.play().catch(()=>{}); } else if(v.src) v.pause(); },{threshold:.2}).observe(film);
-    addEventListener('touchend',()=>{ if(v.src&&v.paused&&film.getBoundingClientRect().top<innerHeight) v.play().catch(()=>{}); },{passive:true}); }
+  // 02: the step in the middle of the screen picks the screen (desktop; phones show each screen inline)
+  const steps=[...document.querySelectorAll('.pp-step')], scr=[...document.querySelectorAll('.pp-s')], prog=[...document.querySelectorAll('.pp-prog i')];
+  const show=(k)=>{ [steps,scr,prog].forEach(L=>L.forEach((s,i)=>s.classList.toggle('on',i===k))); };
+  show(0);
+  const sio=new IntersectionObserver(es=>es.forEach(x=>{ if(x.isIntersecting) show(+x.target.dataset.i); }),{rootMargin:'-45% 0px -45% 0px'});
+  steps.forEach(s=>sio.observe(s));
   const meet=document.querySelector('.endscene .meet'), ml=document.querySelector('.meet-layer');
   if(meet&&ml&&!reduce){ const rise=()=>{ const r=meet.getBoundingClientRect(), vh=innerHeight; if(r.top>vh||r.bottom<0) return;
       const t=Math.max(0,Math.min(1,(vh-r.top)/(vh*.3))); ml.style.setProperty('--rise',((1-t)*36).toFixed(1)+'px'); };
