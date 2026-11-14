@@ -980,12 +980,12 @@ a{color:inherit;text-decoration:none}
 }
 
 
-.v-sh2{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;align-items:end;padding-top:20px;border-top:1px solid var(--hair);margin-bottom:clamp(44px,6vh,64px)}
+.v-sh2{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;align-items:start;padding-top:20px;border-top:1px solid var(--hair);margin-bottom:clamp(44px,6vh,64px)}
 .v2-l{grid-column:1 / span 7}
 .v2-k{display:flex;gap:14px;align-items:baseline;font-size:11.5px;font-weight:500;font-stretch:112%;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-2)}
 .v2-k b{font-weight:500;color:#0A997D}
 .v2-l h2{margin:clamp(22px,3vh,34px) 0 0;font-family:var(--display);font-weight:500;font-size:clamp(34px,3.6vw,58px);line-height:1.03;letter-spacing:-.035em;max-width:15ch}
-.v2-r{grid-column:9 / span 4;padding-bottom:6px}
+.v2-r{grid-column:9 / span 4;padding-top:2px}
 .v2-r p{margin:0;font-size:15px;line-height:1.6;color:var(--ink-2)}
 .v-scroll{background:var(--pn);padding:clamp(20px,5vw,90px) clamp(20px,5vw,90px) 0}
 .vs-win{position:relative;aspect-ratio:1440/900;overflow:hidden;border-radius:8px 8px 0 0;box-shadow:0 30px 70px -36px rgba(12,7,48,.35),0 0 0 1px rgba(11,11,10,.06);background:#fff}
@@ -997,6 +997,15 @@ a{color:inherit;text-decoration:none}
   .v2-r{margin-top:18px}
   .v-scroll{padding:14px 14px 0}.vs-win{aspect-ratio:4/5}
 }
+
+.v-intro .v-lede{grid-column:1 / span 6}
+.v-intro .v-lede p{font-size:clamp(24px,2.2vw,34px);line-height:1.22;letter-spacing:-.02em;margin-top:22px}
+.v-intro .v-facts{grid-column:8 / span 5;margin-top:0}
+
+.v-pin{height:260vh;position:relative}
+.v-pin .v-scroll{position:sticky;top:max(84px,8vh)}
+.v-pin .vs-win{aspect-ratio:auto;height:min(72vh,calc((100vw - 2*max(20px,2.5vw) - 2*clamp(20px,5vw,90px))*.625))}
+@media (max-width:900px){.v-pin{height:220vh}.v-pin .v-scroll{top:76px}.v-pin .vs-win{height:62vh}}
 </style>
 </head>
 <body>
@@ -1143,7 +1152,7 @@ body{background:var(--ink)}
     <div class="v-grid">
       <figure class="v-p v-full v-film v-site" data-reveal aria-label="A walk through quickfleet.co"><div class="vf-in"><img src="assets/img/cs-qf-walkposter-d706f9d7fe.webp" alt="" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="assets/video/cs-qf-walk.mp4" data-src-m="assets/video/cs-qf-walk-m.mp4"></video></div></figure>
       <figure class="v-p v-full v-wide" data-reveal><img src="assets/img/cs-qf-sc-desk.webp" srcset="assets/img/cs-qf-sc-desk-1000.webp 1000w, assets/img/cs-qf-sc-desk.webp 2400w" sizes="(max-width:900px) 100vw, 96vw" width="2400" height="1600" alt="The quickfleet.co Services page on a laptop" loading="lazy" decoding="async"></figure>
-      <figure class="v-p v-full v-scroll" data-reveal aria-label="The full quickfleet.co home page"><div class="vs-win"><img src="assets/img/cs-qf-fullpage-32b79d8505.webp" width="1440" height="12067" alt="The full quickfleet.co home page, top to bottom" loading="lazy" decoding="async"></div><figcaption><span>quickfleet.co</span><span>The full home page</span></figcaption></figure>
+      <div class="v-full v-pin"><figure class="v-p v-scroll" aria-label="The full quickfleet.co home page"><div class="vs-win"><img src="assets/img/cs-qf-fullpage-32b79d8505.webp" width="1440" height="12067" alt="The full quickfleet.co home page, top to bottom" loading="eager" decoding="async"></div><figcaption><span>quickfleet.co</span><span>The full home page</span></figcaption></figure></div>
     </div>
   </div></section>
 
@@ -1197,8 +1206,9 @@ body{background:var(--ink)}
   const frame=()=>{ tick=false; const vh=innerHeight;
     if(hero){ const r=hero.getBoundingClientRect(); if(r.bottom>0&&r.top<vh){ const t=Math.max(0,Math.min(1,1-r.top/vh)); hero.style.setProperty('--z',(1.22-.07*t).toFixed(4)); } }
     // the two page columns drift in opposite directions while the panel crosses the screen
-    const sw=document.querySelector('.vs-win'); if(sw){ const r=sw.getBoundingClientRect(); if(r.bottom>0&&r.top<vh){ const img=sw.querySelector('img'); const t=Math.max(0,Math.min(1,(vh*.85-r.top)/(vh*.85+r.height*.1)));
-      sw.style.setProperty('--sy',(-t*Math.max(0,img.offsetHeight-sw.clientHeight)).toFixed(1)+'px'); } }
+    const pin=document.querySelector('.v-pin'); if(pin){ const r=pin.getBoundingClientRect(); if(r.bottom>0&&r.top<vh){ const sw=pin.querySelector('.vs-win'), img=sw.querySelector('img');
+      const ih=sw.clientWidth*(+img.getAttribute('height'))/(+img.getAttribute('width')); const run=r.height-vh*.85; const t=Math.max(0,Math.min(1,(-r.top+vh*.1)/Math.max(1,run)));
+      sw.style.setProperty('--sy',(-t*Math.max(0,ih-sw.clientHeight)).toFixed(1)+'px'); } }
     if(pages){ const r=pages.getBoundingClientRect(); if(r.bottom>0&&r.top<vh){ const t=Math.max(0,Math.min(1,(vh-r.top)/(vh+r.height)));
       cols.forEach(c=>{ const room=Math.max(0,c.scrollHeight-r.height*.92), d=+c.dataset.dir; c.style.setProperty('--ty',(d>0?-t*room*.55:(t-.5)*r.height*.28).toFixed(1)+'px'); }); } } };
   const onScroll=()=>{ const y=scrollY; nav.classList.toggle('float',y>40); nav.classList.toggle('solid',y>40); nav.classList.toggle('on-light',y<=40);
