@@ -1006,6 +1006,15 @@ a{color:inherit;text-decoration:none}
 .v-pin .v-scroll{position:sticky;top:max(84px,8vh)}
 .v-pin .vs-win{aspect-ratio:auto;height:min(72vh,calc((100vw - 2*max(20px,2.5vw) - 2*clamp(20px,5vw,90px))*.625))}
 @media (max-width:900px){.v-pin{height:220vh}.v-pin .v-scroll{top:76px}.v-pin .vs-win{height:62vh}}
+
+.v-br{background:var(--pn);padding:clamp(18px,3vw,48px) clamp(18px,3vw,48px) 0;display:flex;flex-direction:column}
+.br-w{border-radius:10px 10px 0 0;overflow:hidden;background:#fff;box-shadow:0 30px 60px -34px rgba(12,7,48,.32),0 0 0 1px rgba(11,11,10,.06);flex:1;position:relative}
+.br-bar{height:30px;display:flex;align-items:center;gap:6px;padding:0 12px;border-bottom:1px solid rgba(11,11,10,.07);background:#FAFAF8;position:relative}
+.br-bar i{width:9px;height:9px;border-radius:50%;background:rgba(11,11,10,.14)}
+.br-bar span{position:absolute;left:50%;transform:translateX(-50%);font-size:11px;color:var(--muted);background:rgba(11,11,10,.05);padding:3px 14px;border-radius:5px}
+.br-w img{display:block;width:100%;height:auto}
+.v-br figcaption{order:-1;margin:0 0 14px;font-size:11px;font-stretch:112%;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+@media (max-width:900px){.v-br{padding:16px 16px 0}.br-bar{height:24px}}
 </style>
 </head>
 <body>
@@ -1150,9 +1159,11 @@ body{background:var(--ink)}
   <section class="v-sec wrap" id="website"><div class="in">
     <header class="v-sh2" data-reveal><div class="v2-l"><span class="v2-k"><b>04</b>Website</span><h2>A site that answers what a customer asks first.</h2></div><div class="v2-r"><p>What it costs, who comes and how it’s proved. Each page answers one of those, from the bikes and the hubs to the app, and a waitlist sorts customers, businesses and riders ahead of launch.</p></div></header>
     <div class="v-grid">
-      <figure class="v-p v-full v-film v-site" data-reveal aria-label="A walk through quickfleet.co"><div class="vf-in"><img src="assets/img/cs-qf-walkposter-d706f9d7fe.webp" alt="" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="assets/video/cs-qf-walk.mp4" data-src-m="assets/video/cs-qf-walk-m.mp4"></video></div></figure>
       <figure class="v-p v-full v-wide" data-reveal><img src="assets/img/cs-qf-sc-desk.webp" srcset="assets/img/cs-qf-sc-desk-1000.webp 1000w, assets/img/cs-qf-sc-desk.webp 2400w" sizes="(max-width:900px) 100vw, 96vw" width="2400" height="1600" alt="The quickfleet.co Services page on a laptop" loading="lazy" decoding="async"></figure>
-      <div class="v-full v-pin"><figure class="v-p v-scroll" aria-label="The full quickfleet.co home page"><div class="vs-win"><img src="assets/img/cs-qf-fullpage-32b79d8505.webp" width="1440" height="12067" alt="The full quickfleet.co home page, top to bottom" loading="eager" decoding="async"></div><figcaption><span>quickfleet.co</span><span>The full home page</span></figcaption></figure></div>
+      <figure class="v-p v-br" data-reveal><div class="br-w"><div class="br-bar"><i></i><i></i><i></i><span>quickfleet.co</span></div><img src="assets/img/cs-qf-wd_s6-6779d0ea9b.webp" width="1600" height="851" alt="Delivery has become a cost you cannot control" sizes="(max-width:900px) 100vw, 46vw" loading="lazy" decoding="async"></div><figcaption>The problem</figcaption></figure>
+      <figure class="v-p v-br" data-reveal><div class="br-w"><div class="br-bar"><i></i><i></i><i></i><span>quickfleet.co</span></div><img src="assets/img/cs-qf-wd_s2-17d4547be1.webp" width="1600" height="1183" alt="Every city starts with its hubs" sizes="(max-width:900px) 100vw, 46vw" loading="lazy" decoding="async"></div><figcaption>The network</figcaption></figure>
+      <figure class="v-p v-br" data-reveal><div class="br-w"><div class="br-bar"><i></i><i></i><i></i><span>quickfleet.co</span></div><img src="assets/img/cs-qf-wd_s4-91b7c1104f.webp" width="1600" height="913" alt="Steadier prices. Quieter streets." sizes="(max-width:900px) 100vw, 46vw" loading="lazy" decoding="async"></div><figcaption>What changes</figcaption></figure>
+      <figure class="v-p v-br" data-reveal><div class="br-w"><div class="br-bar"><i></i><i></i><i></i><span>quickfleet.co</span></div><img src="assets/img/cs-qf-wd_s5-39e4c30224.webp" width="1600" height="1011" alt="One app, from your door to theirs" sizes="(max-width:900px) 100vw, 46vw" loading="lazy" decoding="async"></div><figcaption>The product</figcaption></figure>
     </div>
   </div></section>
 
