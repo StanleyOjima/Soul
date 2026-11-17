@@ -1290,6 +1290,31 @@ img.top{object-position:50% 0}
 }
 </style>
 <style id="qf23">.v-mk2 .m-big{width:44%}</style>
+<style id="qf24">
+.c-shot picture{display:contents}
+/* status: each state as a chip */
+.s-tab dd{font-size:14.5px;font-weight:500;padding:8px 14px 8px 12px;border-radius:999px;gap:9px}
+.s-tab dd.done{background:#E3F4EE;color:#0A6E5A}
+.s-tab dd.wip{background:transparent;box-shadow:inset 0 0 0 1px var(--hair);color:var(--ink)}
+.s-tab div{min-height:68px}
+@media (max-width:760px){
+ /* the challenge phone stands upright on phones */
+ .c-shot{aspect-ratio:4/5}.c-shot img{transform:none!important;object-position:50% 50%}
+ /* the film fills the column like every other image */
+ .v-ad{max-height:none!important;max-width:none!important;width:100%}
+ /* steps: one card per step */
+ .v-caps{gap:10px!important;margin-top:14px}
+ .v-caps li{padding:20px 20px 22px!important;border-radius:8px;background:var(--pn);display:grid;grid-template-columns:auto 1fr;column-gap:14px;align-items:center}
+ .v-caps li::before{display:none}
+ .v-caps li>span{position:static;width:30px;height:30px;font-size:11.5px}
+ .v-caps b{margin:0!important;font-size:18px}
+ .v-caps p{grid-column:1 / -1;margin:10px 0 0!important;font-size:15px;max-width:none}
+ .v-caps li:last-child{padding-bottom:22px!important}
+ /* status: label above, chip below, quiet rules */
+ .s-tab div{gap:10px;padding:18px 0;min-height:0}
+ .s-tab dt{font-size:13px}
+}
+</style>
 </head>
 <body>
 <header class="nav wrap" id="nav">
@@ -1388,7 +1413,7 @@ body{background:var(--ink)}
 
   <section class="v-sec wrap" id="challenge"><div class="in">
     <header class="v-sh2" data-reveal><div class="v2-l"><span class="v2-k"><b>01</b>The challenge</span><h2>Delivery in Nigeria is a gamble.</h2></div><div class="v2-r"><p>Calls that go unanswered, prices that move with fuel and no proof a parcel arrived. QuickFleet is built to fix all three.</p></div></header>
-    <figure class="c-shot" data-reveal><img src="/assets/img/cs-qf-ch-phone.webp" srcset="/assets/img/cs-qf-ch-phone-1200.webp 1200w, /assets/img/cs-qf-ch-phone.webp 2400w" sizes="(max-width:900px) 100vw, 96vw" width="2400" height="1350" alt="A phone lock screen after a delivery goes wrong: 12 missed calls from the rider, then messages asking for fuel money, saying they can't find the address and that traffic is crazy" loading="lazy" decoding="async"></figure>
+    <figure class="c-shot" data-reveal><picture><source media="(max-width:760px)" srcset="/assets/img/cs-qf-ch-phone-m.webp" width="1200" height="1500"><img src="/assets/img/cs-qf-ch-phone.webp" srcset="/assets/img/cs-qf-ch-phone-1200.webp 1200w, /assets/img/cs-qf-ch-phone.webp 2400w" sizes="(max-width:900px) 100vw, 96vw" width="2400" height="1350" alt="A phone lock screen after a delivery goes wrong: 12 missed calls from the rider, then messages asking for fuel money, saying they can't find the address and that traffic is crazy" loading="lazy" decoding="async"></picture></figure>
   </div></section>
 
   <section class="v-sec wrap" id="branding"><div class="in">
@@ -1462,11 +1487,11 @@ body{background:var(--ink)}
   <section class="v-sec wrap" id="status"><div class="in">
     <header class="v-sh2" data-reveal><div class="v2-l"><span class="v2-k"><b>07</b>Where it stands</span><h2>Pre-launch, Abuja first.</h2></div><div class="v2-r"><p>No delivery numbers yet. We’ll add them when the first parcels move.</p></div></header>
     <dl class="s-tab" data-reveal>
-      <div><dt>Brand identity</dt><dd><i class="on"></i>Created</dd></div>
-      <div><dt>Marketing website</dt><dd><i class="on"></i>Live at quickfleet.co</dd></div>
-      <div><dt>Customer app</dt><dd><i></i>Designed, not yet launched</dd></div>
-      <div><dt>Battery-swap hubs</dt><dd><i></i>Concept and operational planning</dd></div>
-      <div><dt>Delivery service</dt><dd><i></i>Pre-launch, Abuja first</dd></div>
+      <div><dt>Brand identity</dt><dd class="done"><i class="on"></i>Created</dd></div>
+      <div><dt>Marketing website</dt><dd class="done"><i class="on"></i>Live at quickfleet.co</dd></div>
+      <div><dt>Customer app</dt><dd class="wip"><i></i>Designed, not yet launched</dd></div>
+      <div><dt>Battery-swap hubs</dt><dd class="wip"><i></i>Concept and operational planning</dd></div>
+      <div><dt>Delivery service</dt><dd class="wip"><i></i>Pre-launch, Abuja first</dd></div>
     </dl>
     <div class="s-end" data-reveal>
       <h2>From an idea to a business with a system.</h2>
