@@ -22,12 +22,21 @@
       "source": "/index",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/case-pantech",
+      "destination": "/work/pantech",
+      "permanent": true
     }
   ],
   "rewrites": [
     {
       "source": "/work/quickfleet",
       "destination": "/case-quickfleet"
+    },
+    {
+      "source": "/work/pantech",
+      "destination": "/case-pantech"
     }
   ]
 }
