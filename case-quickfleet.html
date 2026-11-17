@@ -1121,14 +1121,14 @@ a{color:inherit;text-decoration:none}
 .i-chips{list-style:none;margin:30px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
 .i-chips li{font-size:13px;padding:8px 13px;border:1px solid var(--hair);border-radius:999px;color:var(--ink)}
 /* challenge */
-.c-wide{margin:0;position:relative;border-radius:8px;overflow:hidden;aspect-ratio:16/8.2;background:#0A987D}
-.c-wide img{width:100%;height:100%;object-fit:cover;display:block}
-.c-wide figcaption,.c-card figcaption span{font-size:11px;font-weight:500;font-stretch:112%;letter-spacing:.09em;text-transform:uppercase}
-.c-wide figcaption{position:absolute;left:18px;top:16px;color:rgba(255,255,255,.85)}
-.c-row{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap);margin-top:var(--gap)}
+
+
+
+
+
 .c-card{margin:0}
-.c-img{border-radius:8px;overflow:hidden;aspect-ratio:4/5;background:#F2EDE6}
-.c-img img{width:100%;height:100%;object-fit:cover;display:block}
+
+
 .c-card figcaption{padding:18px 4px 0}
 .c-card figcaption span{color:#0A997D}
 .c-card b{display:block;margin:8px 0 6px;font-family:var(--display);font-weight:500;font-size:clamp(20px,1.7vw,26px);letter-spacing:-.025em}
@@ -1141,8 +1141,8 @@ a{color:inherit;text-decoration:none}
 .v-bento .b-feat img{position:absolute;left:14%;right:14%;top:12%;width:72%;height:56%;object-fit:contain}
 @media (max-width:900px){
   .v-intro .v-lede p{font-size:clamp(26px,7.4vw,34px)}
-  .c-wide{aspect-ratio:4/3}.c-wide img{object-position:50% 50%}
-  .c-row{grid-template-columns:1fr;gap:28px;margin-top:28px}
+  
+  
   .v-bento .b-feat img{top:10%;height:52%}
 }
 </style>
@@ -1155,6 +1155,11 @@ a{color:inherit;text-decoration:none}
 .i-row a{display:inline-flex;align-items:center;gap:6px}
 .v-intro .i-chips{margin-top:28px}
 @media (max-width:900px){.i-big{font-size:clamp(28px,8vw,38px)}.i-row{grid-template-columns:1fr 1fr;row-gap:6px}.i-row div{border-bottom:1px solid var(--hair);padding:12px 0}}
+</style>
+<style id="qf16">
+.c-shot{margin:0;border-radius:8px;overflow:hidden;aspect-ratio:16/9;background:#EFEBE4}
+.c-shot img{width:100%;height:100%;object-fit:cover;display:block}
+@media (max-width:900px){.c-shot{aspect-ratio:4/5}.c-shot img{object-position:63% 50%;transform:scale(1.22);transform-origin:63% 50%}}
 </style>
 </head>
 <body>
@@ -1262,13 +1267,7 @@ body{background:var(--ink)}
 
   <section class="v-sec wrap" id="challenge"><div class="in">
     <header class="v-sh2" data-reveal><div class="v2-l"><span class="v2-k"><b>01</b>The challenge</span><h2>Delivery in Nigeria is a gamble.</h2></div><div class="v2-r"><p>Calls that go unanswered, prices that move with fuel and no proof a parcel arrived. QuickFleet is built to fix all three.</p></div></header>
-    <figure class="c-wide" data-reveal><img src="/assets/img/cs-qf-ch-calls.webp" srcset="/assets/img/cs-qf-ch-calls-960.webp 960w, /assets/img/cs-qf-ch-calls.webp 1920w" sizes="(max-width:900px) 100vw, 96vw" width="1920" height="1080" alt="Twelve calls, no answer: messages from a delivery that went wrong" loading="lazy" decoding="async"><figcaption>The problem</figcaption></figure>
-    <div class="c-row">
-      <figure class="c-card" data-reveal><div class="c-img"><img src="/assets/img/cs-qf-ch-riders.webp" srcset="/assets/img/cs-qf-ch-riders-640.webp 640w, /assets/img/cs-qf-ch-riders.webp 1080w" sizes="(max-width:900px) 100vw, 32vw" width="1080" height="1350" alt="Riders, vetted and trained" loading="lazy" decoding="async"></div><figcaption><span>01</span><b>A rider you know</b><p>Our own riders, vetted and trained. No more chasing a stranger.</p></figcaption></figure>
-      <figure class="c-card" data-reveal><div class="c-img"><img src="/assets/img/cs-qf-ch-price.webp" srcset="/assets/img/cs-qf-ch-price-640.webp 640w, /assets/img/cs-qf-ch-price.webp 1080w" sizes="(max-width:900px) 100vw, 32vw" width="1080" height="1350" alt="Steady when fuel isn’t: the fuel price climbs while QuickFleet’s stays flat" loading="lazy" decoding="async"></div><figcaption><span>02</span><b>A price that holds</b><p>Petrol went from ₦238 to ₦1,325 a litre.<sup>*</sup> Electric doesn’t move with it.</p></figcaption></figure>
-      <figure class="c-card" data-reveal><div class="c-img"><img src="/assets/img/cs-qf-ch-tracked.webp" srcset="/assets/img/cs-qf-ch-tracked-640.webp 640w, /assets/img/cs-qf-ch-tracked.webp 1080w" sizes="(max-width:900px) 100vw, 32vw" width="1080" height="1350" alt="Tracked to the door on a map, in the app" loading="lazy" decoding="async"></div><figcaption><span>03</span><b>Proof at the door</b><p>Tracked on the map, closed with a four-digit code.</p></figcaption></figure>
-    </div>
-    <p class="v-src"><sup>*</sup>National Bureau of Statistics, Petrol Price Watch, May 2023 (average ₦238.11); NNPC pump price in Abuja, reported 5 November 2026. Frames from the QuickFleet launch film.</p>
+    <figure class="c-shot" data-reveal><img src="/assets/img/cs-qf-ch-phone.webp" srcset="/assets/img/cs-qf-ch-phone-1200.webp 1200w, /assets/img/cs-qf-ch-phone.webp 2400w" sizes="(max-width:900px) 100vw, 96vw" width="2400" height="1350" alt="A phone lock screen after a delivery goes wrong: 12 missed calls from the rider, then messages asking for fuel money, saying they can't find the address and that traffic is crazy" loading="lazy" decoding="async"></figure>
   </div></section>
 
   <section class="v-sec wrap" id="branding"><div class="in">
@@ -1293,7 +1292,7 @@ body{background:var(--ink)}
         <li style="--c:#6FD9C1" class="lt v-wide2"><b>Mint</b><code>#6FD9C1</code></li>
       </ul>
       <div class="v-full v-bento" data-reveal aria-label="QuickFleet illustrations"><figure class="b-feat"><img src="/assets/img/cs-qf-art-batteries.webp" width="740" height="520" alt="" loading="lazy" decoding="async"><figcaption><span>Illustration</span><b>One idea per drawing, in layered line.</b></figcaption></figure><figure class="b-t"><img src="/assets/img/cs-qf-art-parcel.webp" width="511" height="578" alt="" loading="lazy" decoding="async"></figure><figure class="b-t"><img src="/assets/img/cs-qf-art-record.webp" width="418" height="676" alt="" loading="lazy" decoding="async"></figure><figure class="b-t"><img src="/assets/img/cs-qf-art-coins.webp" width="722" height="599" alt="" loading="lazy" decoding="async"></figure><figure class="b-t"><img src="/assets/img/cs-qf-art-stopwatch.webp" width="468" height="418" alt="" loading="lazy" decoding="async"></figure><figure class="b-t"><img src="/assets/img/cs-qf-art-calendar.webp" width="705" height="446" alt="" loading="lazy" decoding="async"></figure><figure class="b-t"><img src="/assets/img/cs-qf-art-tree.webp" width="523" height="504" alt="" loading="lazy" decoding="async"></figure><figure class="b-t"><img src="/assets/img/cs-qf-art-cones.webp" width="455" height="510" alt="" loading="lazy" decoding="async"></figure><figure class="b-t"><img src="/assets/img/cs-qf-art-packages.webp" width="596" height="634" alt="" loading="lazy" decoding="async"></figure></div>
-      <figure class="v-p v-full v-wide v-posters" data-reveal><img src="/assets/img/cs-qf-sc-posters.webp" srcset="/assets/img/cs-qf-sc-posters-1000.webp 1000w, /assets/img/cs-qf-sc-posters.webp 2400w" sizes="(max-width:900px) 100vw, 96vw" width="2400" height="1600" alt="Two QuickFleet launch posters on a concrete wall" loading="lazy" decoding="async"></figure>
+      <figure class="v-p v-full v-wide v-posters" data-reveal><img src="/assets/img/cs-qf-sc-posters.webp" srcset="/assets/img/cs-qf-sc-posters-1000.webp 1000w, /assets/img/cs-qf-sc-posters.webp 2400w" sizes="(max-width:900px) 100vw, 96vw" width="2400" height="1600" alt="Two QuickFleet posters on a concrete wall: “Swap the battery. Skip the wait.” and “A vetted rider. Tracked to the door.”" loading="lazy" decoding="async"></figure>
     </div>
   </div></section>
 
