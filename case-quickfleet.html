@@ -1227,6 +1227,33 @@ img.top{object-position:50% 0}
 }
 .v-br.v-half2 .br-w{border-radius:8px 8px 0 0}
 </style>
+<style id="qf21">
+/* live site loops */
+.lv{position:relative;overflow:hidden;border-radius:8px;background:var(--bg);aspect-ratio:var(--r)}
+.lv img,.lv video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.lv video{opacity:0;transition:opacity .5s ease}
+.lv::after{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:inset 0 0 0 1px rgba(11,11,10,.08);pointer-events:none;z-index:2}.lv.on video{opacity:1}
+.v-tile{margin:0}
+.v-tile figcaption{display:flex;gap:14px;align-items:baseline;padding:14px 2px 0;font-size:14px;color:var(--ink-2)}
+.v-tile figcaption b{font-size:11px;font-weight:500;font-stretch:112%;letter-spacing:.09em;text-transform:uppercase;color:#0A997D}
+#website .v-grid{row-gap:28px}
+.v-swap2 .lv{aspect-ratio:1920/965}
+/* brand in use */
+.v-sublab{margin:clamp(40px,5vw,72px) 0 6px;font-size:11.5px;font-weight:500;font-stretch:112%;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-2)}
+.v-ap{aspect-ratio:4/3}.v-ap.v-full{aspect-ratio:2400/1250}
+.v-ap img{width:100%;height:100%;object-fit:cover;display:block}
+/* app icon: off navy, on a light ground */
+.v-icon2{background:linear-gradient(160deg,#F4F3F0,#E6E5E1)}
+.v-icon2 figcaption{color:var(--ink-2)}
+.ic{box-shadow:0 26px 50px -22px rgba(10,80,66,.55),0 2px 6px rgba(12,7,48,.08),inset 0 1px 0 rgba(255,255,255,.22)}
+@media (max-width:760px){
+ .lv{aspect-ratio:var(--rm)}
+ .v-swap2 .lv{aspect-ratio:780/760}
+ .v-ap,.v-ap.v-full{aspect-ratio:4/3}
+ .v-tile figcaption{flex-direction:column;gap:6px;padding-top:12px}
+}
+@media (prefers-reduced-motion:reduce){.lv video{display:none}}
+</style>
 </head>
 <body>
 <header class="nav wrap" id="nav">
@@ -1351,6 +1378,13 @@ body{background:var(--ink)}
       </ul>
       <div class="v-full v-bento" data-reveal aria-label="QuickFleet illustrations"><figure class="b-feat"><img src="/assets/img/cs-qf-art-batteries.webp" width="740" height="520" alt="" loading="lazy" decoding="async"><figcaption><span>Illustration</span><b>One idea per drawing, in layered line.</b></figcaption></figure><figure class="b-t"><img src="/assets/img/cs-qf-art-parcel.webp" width="511" height="578" alt="" loading="lazy" decoding="async"></figure><figure class="b-t"><img src="/assets/img/cs-qf-art-record.webp" width="418" height="676" alt="" loading="lazy" decoding="async"></figure><figure class="b-t"><img src="/assets/img/cs-qf-art-coins.webp" width="722" height="599" alt="" loading="lazy" decoding="async"></figure><figure class="b-t"><img src="/assets/img/cs-qf-art-stopwatch.webp" width="468" height="418" alt="" loading="lazy" decoding="async"></figure><figure class="b-t"><img src="/assets/img/cs-qf-art-calendar.webp" width="705" height="446" alt="" loading="lazy" decoding="async"></figure><figure class="b-t"><img src="/assets/img/cs-qf-art-tree.webp" width="523" height="504" alt="" loading="lazy" decoding="async"></figure><figure class="b-t"><img src="/assets/img/cs-qf-art-cones.webp" width="455" height="510" alt="" loading="lazy" decoding="async"></figure><figure class="b-t"><img src="/assets/img/cs-qf-art-packages.webp" width="596" height="634" alt="" loading="lazy" decoding="async"></figure></div>
       <figure class="v-p v-full v-wide v-posters" data-reveal><img src="/assets/img/cs-qf-sc-posters.webp" srcset="/assets/img/cs-qf-sc-posters-1000.webp 1000w, /assets/img/cs-qf-sc-posters.webp 2400w" sizes="(max-width:900px) 100vw, 96vw" width="2400" height="1600" alt="Two QuickFleet posters on a concrete wall: “Swap the battery. Skip the wait.” on white with the battery, and “A vetted rider. Tracked to the door.” on navy" loading="lazy" decoding="async"></figure>
+      <p class="v-full v-sublab" data-reveal>The brand in use</p>
+      <figure class="v-p v-ap v-full" data-reveal><img src="/assets/img/cs-qf-ap-billboard.webp" srcset="/assets/img/cs-qf-ap-billboard-900.webp 900w, /assets/img/cs-qf-ap-billboard.webp 2400w" sizes="(max-width:900px) 100vw, 96vw" width="2400" height="1250" alt="A QuickFleet billboard: Steady when fuel isn’t" loading="lazy" decoding="async"></figure>
+      <figure class="v-p v-ap " data-reveal><img src="/assets/img/cs-qf-ap-fan.webp" srcset="/assets/img/cs-qf-ap-fan-900.webp 900w, /assets/img/cs-qf-ap-fan.webp 1800w" sizes="(max-width:900px) 100vw, 48vw" width="1800" height="1350" alt="The QuickFleet colour swatch fan" loading="lazy" decoding="async"></figure>
+      <figure class="v-p v-ap " data-reveal><img src="/assets/img/cs-qf-ap-card.webp" srcset="/assets/img/cs-qf-ap-card-900.webp 900w, /assets/img/cs-qf-ap-card.webp 1800w" sizes="(max-width:900px) 100vw, 48vw" width="1800" height="1350" alt="A rider ID card on a lanyard, marked Vetted" loading="lazy" decoding="async"></figure>
+      <figure class="v-p v-ap " data-reveal><img src="/assets/img/cs-qf-ap-bike.webp" srcset="/assets/img/cs-qf-ap-bike-900.webp 900w, /assets/img/cs-qf-ap-bike.webp 1800w" sizes="(max-width:900px) 100vw, 48vw" width="1800" height="1350" alt="An electric delivery bike with a QuickFleet top box" loading="lazy" decoding="async"></figure>
+      <figure class="v-p v-ap " data-reveal><img src="/assets/img/cs-qf-ap-tape.webp" srcset="/assets/img/cs-qf-ap-tape-900.webp 900w, /assets/img/cs-qf-ap-tape.webp 1800w" sizes="(max-width:900px) 100vw, 48vw" width="1800" height="1350" alt="A parcel sealed with QuickFleet tape" loading="lazy" decoding="async"></figure>
+      <figure class="v-p v-ap v-full" data-reveal><img src="/assets/img/cs-qf-ap-sign.webp" srcset="/assets/img/cs-qf-ap-sign-900.webp 900w, /assets/img/cs-qf-ap-sign.webp 2400w" sizes="(max-width:900px) 100vw, 96vw" width="2400" height="1250" alt="QuickFleet signage on a hub: Battery swap, Parcels" loading="lazy" decoding="async"></figure>
     </div>
   </div></section>
 
@@ -1377,18 +1411,17 @@ body{background:var(--ink)}
     <header class="v-sh2" data-reveal><div class="v2-l"><span class="v2-k"><b>05</b>Website</span><h2>A site that answers what a customer asks first.</h2></div><div class="v2-r"><p>What it costs, who comes and how it’s proved. Each page answers one of those, from the bikes and the hubs to the app, and a waitlist sorts customers, businesses and riders ahead of launch.</p></div></header>
     <div class="v-grid">
       <figure class="v-p v-full v-wide" data-reveal><img src="/assets/img/cs-qf-sc-desk.webp" srcset="/assets/img/cs-qf-sc-desk-1000.webp 1000w, /assets/img/cs-qf-sc-desk.webp 2400w" sizes="(max-width:900px) 100vw, 96vw" width="2400" height="1600" alt="The quickfleet.co Services page on a laptop" loading="lazy" decoding="async"></figure>
-      <figure class="v-p v-br" data-reveal><figcaption>The network: every city starts with its hubs</figcaption><div class="br-w"><picture><source media="(max-width:760px)" srcset="/assets/img/cs-qf-web-hub-m.webp" width="780" height="706"><img src="/assets/img/cs-qf-web-hub.webp" srcset="/assets/img/cs-qf-web-hub.webp 1600w, /assets/img/cs-qf-web-hub-2x.webp 2400w" sizes="(max-width:900px) 100vw, 48vw" width="1600" height="1010" alt="Inside a hub, from the Network page: an isometric hub with riders parked, numbered stops, and a check-in card ticking off rider, machine and pack" loading="lazy" decoding="async"></picture></div></figure>
-      <figure class="v-p v-br" data-reveal><figcaption>The product: one app, door to door</figcaption><div class="br-w"><picture><source media="(max-width:760px)" srcset="/assets/img/cs-qf-web-app-m.webp" width="780" height="1900"><img src="/assets/img/cs-qf-wd_s5-39e4c30224.webp" width="1600" height="1011" alt="One app, from your door to theirs" loading="lazy" decoding="async"></picture></div></figure>
-      <figure class="v-p v-br" data-reveal><figcaption>Why it matters: steadier prices, quieter streets</figcaption><div class="br-w"><picture><img src="/assets/img/cs-qf-web-why.webp" width="1600" height="1011" alt="Steadier prices. Quieter streets. Three cards: the price, the machine, the street" loading="lazy" decoding="async"></picture></div></figure>
-      <figure class="v-p v-br" data-reveal><figcaption>For businesses: the cost of a kilometre</figcaption><div class="br-w"><picture><source media="(max-width:760px)" srcset="/assets/img/cs-qf-web-biz-m.webp" width="780" height="1650"><img src="/assets/img/cs-qf-web-biz2.webp" width="1600" height="1011" alt="For businesses: Delivery has become a cost you cannot control, beside a chart of energy cost per kilometre, petrol against electric" loading="lazy" decoding="async"></picture></div></figure>
+      <figure class="v-tile" data-reveal><div class="lv " style="--bg:#F3EDE9;--r:16/10;--rm:1/1" role="img" aria-label="Inside a hub, from the Network page: battery swap, charging, parcels and check-in"><img class="lv-po" src="/assets/img/cs-qf-web-hub-poster.webp" alt="" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="/assets/video/cs-qf-web-hub.mp4" data-src-m="/assets/video/cs-qf-web-hub-m.mp4" data-po-m="/assets/img/cs-qf-web-hub-m-poster.webp"></video></div><figcaption><b>Network</b><span>Every city starts with its hubs</span></figcaption></figure>
+      <figure class="v-tile" data-reveal><div class="lv " style="--bg:#F3F1EF;--r:16/10;--rm:1/1" role="img" aria-label="One app, from your door to theirs, from the home page"><img class="lv-po" src="/assets/img/cs-qf-web-app-poster.webp" alt="" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="/assets/video/cs-qf-web-app.mp4" data-src-m="/assets/video/cs-qf-web-app-m.mp4" data-po-m="/assets/img/cs-qf-web-app-m-poster.webp"></video></div><figcaption><b>Product</b><span>One app, door to door</span></figcaption></figure>
+      <figure class="v-tile" data-reveal><div class="lv " style="--bg:#FFFFFF;--r:16/10;--rm:900/946" role="img" aria-label="Steadier prices. Quieter streets: the price, the machine, the street"><img class="lv-po" src="/assets/img/cs-qf-web-why-poster.webp" alt="" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="/assets/video/cs-qf-web-why.mp4" data-src-m="/assets/video/cs-qf-web-why-m.mp4" data-po-m="/assets/img/cs-qf-web-why-m-poster.webp"></video></div><figcaption><b>Why it matters</b><span>Steadier prices, quieter streets</span></figcaption></figure>
+      <figure class="v-tile" data-reveal><div class="lv " style="--bg:#FFFFFF;--r:16/10;--rm:900/778" role="img" aria-label="For businesses: energy cost per kilometre, petrol against electric"><img class="lv-po" src="/assets/img/cs-qf-web-biz-poster.webp" alt="" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="/assets/video/cs-qf-web-biz.mp4" data-src-m="/assets/video/cs-qf-web-biz-m.mp4" data-po-m="/assets/img/cs-qf-web-biz-m-poster.webp"></video></div><figcaption><b>For businesses</b><span>The cost of a kilometre</span></figcaption></figure>
     </div>
   </div></section>
 
   <section class="v-sec wrap" id="operations"><div class="in">
     <header class="v-sh2" data-reveal><div class="v2-l"><span class="v2-k"><b>06</b>Operations</span><h2>Batteries swap. Parcels never wait.</h2></div><div class="v2-r"><p>The plan: battery-swap hubs, three to five in each city, close to where deliveries start. The network is designed so a rider swaps a flat battery for a charged one in minutes and a parcel never waits on a charger. The riders are QuickFleet’s own: trained, uniformed and on its machines.</p></div></header>
     <div class="v-grid">
-      <figure class="v-p v-full v-photo" data-reveal><img src="/assets/img/cs-qf-hub-d10578f5f8.webp" width="1600" height="900" alt="Concept render of a QuickFleet battery-swap hub" sizes="100vw" loading="lazy" decoding="async"><figcaption>Hub concept</figcaption></figure>
-      <figure class="v-p v-full v-swap" data-reveal><img src="/assets/img/cs-qf-swap-95c4451563.webp" width="1600" height="831" alt="quickfleet.co: Swap in minutes. The hub does the charging." sizes="100vw" loading="lazy" decoding="async"></figure>
+      <figure class="v-full v-tile v-swap2" data-reveal><div class="lv " style="--bg:#0B072F;--r:16/10;--rm:780/760" role="img" aria-label="Swap in minutes, the hub does the charging: a battery moves from the machine to the hub rack"><img class="lv-po" src="/assets/img/cs-qf-swap-poster.webp" alt="" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="/assets/video/cs-qf-swap.mp4" data-src-m="/assets/video/cs-qf-swap-m.mp4" data-po-m="/assets/img/cs-qf-swap-m-poster.webp"></video></div><figcaption><b>The battery</b><span>Swap in minutes. The hub does the charging.</span></figcaption></figure>
       <div class="v-full"><ol class="v-caps" data-reveal><li><span>01</span><b>Arrive</b><p>A rider rolls in with a flat battery.</p></li><li><span>02</span><b>Swap</b><p>A charged one goes in. Minutes, not hours.</p></li><li><span>03</span><b>Ride</b><p>Back on the road while the hub charges the flat one.</p></li></ol><p class="v-src">The hub and swap times are design targets for launch, not measured results.</p></div>
     </div>
   </div></section>
@@ -1468,4 +1501,15 @@ const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 v.addEventListener('playing',()=>v.classList.add('playing'));
 const load=()=>{if(!v.src){v.src=mq.matches?v.dataset.srcM:v.dataset.src;}};
 new IntersectionObserver(es=>{const on=es[0].isIntersecting;if(on){load();if(!reduce)v.play().catch(()=>{});}else if(v.src)v.pause();},{threshold:.35}).observe(f);
-b.addEventListener('click',()=>{load();const on=v.muted;v.muted=!on;b.setAttribute('aria-pressed',String(on));b.setAttribute('aria-label',on?'Turn sound off':'Turn sound on');if(on)v.play().catch(()=>{});});})();</script></body></html>
+b.addEventListener('click',()=>{load();const on=v.muted;v.muted=!on;b.setAttribute('aria-pressed',String(on));b.setAttribute('aria-label',on?'Turn sound off':'Turn sound on');if(on)v.play().catch(()=>{});});})();</script><script>
+(()=>{const mq=matchMedia('(max-width:760px)'),rm=matchMedia('(prefers-reduced-motion:reduce)');
+ document.querySelectorAll('.lv').forEach(w=>{const v=w.querySelector('video'),po=w.querySelector('.lv-po');
+  if(mq.matches&&v.dataset.poM)po.src=v.dataset.poM;
+  if(rm.matches)return;
+  new IntersectionObserver(es=>es.forEach(e=>{
+   if(e.isIntersecting){if(!v.src){v.src=(mq.matches&&v.dataset.srcM)||v.dataset.src;v.addEventListener('playing',()=>w.classList.add('on'),{once:true});}
+     v.play().catch(()=>{});}
+   else if(v.src)v.pause();}),{rootMargin:'200px 0px'}).observe(w);});
+})();
+</script>
+</body></html>
