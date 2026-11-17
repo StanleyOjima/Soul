@@ -1418,9 +1418,9 @@ img.top{object-position:50% 0}
 .pt-con10 li:hover img{opacity:.9}
 .pt-con10 li span{position:absolute;left:12px;bottom:10px;display:flex;gap:8px;font-size:12px;color:var(--ink-2)}
 .pt-con10 li span b{font-weight:500;color:var(--ink-2)}
-.pt-con10 li.pick{box-shadow:inset 0 0 0 2px #1E56FF}
-.pt-con10 li.pick img{opacity:1;filter:none}
-.pt-con10 li.pick span,.pt-con10 li.pick span b{color:#1E56FF}
+.pt-con10 li.pick{background:#090B0D;box-shadow:0 0 0 2px #1E56FF}
+.pt-con10 li.pick img{opacity:1;filter:invert(1)}
+.pt-con10 li.pick span,.pt-con10 li.pick span b{color:#5B86FF}
 /* world rows: each row keeps the images' own proportions */
 .pt-ooh{display:grid;grid-template-columns:723fr 217fr;gap:var(--gap)}
 .pt-ooh .v-p:nth-child(1){aspect-ratio:723/1019}.pt-ooh .v-p:nth-child(2){aspect-ratio:217/1019}
@@ -1446,7 +1446,6 @@ img.top{object-position:50% 0}
  .pt-pal li{aspect-ratio:4/3}
  .pt-posts,.pt-book{grid-template-columns:1fr 1fr}
  .pt-con10{grid-template-columns:1fr 1fr}
- .pt-con10 li.pick{grid-column:1 / -1}
  .pt-three{grid-template-columns:1fr 1fr}.pt-three img:last-child{display:none}
 }
 @media (max-width:760px){
