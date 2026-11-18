@@ -1377,6 +1377,8 @@ body:has(main.aw) .nav.float{inset:0 0 auto;border-radius:0;padding-left:var(--g
 .aw-sp.split.r .sp-t{grid-column:9/-1;order:2}.aw-sp.split.r .sp-m{grid-column:1/9;order:1}
 .sp-2{display:grid;grid-template-columns:1fr 1fr;gap:clamp(12px,1.4vw,20px);align-items:end}
 .sp-2 .lv:nth-child(2){margin-bottom:clamp(40px,6vw,100px)}
+.sp-m .lv.bare{box-shadow:none;border-radius:0;background:#080808;-webkit-mask:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent),linear-gradient(transparent,#000 7%,#000 93%,transparent);-webkit-mask-composite:source-in;mask:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent),linear-gradient(transparent,#000 7%,#000 93%,transparent);mask-composite:intersect}
+.lv.bare::after{display:none}
 /* ending, full bleed */
 .aw-edge{margin:clamp(120px,13vw,210px) 0 clamp(40px,5vw,80px)}
 .ae-m .lv{border-radius:0}.ae-m .lv::after{display:none}
@@ -1573,7 +1575,7 @@ body{background:var(--ink)}
     </article>
     <article class="aw-sp split">
       <div class="sp-t" data-reveal><div class="sp-a"><span class="sp-n">02</span><span class="sp-k"><b>02</b>About</span><h3>Drawn in the same light.</h3></div><div class="sp-b"><p>His portrait is made of particles, like every form on the map. Keep scrolling and it scatters, then rebuilds as Lagos on a globe.</p></div></div>
-      <div class="sp-m" data-reveal><div class="lv" style="--bg:#080808;--r:1100/1100;--rm:900/900" role="img" aria-label="A portrait of Emmanuel made of particles scatters and rebuilds as a globe with Lagos marked"><img data-lq class="lv-po" src="/assets/img/cs-aw-c-light-poster.webp" alt="" loading="lazy" decoding="async" style="background:url(data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADQAwCdASoYABgAPu1srVEppaQiqAqpMB2JaQAALkIsvHc2tQ9eRAAA/vKiXzl6Rd/sUJekSwwDtLI5UI3PYcHb3t1w0A65dBbAAA==) center/cover no-repeat"><video muted loop playsinline preload="none" data-src="/assets/video/cs-aw-c-light.mp4" data-src-m="/assets/video/cs-aw-c-light-m.mp4" data-po-m="/assets/img/cs-aw-c-light-m-poster.webp"></video></div></div>
+      <div class="sp-m" data-reveal><div class="lv bare" style="--bg:#080808;--r:1100/1100;--rm:900/900" role="img" aria-label="A portrait of Emmanuel made of particles scatters and rebuilds as a globe with Lagos marked"><img data-lq class="lv-po" src="/assets/img/cs-aw-c-light-poster.webp" alt="" loading="lazy" decoding="async" style="background:url(data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADQAwCdASoYABgAPu1srVEppaQiqAqpMB2JaQAALkIsvHc2tQ9eRAAA/vKiXzl6Rd/sUJekSwwDtLI5UI3PYcHb3t1w0A65dBbAAA==) center/cover no-repeat"><video muted loop playsinline preload="none" data-src="/assets/video/cs-aw-c-light.mp4" data-src-m="/assets/video/cs-aw-c-light-m.mp4" data-po-m="/assets/img/cs-aw-c-light-m-poster.webp"></video></div></div>
     </article>
     <article class="aw-sp wide">
       <div class="sp-t" data-reveal><div class="sp-a"><span class="sp-n">03</span><span class="sp-k"><b>03</b>On the record</span><h3>Proof, not adjectives.</h3></div><div class="sp-b"><p>His career runs as one stream of light, with his own production figures set along it.</p></div></div>
