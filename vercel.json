@@ -27,6 +27,16 @@
       "source": "/case-pantech",
       "destination": "/work/pantech",
       "permanent": true
+    },
+    {
+      "source": "/case-newco",
+      "destination": "/work/newco",
+      "permanent": true
+    },
+    {
+      "source": "/case-rhanamerzy",
+      "destination": "/work/rhanamerzy",
+      "permanent": true
     }
   ],
   "rewrites": [
@@ -37,6 +47,14 @@
     {
       "source": "/work/pantech",
       "destination": "/case-pantech"
+    },
+    {
+      "source": "/work/newco",
+      "destination": "/case-newco"
+    },
+    {
+      "source": "/work/rhanamerzy",
+      "destination": "/case-rhanamerzy"
     }
   ]
 }
