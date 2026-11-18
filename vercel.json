@@ -32,6 +32,11 @@
       "source": "/case-newco",
       "destination": "/work/newco",
       "permanent": true
+    },
+    {
+      "source": "/case-rhanamerzy",
+      "destination": "/work/rhanamerzy",
+      "permanent": true
     }
   ],
   "rewrites": [
@@ -46,6 +51,10 @@
     {
       "source": "/work/newco",
       "destination": "/case-newco"
+    },
+    {
+      "source": "/work/rhanamerzy",
+      "destination": "/case-rhanamerzy"
     }
   ]
 }
