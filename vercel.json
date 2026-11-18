@@ -37,6 +37,11 @@
       "source": "/case-rhanamerzy",
       "destination": "/work/rhanamerzy",
       "permanent": true
+    },
+    {
+      "source": "/case-atawodi",
+      "destination": "/work/atawodi",
+      "permanent": true
     }
   ],
   "rewrites": [
@@ -55,6 +60,10 @@
     {
       "source": "/work/rhanamerzy",
       "destination": "/case-rhanamerzy"
+    },
+    {
+      "source": "/work/atawodi",
+      "destination": "/case-atawodi"
     }
   ]
 }
