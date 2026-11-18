@@ -1360,9 +1360,9 @@ img.top{object-position:50% 0}
 .rz-br .lv{border-radius:10px;box-shadow:0 0 0 1px var(--hair),0 40px 60px -40px rgba(17,24,39,.35)}
 .rz-br .lv::before{content:"";position:absolute;left:0;right:0;top:0;height:0;z-index:3}
 /* guide */
-.rz-guide{display:grid;gap:var(--gap);align-items:start}
-.rz-guide{grid-template-columns:2.6fr 1fr}
-.rz-phone .lv{border-radius:clamp(22px,2.4vw,36px);box-shadow:0 0 0 clamp(5px,.5vw,8px) #111827,0 30px 50px -30px rgba(17,24,39,.6);width:86%;margin:clamp(6px,.6vw,9px) auto 0}
+.rz-guide{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,4vw,72px);justify-content:center;padding:clamp(40px,5vw,84px) clamp(40px,9vw,160px);background:#FFDECA;border-radius:8px;gap:var(--gap);align-items:start}
+.rz-phone{margin:0}.rz-phone .lv{border-radius:clamp(26px,2.6vw,40px);box-shadow:0 0 0 clamp(6px,.6vw,9px) #111827,0 40px 60px -36px rgba(17,24,39,.6);width:min(100%,360px);margin:clamp(6px,.6vw,9px) auto 0}
+.rz-phone figcaption{justify-content:center}
 .rz-phone figcaption{padding-top:calc(14px + clamp(6px,.6vw,9px))}
 /* line drawings */
 .rz-ig{margin-top:var(--gap)}
@@ -1404,8 +1404,8 @@ img.top{object-position:50% 0}
  .rz-phones::-webkit-scrollbar{display:none}
  .rz-phones li{flex:0 0 62%;scroll-snap-align:center}
  .rz-phones li:nth-child(even){margin-top:24px}
- .rz-guide{grid-template-columns:1fr;gap:36px}
- .rz-gm .lv{width:78%;margin:8px auto 0;border-radius:30px;box-shadow:0 0 0 7px #111827,0 30px 50px -30px rgba(17,24,39,.6)}
+ .rz-guide{grid-template-columns:1fr;row-gap:40px;padding:36px 14%}
+ .rz-phone figcaption{align-items:center;text-align:center}
  .rz-gm figcaption{justify-content:center}
 }
 @media (max-width:760px){
@@ -1422,7 +1422,7 @@ img.top{object-position:50% 0}
 }
 @media (prefers-reduced-motion:reduce){.rz-ills .ri .ln,.rz-ills .ri .lf,.rz-ills .ri .draw{transition:none;stroke-dashoffset:0}}
 </style>
-<style id="cta-brand">.cs .s-end{background:#C74502!important}.cs .s-end p{color:rgba(255,255,255,.86)}</style>
+<style id="cta-brand">.cs .s-end{background:#C74502!important}.cs .s-end p{color:rgba(255,255,255,.86)}.cs .s-end .v-btn{background:#fff;color:#0B0B0A}.cs .s-end .v-btn:hover{background:#0B0B0A;color:#fff}</style>
 </head>
 <body>
 <header class="nav wrap" id="nav">
@@ -1531,9 +1531,9 @@ body{background:var(--ink)}
   <section class="v-sec wrap" id="guide"><div class="in">
     <header class="v-sh2" data-reveal><div class="v2-l"><span class="v2-k"><b>02</b>The digital guide</span><h2>M meets you at the door.</h2></div><div class="v2-r"><p>A first visit opens on M, the firm’s digital guide, in English and Chinese at once. After that, M waits at the foot of every page and answers from the firm’s approved information. Nothing typed is sent or saved.</p></div></header>
 
-    <div class="rz-guide">
-      <figure class="v-tile rz-web rz-gw" data-reveal><div class="lv " style="--bg:#C74502;--r:1600/1000;--rm:600/1298" role="img" aria-label="The welcome screen: M asks which language to use, and the greeting switches to Simplified Chinese as you point at 简体中文"><img class="lv-po" src="/assets/img/cs-rz-welcome-poster.webp" alt="" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="/assets/video/cs-rz-welcome.mp4" data-src-m="/assets/video/cs-rz-welcome-m.mp4" data-po-m="/assets/img/cs-rz-welcome-m-poster.webp"></video></div><figcaption><b>Welcome</b><span>M greets you in both languages</span></figcaption></figure>
-      <figure class="v-tile rz-web rz-gm rz-phone" data-reveal><div class="lv " style="--bg:#FFF7EA;--r:600/1236;--rm:600/1236" role="img" aria-label="Asking M: the guide opens, notes the section you are reading, and answers a typed question about entering a new market"><img class="lv-po" src="/assets/img/cs-rz-m-poster.webp" alt="" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="/assets/video/cs-rz-m.mp4"></video></div><figcaption><b>Ask M</b><span>Answers from approved information</span></figcaption></figure>
+    <div class="rz-guide" data-reveal>
+      <figure class="v-tile rz-web rz-phone"><div class="lv " style="--bg:#C74502;--r:600/1298;--rm:600/1298" role="img" aria-label="The welcome screen on a phone: M asks which language to use, and the greeting switches to Simplified Chinese as you point at 简体中文"><img class="lv-po" src="/assets/img/cs-rz-welcome-m-poster.webp" alt="" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="/assets/video/cs-rz-welcome-m.mp4"></video></div><figcaption><b>Welcome</b><span>M greets you in both languages</span></figcaption></figure>
+      <figure class="v-tile rz-web rz-phone"><div class="lv " style="--bg:#FFF7EA;--r:600/1298;--rm:600/1298" role="img" aria-label="Asking M: the guide opens, notes the section you are reading, and answers a typed question about entering a new market"><img class="lv-po" src="/assets/img/cs-rz-m-poster.webp" alt="" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="/assets/video/cs-rz-m.mp4"></video></div><figcaption><b>Ask M</b><span>Answers from approved information</span></figcaption></figure>
     </div>
   </div></section>
 
@@ -1550,11 +1550,10 @@ body{background:var(--ink)}
   </div></section>
 
   <section class="v-sec wrap" id="website"><div class="in">
-    <header class="v-sh2" data-reveal><div class="v2-l"><span class="v2-k"><b>04</b>Website</span><h2>Every section earns its place.</h2></div><div class="v2-r"><p>Five areas of work, a record built month by month, a method that does not stop at advice, and the work itself, photographed where it happened.</p></div></header>
+    <header class="v-sh2" data-reveal><div class="v2-l"><span class="v2-k"><b>04</b>Website</span><h2>Every section earns its place.</h2></div><div class="v2-r"><p>Five areas of work, a method that does not stop at advice, and the work itself, photographed where it happened.</p></div></header>
 
     <div class="v-grid">
       <figure class="v-full v-tile rz-web " data-reveal><div class="lv " style="--bg:#C74502;--r:1600/756;--rm:900/674" role="img" aria-label="What we do: the five areas of work open one after another, each with its own number, line drawing and plain promise"><img class="lv-po" src="/assets/img/cs-rz-web-wwd-poster.webp" alt="" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="/assets/video/cs-rz-web-wwd.mp4" data-src-m="/assets/video/cs-rz-web-wwd-m.mp4" data-po-m="/assets/img/cs-rz-web-wwd-m-poster.webp"></video></div><figcaption><b>What we do</b><span>Five areas, one plain promise each</span></figcaption></figure>
-      <figure class="v-p v-full rz-shot " data-reveal><picture><source media="(max-width:760px)" srcset="/assets/img/cs-rz-web-rec-m.webp" width="800" height="1415"><img src="/assets/img/cs-rz-web-rec.webp" width="2000" height="881" alt="Track record: 120+ assignments delivered and a timeline from 2020 to today" loading="lazy" decoding="async"></picture><figcaption><b>Track record</b><span>The figures, with consent</span></figcaption></figure>
       <figure class="v-full v-tile rz-web " data-reveal><div class="lv " style="--bg:#FFF4EE;--r:1600/866;--rm:600/1176" role="img" aria-label="How we work: as you scroll, a dial turns through understand, align, advise and support delivery, with a photograph for each"><img class="lv-po" src="/assets/img/cs-rz-web-hwc-poster.webp" alt="" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="/assets/video/cs-rz-web-hwc.mp4" data-src-m="/assets/video/cs-rz-web-hwc-m.mp4" data-po-m="/assets/img/cs-rz-web-hwc-m-poster.webp"></video></div><figcaption><b>How we work</b><span>A dial that turns as you scroll</span></figcaption></figure>
       <figure class="v-full v-tile rz-web rz-pv rz-br" data-reveal><div class="lv " style="--bg:#FFFFFF;--r:1600/1000;--rm:600/1298" role="img" aria-label="The gallery page scrolling: location tabs stay at the top while photographs from the firm’s assignments in Nigeria pass beneath"><img class="lv-po" src="/assets/img/cs-rz-web-gal-poster.webp" alt="" loading="lazy" decoding="async"><video muted loop playsinline preload="none" data-src="/assets/video/cs-rz-web-gal.mp4" data-src-m="/assets/video/cs-rz-web-gal-m.mp4" data-po-m="/assets/img/cs-rz-web-gal-m-poster.webp"></video></div><figcaption><b>Gallery</b><span>The work, where it happened</span></figcaption></figure>
     </div>
