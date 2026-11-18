@@ -1315,45 +1315,72 @@ img.top{object-position:50% 0}
  .s-tab dt{font-size:13px}
 }
 </style>
-<style id="aw1">
+<style id="aw2">
 @font-face{font-family:'AW Author';src:url(/assets/fonts/aw-author.woff2) format('woff2');font-weight:200 700;font-display:swap}
 body:has(main.aw){background:#080808}
+body:has(main.aw) .nav:not(.solid):not(.menu-open){color:#F2F1ED;background:transparent}
+body:has(main.aw) .nav:not(.solid):not(.menu-open) .menu{border-color:rgba(242,241,237,.3)}
 .aw{--ink:#F2F1ED;--ink-2:#A9A69E;--hair:rgba(242,241,237,.12);background:#080808;color:#F2F1ED}
-.aw h1,.aw h2,.aw .i4-big,.aw dd,.aw .v-nh{color:#F2F1ED}
+.aw h1,.aw h2,.aw h3,.aw .i4-big,.aw dd,.aw .v-nh{color:#F2F1ED}
 .aw .v-tag{color:#F2F1ED}.aw .v-tag i{background:#C9B896;box-shadow:0 0 0 4px rgba(201,184,150,.16)}
 .aw .v2-k{color:#A9A69E}.aw .v2-k b{color:#C9B896}
 .aw .v2-r p,.aw .i4-lab,.aw dt{color:#A9A69E}
 .aw .i4-t>div{border-color:rgba(242,241,237,.1)}
 .aw a{color:inherit}
+.aw .aw-live{color:#0B0B0A!important}
+.aw .lv::after{box-shadow:inset 0 0 0 1px rgba(242,241,237,.1)}
 .aw-hero{margin:clamp(28px,4vw,56px) 0 0;border-radius:8px;overflow:hidden;background:#0a0a09;aspect-ratio:2400/1650}
 .aw-hero picture{display:contents}.aw-hero img{width:100%;height:100%;object-fit:cover;display:block}
-/* scrub */
-.aw-scrub{position:relative;height:420vh;background:#080808}
-.aw-pin{position:sticky;top:0;height:100vh;display:flex;flex-direction:column;justify-content:center;gap:clamp(14px,2vh,24px);overflow:hidden;padding-top:84px;box-sizing:border-box}
-.aw-sh .in{display:flex;align-items:baseline;gap:clamp(16px,2vw,32px);flex-wrap:wrap}
-.aw-sh .v2-k{display:inline-flex;gap:10px;font-size:11.5px;font-weight:500;font-stretch:112%;letter-spacing:.09em;text-transform:uppercase}
-.aw-sh h2{margin:0;font-family:var(--display);font-weight:500;font-size:clamp(28px,3vw,46px);letter-spacing:-.035em;line-height:1.02}
-.aw-hint{margin:0 0 0 auto;max-width:44ch;font-size:15px;line-height:1.55;color:#A9A69E}
-.aw-win{border-radius:10px;overflow:hidden;background:#0d0d0c;box-shadow:0 0 0 1px rgba(242,241,237,.1),0 60px 90px -50px rgba(0,0,0,.9);max-height:calc(100vh - 290px);aspect-ratio:1440/938;margin:0 auto}
-.aw-bar{height:30px;display:flex;align-items:center;gap:7px;padding:0 14px;background:#121211;position:relative}
+.aw-entry{margin:clamp(36px,5vw,72px) 0 0}.aw-entry .lv{border-radius:10px}
+/* scrub: the whole page, played by the reader's scroll */
+.aw-sc-h{padding-bottom:0!important}
+.aw-scrub{position:relative;height:1000vh;background:#080808}
+.aw-pin{--w:min(calc(100vw - 48px),calc((100vh - 168px) * 1.6),1760px);position:sticky;top:0;height:100vh;height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:72px 24px 22px;box-sizing:border-box;overflow:hidden}
+.aw-win{width:var(--w);border-radius:12px;overflow:hidden;background:#0d0d0c;box-shadow:0 0 0 1px rgba(242,241,237,.12),0 80px 120px -60px rgba(0,0,0,.95)}
+.aw-bar{height:32px;display:flex;align-items:center;gap:7px;padding:0 14px;background:#121211;position:relative}
 .aw-bar i{width:9px;height:9px;border-radius:50%;background:rgba(242,241,237,.16)}
 .aw-bar span{position:absolute;left:50%;transform:translateX(-50%);font-size:11px;color:rgba(242,241,237,.5);font-family:ui-monospace,monospace}
-.aw-view{position:relative;aspect-ratio:1440/900}
+.aw-pc{margin-left:auto;font-style:normal;font-family:ui-monospace,monospace;font-size:11px;color:#C9B896;font-variant-numeric:tabular-nums}
+.aw-view{position:relative;aspect-ratio:1600/1000}
+.aw-view picture{display:contents}
 .aw-view img,.aw-view video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
-.aw-view video{opacity:0;transition:opacity .4s}.aw-scrub.ready .aw-view video{opacity:1}
-.aw-ch{list-style:none;margin:14px 0 0;padding:0;display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
+.aw-view video{opacity:0;transition:opacity .5s}.aw-scrub.ready .aw-view video{opacity:1}
+.aw-ui{width:var(--w);display:flex;flex-direction:column;align-items:center;gap:12px}
+.aw-ch{list-style:none;margin:0;padding:0;display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
 .aw-ch li{display:flex;gap:8px;align-items:baseline;padding:7px 12px;border-radius:99px;font-size:12px;color:rgba(242,241,237,.45);box-shadow:inset 0 0 0 1px rgba(242,241,237,.1);transition:color .3s,box-shadow .3s,background .3s}
 .aw-ch li b{font-weight:500;font-family:ui-monospace,monospace;font-size:10.5px;color:inherit}
 .aw-ch li.on{color:#080808;background:#C9B896;box-shadow:none}
-.aw-prog{height:2px;margin-top:12px;background:rgba(242,241,237,.08);border-radius:2px;overflow:hidden}
+.aw-now{display:none}
+.aw-prog{width:100%;height:2px;background:rgba(242,241,237,.08);border-radius:2px;overflow:hidden}
 .aw-prog i{display:block;height:100%;width:100%;background:#C9B896;transform-origin:0 50%;transform:scaleX(0)}
-/* tiles */
-.aw-cg{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2vw,28px)}
-.aw-cg .aw-t{margin:0}
-.aw-cg .lv{border-radius:10px;box-shadow:0 0 0 1px rgba(242,241,237,.14),0 40px 60px -40px rgba(0,0,0,.9)}
-.aw-t .lv{border-radius:8px}
-.aw .v-tile figcaption{color:#A9A69E}.aw .v-tile figcaption b{color:#C9B896}
-.aw .v-half{grid-column:span 6}
+/* chapter spreads */
+.aw-sp{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gap,24px);row-gap:clamp(32px,3.4vw,52px);margin-top:clamp(110px,12vw,190px);align-items:center}
+.aw-sp:first-of-type{margin-top:clamp(64px,7vw,110px)}
+.sp-t{display:flex;flex-direction:column;gap:22px}
+.sp-a{display:flex;flex-direction:column}
+.sp-n{font-family:'AW Author',var(--display);font-weight:200;font-size:clamp(72px,8vw,140px);line-height:.78;letter-spacing:-.05em;color:rgba(201,184,150,.34);margin-bottom:clamp(18px,2vw,30px)}
+.sp-k{display:block;font-family:ui-monospace,'Geist Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#C9B896;margin-bottom:14px}
+.sp-k b{display:none;font-weight:500;margin-right:10px}
+.aw .sp-a h3{margin:0;font-family:var(--display);font-weight:500;font-size:clamp(32px,3.4vw,56px);letter-spacing:-.035em;line-height:1.02}
+.sp-b p{margin:0;max-width:42ch;font-size:clamp(15px,1.1vw,17px);line-height:1.55;color:#A9A69E}
+.sp-f{list-style:none;margin:24px 0 0;padding:0;display:flex;border-top:1px solid rgba(242,241,237,.12)}
+.sp-f li{flex:1 1 0;min-width:0;display:flex;flex-direction:column;gap:7px;padding:16px 16px 0 0}
+.sp-f li+li{padding-left:16px;border-left:1px solid rgba(242,241,237,.12)}
+.sp-f b{font-family:'AW Author',var(--display);font-weight:300;font-size:clamp(24px,2.2vw,34px);letter-spacing:-.03em;line-height:1;color:#F2F1ED;white-space:nowrap}
+.sp-f span{font-family:ui-monospace,'Geist Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#6F6C64;line-height:1.5}
+.sp-m .lv{border-radius:10px;box-shadow:0 0 0 1px rgba(242,241,237,.12),0 60px 90px -50px rgba(0,0,0,.95)}
+.aw-sp.wide .sp-t{grid-column:1/-1;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gap,24px);align-items:end}
+.aw-sp.wide .sp-a{grid-column:1/7}.aw-sp.wide .sp-b{grid-column:8/-1}
+.aw-sp.wide .sp-m{grid-column:1/-1}
+.aw-sp.split .sp-t,.aw-sp.pair .sp-t{grid-column:1/5}.aw-sp.split .sp-m,.aw-sp.pair .sp-m{grid-column:5/-1}
+.aw-sp.split.r .sp-t{grid-column:9/-1;order:2}.aw-sp.split.r .sp-m{grid-column:1/9;order:1}
+.sp-2{display:grid;grid-template-columns:1fr 1fr;gap:clamp(12px,1.4vw,20px);align-items:end}
+.sp-2 .lv:nth-child(2){margin-bottom:clamp(40px,6vw,100px)}
+/* ending, full bleed */
+.aw-edge{margin:clamp(120px,13vw,210px) 0 clamp(40px,5vw,80px)}
+.ae-m .lv{border-radius:0}.ae-m .lv::after{display:none}
+.ae-t{display:grid!important;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gap,24px);align-items:end;margin-top:clamp(28px,3vw,48px)}
+.ae-t .sp-a{grid-column:1/7}.ae-t .sp-b{grid-column:8/-1}
 /* palette, fan, type */
 .aw-pal{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(8,1fr);border-radius:8px;overflow:hidden;box-shadow:0 0 0 1px rgba(242,241,237,.08)}
 .aw-pal li{background:var(--c);aspect-ratio:3/4;display:flex;flex-direction:column;justify-content:flex-end;padding:12px;gap:4px;color:#F2F1ED}
@@ -1368,29 +1395,59 @@ body:has(main.aw){background:#080808}
 .aw .tm{margin:auto 0 0;font-family:ui-monospace,'Geist Mono',monospace;font-size:clamp(11px,1vw,13px);letter-spacing:.14em;line-height:2;color:#6F6C64}
 .aw .tm b{display:block;font-family:'AW Author',var(--ui);font-weight:300;font-size:clamp(70px,8.4vw,140px);letter-spacing:-.04em;line-height:1;color:#080808;margin:4px 0 6px}
 .aw .tn{margin:26px 0 0;padding-top:16px;border-top:1px solid rgba(8,8,8,.12);font-size:15px}
-/* phones */
-.aw-phones{list-style:none;margin:0;padding:clamp(40px,5vw,80px) clamp(20px,3vw,48px);display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(12px,1.8vw,28px);align-items:start;background:radial-gradient(70% 90% at 50% 40%,#1c1a16,#0b0b0a);border-radius:8px;box-shadow:inset 0 0 0 1px rgba(242,241,237,.06)}
-.aw-phones li{border-radius:clamp(16px,2vw,30px);overflow:hidden;background:#000;padding:clamp(3px,.4vw,6px);box-shadow:0 0 0 1px rgba(242,241,237,.14),0 30px 50px -30px rgba(0,0,0,.9);transition-delay:calc(var(--i) * 80ms)}
-.aw-phones li:nth-child(even){margin-top:clamp(28px,4vw,64px)}
-.aw-phones img{width:100%;height:auto;display:block;border-radius:clamp(13px,1.6vw,25px)}
+/* phones: one composition, real proportions */
+.aw-phw{border-radius:10px;overflow:hidden;background:radial-gradient(60% 70% at 50% 45%,#1d1b17 0%,#0d0c0b 70%,#0a0a09 100%);box-shadow:inset 0 0 0 1px rgba(242,241,237,.06);padding:clamp(56px,7vw,120px) clamp(16px,3vw,56px)}
+.aw-phs{list-style:none;margin:0 auto;padding:0;display:flex;justify-content:center;align-items:center;gap:clamp(10px,1.6vw,28px);max-width:1240px}
+.ph{flex:0 0 auto;width:min(17%,230px);position:relative}
+.ph.ph2{width:min(20%,272px)}
+.ph2{transform:translateY(-7%)}
+.ph0,.ph4{transform:translateY(9%)}
+.ph-s{position:relative;padding:3.6%;border-radius:14%/6.5%;background:linear-gradient(150deg,#2a2926,#0e0e0d 40%,#1b1a18);box-shadow:0 0 0 1px rgba(242,241,237,.16),0 2px 0 0 rgba(242,241,237,.06) inset,0 50px 70px -36px rgba(0,0,0,.95)}
+.ph-s::before{content:"";position:absolute;z-index:3;left:50%;top:5.2%;width:27%;height:2.6%;transform:translateX(-50%);border-radius:99px;background:#000}
+.ph-s .lv{border-radius:11%/5.1%;aspect-ratio:600/1298}
+.ph-s .lv::after{box-shadow:inset 0 0 0 1px rgba(0,0,0,.6)}
 .aw .s-end{background:#C9B896!important;color:#080808}.aw .s-end h2{color:#080808}.aw .s-end p{color:rgba(8,8,8,.72)!important}
 .aw .s-end .v-btn{background:#080808!important;color:#F2F1ED!important}
-.aw .v-card{background:#121211;color:#F2F1ED}.aw .v-card p,.aw .v-lab{color:#A9A69E}
-@media (max-width:900px){.aw .v-half{grid-column:1 / -1}.aw-pal{grid-template-columns:repeat(4,1fr)}.aw-pal li{aspect-ratio:1/1}
- .aw-phones{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;padding:32px 20px;scrollbar-width:none}.aw-phones::-webkit-scrollbar{display:none}
- .aw-phones li{flex:0 0 62%;scroll-snap-align:center}}
+.aw .v-card .vc-t{background:#121211}.aw .v-card h3{color:#F2F1ED}.aw .v-card p,.aw .v-lab{color:#A9A69E}
+.aw .vc-f li{background:rgba(242,241,237,.08);color:#ECE9E2}
+.aw .vc-f i{background:#C9B896;color:#080808}
+@media (max-width:1100px){.aw-sp.split .sp-t,.aw-sp.pair .sp-t{grid-column:1/6}.aw-sp.split .sp-m,.aw-sp.pair .sp-m{grid-column:6/-1}
+ .aw-sp.split.r .sp-t{grid-column:8/-1}.aw-sp.split.r .sp-m{grid-column:1/8}}
+@media (max-width:900px){.aw-pal{grid-template-columns:repeat(4,1fr)}.aw-pal li{aspect-ratio:1/1}}
 @media (max-width:760px){
  .aw-hero{aspect-ratio:1/1}.aw-fan{aspect-ratio:1/1}
- .aw-scrub{height:auto;padding:clamp(56px,10vw,90px) 0}.aw-pin{position:static;height:auto;gap:22px}
- .aw-hint{margin:0}
- .aw-win{max-height:none;aspect-ratio:auto;width:78%;border-radius:30px;box-shadow:0 0 0 7px #000,0 0 0 8px rgba(242,241,237,.14),0 40px 60px -36px rgba(0,0,0,.9)}
- .aw-bar{display:none}.aw-view{aspect-ratio:390/844}
- .aw-ch,.aw-prog{display:none}
- .aw .v-tile figcaption{flex-direction:column;gap:6px;padding-top:12px;align-items:center;text-align:center}
- .aw-cg{grid-template-columns:1fr;row-gap:44px}
- .aw-cg .lv{width:72%;margin:8px auto 0;border-radius:28px;box-shadow:0 0 0 7px #000,0 0 0 8px rgba(242,241,237,.14),0 40px 60px -36px rgba(0,0,0,.9)}
+ .aw-entry{margin:28px -20px 0}.aw-entry .lv{border-radius:0}.aw-entry .lv::after{display:none}
+ /* scrub on a phone: the phone recording, still driven by scroll */
+ .aw-scrub{height:720vh}
+ .aw-pin{--w:min(calc(100vw - 40px),calc((100svh - 150px) * .4621));padding:70px 20px 18px;gap:14px}
+ .aw-win{border-radius:22px;box-shadow:0 0 0 1px rgba(242,241,237,.16),0 40px 60px -36px rgba(0,0,0,.9)}
+ .aw-bar{display:none}.aw-view{aspect-ratio:540/1168}
+ .aw-ch{display:none}
+ .aw-ui{gap:10px}
+ .aw-now{display:flex;width:100%;justify-content:space-between;align-items:baseline;margin:0;font-size:13px;color:#ECE9E2}
+ .aw-now b{font-family:ui-monospace,monospace;font-weight:500;font-size:11px;color:#C9B896;letter-spacing:.1em}
+ .aw-ui{flex-direction:column-reverse}
+ /* spreads stack: words, then a full-bleed close-up */
+ .aw-sp,.aw-sp .sp-t,.ae-t{display:block!important}
+ .aw-sp{margin-top:88px}.aw-sp:first-of-type{margin-top:48px}
+ .sp-n{display:none}.sp-k b{display:inline}
+ .aw .sp-a h3{font-size:31px}
+ .sp-b{margin-top:16px}
+ .sp-f{margin-top:22px}.sp-f li{padding:14px 10px 0 0}.sp-f li+li{padding-left:12px}.sp-f b{font-size:22px}.sp-f span{font-size:9.5px;letter-spacing:.1em}
+ .sp-m{margin:28px -20px 0}
+ .sp-m .lv{border-radius:0;box-shadow:none}.sp-m .lv::after{display:none}
+ .sp-2{grid-template-columns:1fr;gap:4px}.sp-2 .lv:nth-child(2){margin:0}
+ .aw-edge{margin:100px 0 24px}
+ .ae-t{margin-top:24px}
+ /* phones: three, overlapped like a hand of cards */
+ .aw-phw{margin:0 -20px;border-radius:0;padding:60px 14px 70px;box-shadow:none}
+ .ph0,.ph4{display:none}
+ .aw-phs{gap:0;align-items:center}
+ .ph{width:38%}.ph.ph2{width:52%;z-index:2;transform:none}
+ .ph1{margin-right:-14%;transform:translateY(5%) scale(.94);z-index:1}.ph3{margin-left:-14%;transform:translateY(5%) scale(.94);z-index:1}
+ .ph1 .ph-s,.ph3 .ph-s{filter:brightness(.62)}
 }
-@media (prefers-reduced-motion:reduce){.aw-scrub{height:auto}.aw-pin{position:static;height:auto;padding:80px 0}}
+@media (prefers-reduced-motion:reduce){.aw-scrub{height:auto}.aw-pin{position:static;height:auto;padding:40px 24px}}
 </style>
 </head>
 <body>
@@ -1478,7 +1535,7 @@ body{background:var(--ink)}
     <span class="v-tag"><i></i>Emmanuel Atawodi</span>
     <div class="v-hh">
       <h1 data-reveal>A portfolio you <br class="v-br">descend through</h1>
-      <a class="btn v-btn" href="https://atawodi.vercel.app" target="_blank" rel="noopener" data-reveal><span>Visit the live site</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a>
+      <a class="btn v-btn aw-live" href="https://atawodi.vercel.app" target="_blank" rel="noopener" data-reveal><span>Visit the live site</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a>
     </div>
     <figure class="aw-hero"><picture><source media="(max-width:760px)" srcset="/assets/img/cs-aw-hero-m.webp" width="1200" height="1200"><img data-lq src="/assets/img/cs-aw-hero.webp" srcset="/assets/img/cs-aw-hero-1200.webp 1200w, /assets/img/cs-aw-hero.webp 2400w" sizes="96vw" width="2400" height="1650" alt="The Atawodi site on a monitor in a dark room: Building systems that survive contact with reality, beside a ringed planet made of particles" decoding="async" fetchpriority="high" style="background:url(data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADwAwCdASoYABAAPu1iqU2ppaQiMAgBMB2JZQC+SCPtwsp610v5Y6EAAP6tOKUIFt4+h/yS7kqHh0nTiGoylYEFo5TPwAAA) center/cover no-repeat"></picture></figure>
   </div></section>
@@ -1489,36 +1546,52 @@ body{background:var(--ink)}
   </div></section>
 
   <section class="v-sec wrap" id="challenge"><div class="in">
-    <header class="v-sh2" data-reveal><div class="v2-l"><span class="v2-k"><b>01</b>The challenge</span><h2>A portfolio, not a CV.</h2></div><div class="v2-r"><p>Emmanuel builds systems: technical, social and economic. A grid of projects would flatten that. The site had to show how he thinks, in systems, tensions, laws and evidence.</p></div></header>
+    <header class="v-sh2" data-reveal><div class="v2-l"><span class="v2-k"><b>01</b>The challenge</span><h2>A portfolio, not a CV.</h2></div><div class="v2-r"><p>Emmanuel builds systems: technical, social and economic. A grid of projects would flatten that. The site had to show how he thinks, in systems, tensions, laws and evidence, from the first screen.</p></div></header>
 
+    <figure class="aw-entry" data-reveal><div class="lv" style="--bg:#080808;--r:1600/1000;--rm:900/900" role="img" aria-label="The first screen: Building systems that survive contact with reality, beside a ringed planet made of particles"><img data-lq class="lv-po" src="/assets/img/cs-aw-c-entry-poster.webp" alt="" loading="lazy" decoding="async" style="background:url(data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAABQAwCdASoYAA8APu1iqU2ppaOiMAgBMB2JaQAAetHl+TtAAAD+8J4Napj3j+2w/IFX0hKeiGHwCTjsF+kgAA==) center/cover no-repeat"><video muted loop playsinline preload="none" data-src="/assets/video/cs-aw-c-entry.mp4" data-src-m="/assets/video/cs-aw-c-entry-m.mp4" data-po-m="/assets/img/cs-aw-c-entry-m-poster.webp"></video></div></figure>
   </div></section>
 
-  <section class="aw-scrub" id="scroll" aria-label="The landing page, scrubbed by your scroll">
+  <section class="v-sec wrap aw-sc-h" id="scroll-intro"><div class="in">
+    <header class="v-sh2" data-reveal><div class="v2-l"><span class="v2-k"><b>02</b>The scroll</span><h2>Scroll is the clock.</h2></div><div class="v2-r"><p>Nothing plays on its own. Every chapter moves with the scroll, so the visitor sets the pace. Scroll on to drive the whole descent, top to bottom.</p></div></header>
+
+  </div></section>
+  <section class="aw-scrub" id="scroll" aria-label="The whole landing page, played by your scroll">
     <div class="aw-pin">
-      <div class="aw-sh wrap"><div class="in">
-        <span class="v2-k"><b>02</b>The scroll</span>
-        <h2>Scroll is the clock.</h2>
-        <p class="aw-hint">Every chapter moves with your scroll, so the visitor sets the pace. Scroll here to drive it.</p>
-      </div></div>
-      <div class="aw-stage wrap"><div class="in">
-        <div class="aw-win"><div class="aw-bar"><i></i><i></i><i></i><span>atawodi.vercel.app</span></div>
-          <div class="aw-view"><img data-lq class="aw-po" src="/assets/img/cs-aw-scroll-poster.webp" alt="" decoding="async" style="background:url(data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAACwAwCdASoYAA8APu1kqU2ppaOiMAgBMB2JaQAAW+wCAq0uolbgAAD+8pjiTTVoeduenwxGGlLYbnNXOaZ/n9AA) center/cover no-repeat"><video muted playsinline preload="auto" data-src="/assets/video/cs-aw-scroll.mp4" data-src-m="/assets/video/cs-aw-scroll-m.mp4"></video></div></div>
-        <ol class="aw-ch"><li data-c="0"><b>01</b>Entry</li><li data-c="1"><b>02</b>Atlas</li><li data-c="2"><b>03</b>Doctrine</li><li data-c="3"><b>04</b>Notes</li><li data-c="4"><b>05</b>About</li><li data-c="5"><b>06</b>Edge of the map</li></ol>
-        <div class="aw-prog"><i></i></div>
-      </div></div>
+      <div class="aw-win"><div class="aw-bar"><i></i><i></i><i></i><span>atawodi.vercel.app</span><em class="aw-pc">0%</em></div>
+        <div class="aw-view"><picture><source media="(max-width:760px)" srcset="/assets/img/cs-aw-scroll2-m-poster.webp"><img data-lq class="aw-po" src="/assets/img/cs-aw-scroll2-poster.webp" alt="" decoding="async" style="background:url(data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAAAQAwCdASoYAA8APu1kqk4ppaQiMAgBMB2JaQAAetHlAAAA/vCeDWqY94/tsPyBV9ISnohh8IBfdp92CMAAAA==) center/cover no-repeat"></picture><video muted playsinline preload="none" data-src="/assets/video/cs-aw-scroll2.mp4" data-src-m="/assets/video/cs-aw-scroll2-m.mp4"></video></div></div>
+      <div class="aw-ui"><ol class="aw-ch"><li data-c="0"><b>01</b>Entry</li><li data-c="1"><b>02</b>Atlas</li><li data-c="2"><b>03</b>Doctrine</li><li data-c="3"><b>04</b>Notes</li><li data-c="4"><b>05</b>About</li><li data-c="5"><b>06</b>Edge of the map</li></ol><p class="aw-now"><b>01</b><span>Entry</span></p><div class="aw-prog"><i></i></div></div>
     </div>
   </section>
 
   <section class="v-sec wrap" id="chapters"><div class="in">
-    <header class="v-sh2" data-reveal><div class="v2-l"><span class="v2-k"><b>03</b>The chapters</span><h2>Five systems, eleven laws, one map.</h2></div><div class="v2-r"><p>Each chapter is its own instrument: an atlas of systems and the tensions they share, a dial of operating laws, field notes on a timeline, and a figure made of particles.</p></div></header>
+    <header class="v-sh2" data-reveal><div class="v2-l"><span class="v2-k"><b>03</b>The chapters</span><h2>Five systems, eleven laws, one map.</h2></div><div class="v2-r"><p>Each chapter is its own instrument, built to show a way of thinking rather than describe it.</p></div></header>
 
-    <div class="aw-cg">
-      <figure class="aw-ti v-tile aw-t" data-reveal><div class="lv" style="--bg:#080808;--r:1600/1000;--rm:600/1298" role="img" aria-label="The Atlas: five systems orbit one question, linked by the tensions they share"><img data-lq class="lv-po" src="/assets/img/cs-aw-atlas-poster.webp" alt="" loading="lazy" decoding="async" style="background:url(data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAACwAgCdASoYAA8APu1iqU2ppaOiMAgBMB2JaQAAeyAA/vCy7IZF0+hJNhy8kh1AAAA=) center/cover no-repeat"><video muted loop playsinline preload="none" data-src="/assets/video/cs-aw-atlas.mp4" data-src-m="/assets/video/cs-aw-atlas-m.mp4" data-po-m="/assets/img/cs-aw-atlas-m-poster.webp"></video></div><figcaption><b>Atlas</b><span>A living map of systems and ideas</span></figcaption></figure>
-      <figure class="aw-ti v-tile aw-t" data-reveal><div class="lv" style="--bg:#080808;--r:1600/1000;--rm:600/1298" role="img" aria-label="Doctrine: a dial turns through the laws this work obeys, each with its limit and confidence"><img data-lq class="lv-po" src="/assets/img/cs-aw-doctrine-poster.webp" alt="" loading="lazy" decoding="async" style="background:url(data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAACwAgCdASoYAA8APu1iqk2ppaQiMAgBMB2JaQAAeyAA/vC02tHkUSwAAAA=) center/cover no-repeat"><video muted loop playsinline preload="none" data-src="/assets/video/cs-aw-doctrine.mp4" data-src-m="/assets/video/cs-aw-doctrine-m.mp4" data-po-m="/assets/img/cs-aw-doctrine-m-poster.webp"></video></div><figcaption><b>Doctrine</b><span>The laws this work obeys</span></figcaption></figure>
-      <figure class="aw-ti v-tile aw-t" data-reveal><div class="lv" style="--bg:#080808;--r:1600/1000;--rm:600/1298" role="img" aria-label="Field notes: a curved timeline of working notes, one selected at a time"><img data-lq class="lv-po" src="/assets/img/cs-aw-notes-poster.webp" alt="" loading="lazy" decoding="async" style="background:url(data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAADwAgCdASoYAA8APu1iqU2ppaQiMAgBMB2JaQAAetCIAAD+8MOUcgd5vkQAAA==) center/cover no-repeat"><video muted loop playsinline preload="none" data-src="/assets/video/cs-aw-notes.mp4" data-src-m="/assets/video/cs-aw-notes-m.mp4" data-po-m="/assets/img/cs-aw-notes-m-poster.webp"></video></div><figcaption><b>Notes</b><span>Working in public</span></figcaption></figure>
-      <figure class="aw-ti v-tile aw-t" data-reveal><div class="lv" style="--bg:#080808;--r:1600/1000;--rm:600/1298" role="img" aria-label="About: a portrait made of particles drifts apart and back together"><img data-lq class="lv-po" src="/assets/img/cs-aw-about-poster.webp" alt="" loading="lazy" decoding="async" style="background:url(data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAwAwCdASoYAA8APu1iqU2ppaOiMAgBMB2JaQAAW+siMZ7AAP7yn099sTKmPggYNc6DmPVp7gSbaZ9nxgzez9BCUY/iAAAA) center/cover no-repeat"><video muted loop playsinline preload="none" data-src="/assets/video/cs-aw-about.mp4" data-src-m="/assets/video/cs-aw-about-m.mp4" data-po-m="/assets/img/cs-aw-about-m-poster.webp"></video></div><figcaption><b>About</b><span>A figure made of particles</span></figcaption></figure>
-    </div>
+    <article class="aw-sp wide">
+      <div class="sp-t" data-reveal><div class="sp-a"><span class="sp-n">02</span><span class="sp-k"><b>02</b>Atlas</span><h3>A map, not a list.</h3></div><div class="sp-b"><p>Five systems orbit one question. Pick a tension, like Trust or Verification, and the map redraws to show which systems share it.</p><ul class="sp-f"><li><b>5</b><span>systems</span></li><li><b>6</b><span>tensions</span></li><li><b>3</b><span>rings of maturity</span></li></ul></div></div>
+      <div class="sp-m" data-reveal><div class="lv" style="--bg:#080808;--r:1600/938;--rm:900/900" role="img" aria-label="The Atlas: systems orbit a light; choosing a tension draws the lines between the systems that share it"><img data-lq class="lv-po" src="/assets/img/cs-aw-c-atlas-poster.webp" alt="" loading="lazy" decoding="async" style="background:url(data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAAAQAwCdASoYAA4APu1iqU2ppaOiMAgBMB2JaQAAetCfi4AA/vCy7EA96tNEhBbJowhqVxG+cAAAAA==) center/cover no-repeat"><video muted loop playsinline preload="none" data-src="/assets/video/cs-aw-c-atlas.mp4" data-src-m="/assets/video/cs-aw-c-atlas-m.mp4" data-po-m="/assets/img/cs-aw-c-atlas-m-poster.webp"></video></div></div>
+    </article>
+    <article class="aw-sp split">
+      <div class="sp-t" data-reveal><div class="sp-a"><span class="sp-n">03</span><span class="sp-k"><b>03</b>Doctrine</span><h3>Principles with receipts.</h3></div><div class="sp-b"><p>Each law says where it was tested, where it stops being true, and how sure he is. Your scroll turns the dial from one law to the next.</p><ul class="sp-f"><li><b>5</b><span>laws on the dial</span></li><li><b>11</b><span>in the doctrine</span></li></ul></div></div>
+      <div class="sp-m" data-reveal><div class="lv" style="--bg:#080808;--r:1600/938;--rm:900/900" role="img" aria-label="Doctrine: a dial turns through five laws, each with where it was tested, its limit and a confidence"><img data-lq class="lv-po" src="/assets/img/cs-aw-c-doctrine-poster.webp" alt="" loading="lazy" decoding="async" style="background:url(data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAACwAgCdASoYAA4APu1iqU2ppaQiMAgBMB2JaQAAeyAA/vC02ufwpbZzaM8gAA==) center/cover no-repeat"><video muted loop playsinline preload="none" data-src="/assets/video/cs-aw-c-doctrine.mp4" data-src-m="/assets/video/cs-aw-c-doctrine-m.mp4" data-po-m="/assets/img/cs-aw-c-doctrine-m-poster.webp"></video></div></div>
+    </article>
+    <article class="aw-sp split r">
+      <div class="sp-t" data-reveal><div class="sp-a"><span class="sp-n">04</span><span class="sp-k"><b>04</b>Field notes</span><h3>A timeline you turn.</h3></div><div class="sp-b"><p>Seven working notes sit on a curved dial. Each one links back to the system it came from, so the thinking stays attached to the work.</p><ul class="sp-f"><li><b>7</b><span>notes</span></li><li><b>1</b><span>open research thread</span></li></ul></div></div>
+      <div class="sp-m" data-reveal><div class="lv" style="--bg:#080808;--r:1600/938;--rm:900/900" role="img" aria-label="Field notes: a curved timeline turns, one note selected at a time"><img data-lq class="lv-po" src="/assets/img/cs-aw-c-notes-poster.webp" alt="" loading="lazy" decoding="async" style="background:url(data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAACwAgCdASoYAA4APu1iqU2ppaOiMAgBMB2JaQAAeyAA/vDEWlPBipvAV/CVOQ7AAAA=) center/cover no-repeat"><video muted loop playsinline preload="none" data-src="/assets/video/cs-aw-c-notes.mp4" data-src-m="/assets/video/cs-aw-c-notes-m.mp4" data-po-m="/assets/img/cs-aw-c-notes-m-poster.webp"></video></div></div>
+    </article>
+    <article class="aw-sp pair">
+      <div class="sp-t" data-reveal><div class="sp-a"><span class="sp-n">05</span><span class="sp-k"><b>05</b>About</span><h3>Drawn in the same light.</h3></div><div class="sp-b"><p>His portrait is made of particles, like every form on the map. Keep scrolling and it scatters, then rebuilds as Lagos on a globe.</p><ul class="sp-f"><li><b>06°31′N</b><span>latitude</span></li><li><b>03°22′E</b><span>longitude</span></li></ul></div></div>
+      <div class="sp-m" data-reveal><div class="sp-2"><div class="lv" style="--bg:#080808;--r:1100/1254;--rm:1100/1254" role="img" aria-label="A portrait of Emmanuel made of white particles"><img data-lq class="lv-po" src="/assets/img/cs-aw-c-portrait-poster.webp" alt="" loading="lazy" decoding="async" style="background:url(data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAACQAwCdASoYABsAPu1mqk2ppaQiMAgBMB2JaQAAWqGrkF0/MaAAAP7ypSuN/kArEtY+YiHh9sKBbGOdT9E51MrNyvV2XEaQle5vJyVru09Tebz6wQV/zYVZMAAAAA==) center/cover no-repeat"><video muted loop playsinline preload="none" data-src="/assets/video/cs-aw-c-portrait.mp4"></video></div><div class="lv" style="--bg:#080808;--r:1100/1062;--rm:1100/1062" role="img" aria-label="The particles rebuild as a wireframe globe with Lagos marked"><img data-lq class="lv-po" src="/assets/img/cs-aw-c-globe-poster.webp" alt="" loading="lazy" decoding="async" style="background:url(data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAADwAgCdASoYABcAPu1wsVKppiSiqAgBMB2JaQAAPaXUAAD+8MNt3LerAAA=) center/cover no-repeat"><video muted loop playsinline preload="none" data-src="/assets/video/cs-aw-c-globe.mp4"></video></div></div></div>
+    </article>
+    <article class="aw-sp wide r">
+      <div class="sp-t" data-reveal><div class="sp-a"><span class="sp-n">05</span><span class="sp-k"><b>05</b>On the record</span><h3>Proof, not adjectives.</h3></div><div class="sp-b"><p>His career runs as one stream of light, with his own production figures set along it, taken from the work itself.</p><ul class="sp-f"><li><b>500k+</b><span>users, HelpBnk rewrite</span></li><li><b>10m+</b><span>records a month</span></li><li><b>1.8→0.4%</b><span>crash rate</span></li></ul></div></div>
+      <div class="sp-m" data-reveal><div class="lv" style="--bg:#080808;--r:1600/938;--rm:900/642" role="img" aria-label="On the record: a stream of particles rises with three production figures along it"><img data-lq class="lv-po" src="/assets/img/cs-aw-c-record-poster.webp" alt="" loading="lazy" decoding="async" style="background:url(data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACwAgCdASoYAA4APu1iqU2ppaOiMAgBMB2JaQAAeyAA/vCxCtZFETqVxYMpSAAA) center/cover no-repeat"><video muted loop playsinline preload="none" data-src="/assets/video/cs-aw-c-record.mp4" data-src-m="/assets/video/cs-aw-c-record-m.mp4" data-po-m="/assets/img/cs-aw-c-record-m-poster.webp"></video></div></div>
+    </article>
   </div></section>
+
+  <section class="aw-edge" aria-label="The ending">
+    <div class="ae-m" data-reveal><div class="lv" style="--bg:#080808;--r:1920/512;--rm:900/362" role="img" aria-label="The edge of the map: a black hole of gold particles with an open orbit circling it"><img data-lq class="lv-po" src="/assets/img/cs-aw-c-edge-poster.webp" alt="" loading="lazy" decoding="async" style="background:url(data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAACwAgCdASoYAAYAPu1iqU2ppaOiMAgBMB2JZwAAeyAA/vDHIJw/7GB5kMrJN1uAAAA=) center/cover no-repeat"><video muted loop playsinline preload="none" data-src="/assets/video/cs-aw-c-edge.mp4" data-src-m="/assets/video/cs-aw-c-edge-m.mp4" data-po-m="/assets/img/cs-aw-c-edge-m-poster.webp"></video></div></div>
+    <div class="wrap"><div class="in ae-t sp-t" data-reveal><div class="sp-a"><span class="sp-n">06</span><span class="sp-k"><b>06</b>The edge of the map</span><h3>An ending, and a way in.</h3></div><div class="sp-b"><p>The descent ends at a black hole, with an open orbit waiting for a sixth system. That orbit is the contact.</p></div></div></div>
+  </section>
 
   <section class="v-sec wrap" id="system"><div class="in">
     <header class="v-sh2" data-reveal><div class="v2-l"><span class="v2-k"><b>04</b>The visual system</span><h2>Black, bone and one gold.</h2></div><div class="v2-r"><p>Near-black space, warm neutrals and a single gold for signal. Author speaks, Geist Mono measures, and every form is drawn in light.</p></div></header>
@@ -1532,9 +1605,9 @@ body{background:var(--ink)}
   </div></section>
 
   <section class="v-sec wrap" id="mobile"><div class="in">
-    <header class="v-sh2" data-reveal><div class="v2-l"><span class="v2-k"><b>05</b>Mobile</span><h2>The same descent, in a hand.</h2></div><div class="v2-r"><p>The site is built mobile first. Every chapter re-composes for a phone, and the particle forms hold their detail at a fraction of the size.</p></div></header>
+    <header class="v-sh2" data-reveal><div class="v2-l"><span class="v2-k"><b>05</b>Mobile</span><h2>The same descent, in a hand.</h2></div><div class="v2-r"><p>Built mobile first. Every chapter re-composes for a phone, and the particle forms keep their detail at a fraction of the size.</p></div></header>
 
-    <ul class="aw-phones"><li data-reveal style="--i:0"><img data-lq src="/assets/img/cs-aw-ph-entry.webp" width="600" height="1298" alt="The Atawodi site on a phone. Entry: the planet" loading="lazy" decoding="async" style="background:url(data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAACwBACdASoYADQAPu1yq1EppyOiqBgMATAdiWkAABUtivKfeDqpNSv5hnv9tghgAP7ytSLn5bzscBUXNubkWHOFDlDZBfTJZzp122TUg6aG5nk51ZDLH/h7dMauHK4+whFY/x5+iOPbFdsCRIVXOeyu110UmLnNnzrB7sPekp4LuQAA) center/cover no-repeat"></li><li data-reveal style="--i:1"><img data-lq src="/assets/img/cs-aw-ph-doctrine.webp" width="600" height="1298" alt="The Atawodi site on a phone. Doctrine: the laws this work obeys" loading="lazy" decoding="async" style="background:url(data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAADQBACdASoYADQAPu1erk8ppKSjLBqrMTAdiWkAADnYAcvagjAKHNdz+TWKii5QgAD+8LdzY+Z+xsX3GcaISfSRYX5AstG7ArtjAbeva6LHAc9QkjEJ31rv1rMlK2UMAAA=) center/cover no-repeat"></li><li data-reveal style="--i:2"><img data-lq src="/assets/img/cs-aw-ph-about.webp" width="600" height="1298" alt="The Atawodi site on a phone. About: the figure in particles" loading="lazy" decoding="async" style="background:url(data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAACQBACdASoYADQAPuVkpU2pJiOiM/zIASAciWkAAHsApi6jK8Ix3qJcOu2dO8AA/vDq37BBG8QGM8zDSjU0g0d2mWd4BYnCfAgc1TolSDCCulZrdPzh7zw9ZWNtwmTbE715YAUM11cGqTDJQXoAAA==) center/cover no-repeat"></li><li data-reveal style="--i:3"><img data-lq src="/assets/img/cs-aw-ph-edge.webp" width="600" height="1298" alt="The Atawodi site on a phone. The edge of the map" loading="lazy" decoding="async" style="background:url(data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAACwBACdASoYADQAPu1uslEppqUiqAlZMB2JaQAALnWZNQy0zKUa5+XZUq9k6NVwAP7ylmLWqEL7gsLgW0Rrx2ODKhJlP0o36sKjjo6Fm4eiUYnN2M+UlcILYZx6JVNWh4actF8w0L7Mgp6TnCnmrLWiDhEDZCe1gG+8ygAA) center/cover no-repeat"></li></ul>
+    <div class="aw-phw" data-reveal><ul class="aw-phs"><li class="ph ph0" data-reveal style="--i:0"><div class="ph-s"><div class="lv" style="--bg:#080808;--r:600/1298;--rm:600/1298" role="img" aria-label="The Atawodi site on a phone. Entry: the planet"><img data-lq class="lv-po" src="/assets/img/cs-aw-p-entry-poster.webp" alt="" loading="lazy" decoding="async" style="background:url(data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAADQBACdASoYADQAPu1usVGppiSipAtpMB2JaQAAFaf09np2NM9LA8FJVd4VJHZjQAD+8r77Z9lWzyIGCyhXJ2eDZDxPBXpnyqV78n/HY7Cn8xWkrEy5DWTVll1tbnggnblrEWZ6NKk9AXUAJvBsAAAA) center/cover no-repeat"><video muted loop playsinline preload="none" data-src="/assets/video/cs-aw-p-entry.mp4"></video></div></div></li><li class="ph ph1" data-reveal style="--i:1"><div class="ph-s"><div class="lv" style="--bg:#080808;--r:600/1298;--rm:600/1298" role="img" aria-label="The Atawodi site on a phone. Atlas: five systems in orbit"><img data-lq class="lv-po" src="/assets/img/cs-aw-p-atlas-poster.webp" alt="" loading="lazy" decoding="async" style="background:url(data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAADwBACdASoYADQAPu1gqE8ppSOiLBqsyTAdiWkAAD7wBbU4DACEISBzKbGGoe/CQIAA/vCyGnvZDSLFKcsdgjSPBNmlddTlhq+a+ldCkjRInQ2+hTZJtNp1sVi59C1+czvfSmY5d3hpWI3U8r5dfOlxCTFwYiBAXanL/C4RRSpw4AAA) center/cover no-repeat"><video muted loop playsinline preload="none" data-src="/assets/video/cs-aw-p-atlas.mp4"></video></div></div></li><li class="ph ph2" data-reveal style="--i:2"><div class="ph-s"><div class="lv" style="--bg:#080808;--r:600/1298;--rm:600/1298" role="img" aria-label="The Atawodi site on a phone. Doctrine: the dial of laws"><img data-lq class="lv-po" src="/assets/img/cs-aw-p-doctrine-poster.webp" alt="" loading="lazy" decoding="async" style="background:url(data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADQAwCdASoYADQAPu1qrlCppaQjqAqpMB2JaQAAPjX2zDjZVlBumgAA/vC2ksf9jEU/2Vd5Mpa2OlcITB4f9eReBkXLFweKJzCkXaZMWSAAAA==) center/cover no-repeat"><video muted loop playsinline preload="none" data-src="/assets/video/cs-aw-p-doctrine.mp4"></video></div></div></li><li class="ph ph3" data-reveal style="--i:3"><div class="ph-s"><div class="lv" style="--bg:#080808;--r:600/1298;--rm:600/1298" role="img" aria-label="The Atawodi site on a phone. About: the portrait in particles"><img data-lq class="lv-po" src="/assets/img/cs-aw-p-portrait-poster.webp" alt="" loading="lazy" decoding="async" style="background:url(data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAAAwBQCdASoYADQAPu1kr1AppSQirBqpmTAdiWkAAC51nZaKYL+VPRAQFFvLfglKi89+AAD+8pV9Y9Y+83UL4fImUC6OoxhztQdyCJkiSPgTEupHv5mDLowN16Q0EdT16wuL+Uk4kK9B5knt56YLMAAA) center/cover no-repeat"><video muted loop playsinline preload="none" data-src="/assets/video/cs-aw-p-portrait.mp4"></video></div></div></li><li class="ph ph4" data-reveal style="--i:4"><div class="ph-s"><div class="lv" style="--bg:#080808;--r:600/1298;--rm:600/1298" role="img" aria-label="The Atawodi site on a phone. The edge of the map"><img data-lq class="lv-po" src="/assets/img/cs-aw-p-edge-poster.webp" alt="" loading="lazy" decoding="async" style="background:url(data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAAAQBQCdASoYADQAPu1mrlEppSQirBqoATAdiWkAAC51mTUM3L/w438PGp4dgswY881AAP7ylmLWqEL7gsLgW0Rrx2ODKhJlP1XNzUCilR2TMjnn3KqNDZVnMTlqXwFdfaYEBOcpNA+YaF9mQU9JyrhInEfMP/AZOo7puDzCczgAAA==) center/cover no-repeat"><video muted loop playsinline preload="none" data-src="/assets/video/cs-aw-p-edge.mp4"></video></div></div></li></ul></div>
     <div class="s-end" data-reveal>
       <h2>Show how you think, not just what you did.</h2>
       <div><p>We gave Emmanuel a portfolio that reads like his work: systems, tensions and evidence. The rest of the site is on its way. If you need a site that feels as considered as you are, start here.</p>
@@ -1582,7 +1655,7 @@ body{background:var(--ink)}
   let tick=false;
   const frame=()=>{ tick=false; const vh=innerHeight;
     if(hero){ const r=hero.getBoundingClientRect(); if(r.bottom>0&&r.top<vh){ const t=Math.max(0,Math.min(1,1-r.top/vh)); hero.style.setProperty('--z',(1.34-.06*t).toFixed(4)); } } };
-  const onScroll=()=>{ const y=scrollY; nav.classList.toggle('float',y>40); nav.classList.toggle('solid',y>40); nav.classList.toggle('on-light',y<=40);
+  const onScroll=()=>{ const y=scrollY; nav.classList.toggle('float',y>40); nav.classList.toggle('solid',y>40); nav.classList.toggle('on-light',false);
     if(!reduce&&!tick){ tick=true; requestAnimationFrame(frame); } };
   addEventListener('scroll',onScroll,{passive:true}); onScroll();
   document.querySelectorAll('.v-film video').forEach(v=>{ v.addEventListener('playing',()=>v.classList.add('playing'));
@@ -1614,22 +1687,28 @@ b.addEventListener('click',()=>{load();const on=v.muted;v.muted=!on;b.setAttribu
 </script>
 <script>
 (()=>{const sec=document.getElementById('scroll'); if(!sec) return;
- const v=sec.querySelector('video'), prog=sec.querySelector('.aw-prog i'), chips=[...sec.querySelectorAll('.aw-ch li')];
+ const v=sec.querySelector('video'), prog=sec.querySelector('.aw-prog i'), pc=sec.querySelector('.aw-pc'), chips=[...sec.querySelectorAll('.aw-ch li')], now=sec.querySelector('.aw-now');
  const mq=matchMedia('(max-width:760px)'), rm=matchMedia('(prefers-reduced-motion:reduce)');
- // chapter starts as a share of the scroll (from the site's own section positions)
- const CH=[0,.125,.23,.46,.58,.83];
- if(mq.matches||rm.matches){ // phones: a plain loop of the phone recording
-   v.loop=true; v.preload='none';
-   new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){if(!v.src){v.src=v.dataset.srcM||v.dataset.src;v.addEventListener('playing',()=>sec.classList.add('ready'),{once:true});} v.play().catch(()=>{});} else v.pause();}),{rootMargin:'300px 0px'}).observe(sec);
-   return; }
- let dur=0, want=0, have=-1, raf=0; v.src=v.dataset.src; v.load();
- ['loadedmetadata','canplay'].forEach(ev=>v.addEventListener(ev,()=>tick()));
+ const NAMES=[...chips].map(li=>[li.querySelector('b').textContent,li.childNodes[1].textContent]);
+ // where each chapter starts in the recording (from the site's own section positions)
+ const CH=mq.matches?[0,.146,.262,.426,.549,.776]:[0,.136,.221,.433,.555,.755];
+ if(rm.matches){ v.loop=true; v.src=mq.matches?v.dataset.srcM:v.dataset.src; v.autoplay=true; sec.classList.add('ready'); return; }
+ let dur=0, cur=0, run=false, started=false, last=-1;
  const p=()=>{const r=sec.getBoundingClientRect(); return Math.max(0,Math.min(1,-r.top/(r.height-innerHeight)));};
- function tick(){raf=0; const t=p(); prog.style.transform=`scaleX(${t})`;
-   let c=0; CH.forEach((s,i)=>{if(t>=s-1e-6)c=i}); chips.forEach((li,i)=>li.classList.toggle('on',i===c));
-   if(!dur && v.readyState>=1 && isFinite(v.duration)){dur=v.duration; sec.classList.add('ready');}
-   if(dur){ want=t*(dur-.05); if(Math.abs(want-have)>.01){ v.currentTime=want; have=want; } } }
- addEventListener('scroll',()=>{if(!raf)raf=requestAnimationFrame(tick)},{passive:true}); addEventListener('resize',tick); tick();
+ function start(){ if(started) return; started=true; v.src=mq.matches?v.dataset.srcM:v.dataset.src; v.preload='auto'; v.load();
+   const pr=v.play(); if(pr&&pr.then) pr.then(()=>v.pause()).catch(()=>{}); }
+ v.addEventListener('loadedmetadata',()=>{dur=v.duration;});
+ v.addEventListener('loadeddata',()=>sec.classList.add('ready'));
+ function ui(t){ prog.style.transform=`scaleX(${t})`; pc.textContent=Math.round(t*100)+'%';
+   let c=0; CH.forEach((s,i)=>{if(t>=s-1e-6)c=i});
+   if(c!==last){ last=c; chips.forEach((li,i)=>li.classList.toggle('on',i===c)); now.innerHTML=`<b>${NAMES[c][0]}</b><span>${NAMES[c][1]}</span>`; } }
+ function frame(){ if(!run) return; requestAnimationFrame(frame);
+   const t=p(); ui(t);
+   if(!dur||!isFinite(dur)) return;
+   const want=t*(dur-.06); cur+= (want-cur)*.14; if(Math.abs(want-cur)<.004) cur=want;
+   if(!v.seeking && Math.abs(v.currentTime-cur)>.012){ try{ v.currentTime=cur; }catch(e){} } }
+ new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ start(); if(!run){ run=true; cur=p()*((dur||1)-.06); requestAnimationFrame(frame);} } else run=false; }),{rootMargin:'1200px 0px'}).observe(sec);
+ ui(p());
 })();
 </script>
 </body></html>
